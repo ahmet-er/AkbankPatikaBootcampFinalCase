@@ -1,0 +1,16 @@
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\bin\Debug\net8.0\AFC.Schema.deps.json
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\bin\Debug\net8.0\AFC.Schema.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\bin\Debug\net8.0\AFC.Schema.pdb
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\bin\Debug\net8.0\AFC.Base.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\bin\Debug\net8.0\AFC.Base.pdb
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.csproj.AssemblyReference.cache
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.AssemblyInfoInputs.cache
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.AssemblyInfo.cs
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.csproj.CoreCompileInputs.cache
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.sourcelink.json
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.csproj.CopyComplete
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\refint\AFC.Schema.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\AFC.Schema.pdb
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Schema\obj\Debug\net8.0\ref\AFC.Schema.dll

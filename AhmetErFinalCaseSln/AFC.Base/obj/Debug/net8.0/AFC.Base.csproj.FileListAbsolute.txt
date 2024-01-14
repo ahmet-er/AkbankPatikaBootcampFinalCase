@@ -1,0 +1,13 @@
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\bin\Debug\net8.0\AFC.Base.deps.json
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\bin\Debug\net8.0\AFC.Base.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\bin\Debug\net8.0\AFC.Base.pdb
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.csproj.AssemblyReference.cache
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.AssemblyInfoInputs.cache
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.AssemblyInfo.cs
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.csproj.CoreCompileInputs.cache
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.sourcelink.json
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\refint\AFC.Base.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\AFC.Base.pdb
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Base\obj\Debug\net8.0\ref\AFC.Base.dll
