@@ -1,5 +1,6 @@
 ﻿using AFC.Base.Entity;
 using AFC.Base.Enums;
+using AFC.Data.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -24,11 +25,7 @@ public class ExpenseRequestConfiguration : IEntityTypeConfiguration<ExpenseReque
 {
     public void Configure(EntityTypeBuilder<ExpenseRequest> builder)
     {
-        builder.Property(x => x.CreateBy).IsRequired(true);
-        builder.Property(x => x.CreateAt).IsRequired(true);
-        builder.Property(x => x.ModifiedBy).IsRequired(false);
-        builder.Property(x => x.ModifiedAt).IsRequired(false);
-        builder.Property(x => x.IsActive).IsRequired(true).HasDefaultValue(true);
+        BaseEntityConfigurationHelper.ConfigureBaseEntity(builder);
 
         builder.Property(x => x.FieldStaffId).IsRequired(true);
         builder.Property(x => x.PaymentCategoryId).IsRequired(true);
