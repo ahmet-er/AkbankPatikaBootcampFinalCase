@@ -1,4 +1,5 @@
-﻿using AFC.Data;
+﻿using AFC.Api.Middleware;
+using AFC.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -56,6 +57,8 @@ public class Startup
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+
+        app.UseMiddleware<ErrorHandlerMiddleware>();
 
         app.UseHttpsRedirection();
 
