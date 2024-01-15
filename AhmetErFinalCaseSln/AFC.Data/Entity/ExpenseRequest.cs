@@ -15,6 +15,7 @@ public class ExpenseRequest : BaseEntity
     public int PaymentCategoryId { get; set; }
     public virtual PaymentCategory PaymentCategory { get; set; }
     public decimal Amount { get; set; }
+    public string Description { get; set; }
     public string PaymentLocation { get; set; }
     public string DocumentPath { get; set; }
     public ExpenseStatus ExpenseStatus { get; set; }
@@ -30,6 +31,7 @@ public class ExpenseRequestConfiguration : IEntityTypeConfiguration<ExpenseReque
         builder.Property(x => x.FieldStaffId).IsRequired(true);
         builder.Property(x => x.PaymentCategoryId).IsRequired(true);
         builder.Property(x => x.Amount).IsRequired(true).HasPrecision(18, 4);
+        builder.Property(x => x.Description).IsRequired(false).HasMaxLength(512);
         builder.Property(x => x.PaymentLocation).IsRequired(true).HasMaxLength(512);
         builder.Property(x => x.DocumentPath).IsRequired(true).HasMaxLength(512);
         builder.Property(x => x.ExpenseStatus).IsRequired(true);

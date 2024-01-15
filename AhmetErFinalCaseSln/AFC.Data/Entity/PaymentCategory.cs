@@ -27,6 +27,7 @@ public class PaymentCategoryConfiguration : IEntityTypeConfiguration<PaymentCate
         builder.HasMany(x => x.ExpenseRequests)
             .WithOne(x => x.PaymentCategory)
             .HasForeignKey(x => x.PaymentCategoryId)
-            .IsRequired(true);
+            .IsRequired(true)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
