@@ -20,6 +20,8 @@ public class Startup
         string connection = Configuration.GetConnectionString("MsSqlConnection");
         services.AddDbContext<AfcDbContext>(options => options.UseSqlServer(connection));
 
+        services.AddControllers();
+
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
 
