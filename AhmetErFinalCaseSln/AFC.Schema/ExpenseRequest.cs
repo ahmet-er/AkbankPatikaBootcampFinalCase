@@ -11,7 +11,6 @@ public class ExpenseRequestRequest : BaseRequest
     public string Description { get; set; }
     public string CompanyResultDescription { get; set; }
     public string PaymentLocation { get; set; }
-    public string DocumentPath { get; set; }
     public ExpenseStatus ExpenseStatus { get; set; }
     public PaymentStatus PaymentStatus { get; set; }
 }
@@ -24,7 +23,6 @@ public class ExpenseRequestResponse : BaseResponse
     public string Description { get; set; }
     public string CompanyResultDescription { get; set; }
     public string PaymentLocation { get; set; }
-    public string DocumentPath { get; set; }
     public ExpenseStatus ExpenseStatus { get; set; }
     public PaymentStatus PaymentStatus { get; set; }
 }

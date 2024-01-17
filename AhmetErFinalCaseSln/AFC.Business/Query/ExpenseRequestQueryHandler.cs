@@ -1,7 +1,12 @@
 ﻿using AFC.Base.Response;
 using AFC.Business.Cqrs;
+using AFC.Data;
+using AFC.Data.Entity;
 using AFC.Schema;
+using AutoMapper;
+using LinqKit;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace AFC.Business.Query;
 
@@ -10,18 +15,53 @@ public class ExpenseRequestQueryHandler :
     IRequestHandler<GetExpenseRequestByIdQuery, ApiResponse<ExpenseRequestResponse>>,
     IRequestHandler<GetExpenseRequestByParameterQuery, ApiResponse<List<ExpenseRequestResponse>>>
 {
-    public Task<ApiResponse<List<ExpenseRequestResponse>>> Handle(GetAllExpenseRequestQuery request, CancellationToken cancellationToken)
+    private readonly AfcDbContext dbContext;
+    private readonly IMapper mapper;
+
+    public ExpenseRequestQueryHandler(AfcDbContext dbContext, IMapper mapper)
     {
-        throw new NotImplementedException();
+        this.dbContext = dbContext;
+        this.mapper = mapper;
     }
 
-    public Task<ApiResponse<ExpenseRequestResponse>> Handle(GetExpenseRequestByIdQuery request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<List<ExpenseRequestResponse>>> Handle(GetAllExpenseRequestQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var list = await dbContext.Set<ExpenseRequest>()
+            .Include(x => x.ExpenseDocuments)
+            .Where(x => x.IsActive)
+            .ToListAsync(cancellationToken);
+
+        var mappedList = mapper.Map<List<ExpenseRequest>, List<ExpenseRequestResponse>>(list);
+        return new ApiResponse<List<ExpenseRequestResponse>>(mappedList);
     }
 
-    public Task<ApiResponse<List<ExpenseRequestResponse>>> Handle(GetExpenseRequestByParameterQuery request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<ExpenseRequestResponse>> Handle(GetExpenseRequestByIdQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var entity = await dbContext.Set<ExpenseRequest>()
+            .Include(x => x.ExpenseDocuments)
+            .Where(x => x.IsActive)
+            .FirstOrDefaultAsync(cancellationToken);
+
+        if (entity is null)
+            return new ApiResponse<ExpenseRequestResponse>("Record not found.");
+
+        var mapped = mapper.Map<ExpenseRequest, ExpenseRequestResponse>(entity);
+        return new ApiResponse<ExpenseRequestResponse>(mapped);
+    }
+
+    public async Task<ApiResponse<List<ExpenseRequestResponse>>> Handle(GetExpenseRequestByParameterQuery request, CancellationToken cancellationToken)
+    {
+        var predicate = PredicateBuilder.New<ExpenseRequest>(true);
+
+        if (string.IsNullOrEmpty(request.PaymentLocation))
+            predicate.And(x => x.PaymentLocation.ToUpper().Contains(request.PaymentLocation.ToUpper()));
+
+        var list = await dbContext.Set<ExpenseRequest>()
+            .Include(x => x.ExpenseDocuments)
+            .Where(x => x.IsActive)
+            .ToListAsync(cancellationToken);
+        
+        var mappedList = mapper.Map<List<ExpenseRequest>, List<ExpenseRequestResponse>>(list);
+        return new ApiResponse<List<ExpenseRequestResponse>>(mappedList);
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AFC.Data.Helpers;
 
-public static class BaseEntityConfigurationHelper
+public static class BaseEntityConfigurationExtension
 {
     public static void ConfigureBaseEntity<TEntity>(EntityTypeBuilder<TEntity> builder) where TEntity : BaseEntity
     {

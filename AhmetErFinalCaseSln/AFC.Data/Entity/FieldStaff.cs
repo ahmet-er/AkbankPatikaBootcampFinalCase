@@ -20,7 +20,7 @@ public class FieldStaffConfiguration : IEntityTypeConfiguration<FieldStaff>
 {
     public void Configure(EntityTypeBuilder<FieldStaff> builder)
     {
-        BaseEntityConfigurationHelper.ConfigureBaseEntity(builder);
+        BaseEntityConfigurationExtension.ConfigureBaseEntity(builder);
 
         builder.Property(x => x.UserId).IsRequired(true);
         builder.Property(x => x.IBAN).IsRequired(true).HasMaxLength(26);

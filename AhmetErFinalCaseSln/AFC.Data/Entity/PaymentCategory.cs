@@ -19,7 +19,7 @@ public class PaymentCategoryConfiguration : IEntityTypeConfiguration<PaymentCate
 {
     public void Configure(EntityTypeBuilder<PaymentCategory> builder)
     {
-        BaseEntityConfigurationHelper.ConfigureBaseEntity(builder);
+        BaseEntityConfigurationExtension.ConfigureBaseEntity(builder);
 
         builder.Property(x => x.Name).IsRequired(true).HasMaxLength(128);
         builder.Property(x => x.Description).IsRequired(true).HasMaxLength(512);

@@ -20,7 +20,7 @@ public class ExpenseDocumentConfiguration : IEntityTypeConfiguration<ExpenseDocu
 {
     public void Configure(EntityTypeBuilder<ExpenseDocument> builder)
     {
-        BaseEntityConfigurationHelper.ConfigureBaseEntity(builder);
+        BaseEntityConfigurationExtension.ConfigureBaseEntity(builder);
 
         builder.Property(x => x.ExpenseRequestId).IsRequired(true);
         builder.Property(x => x.FilePath).IsRequired(true).HasMaxLength(512);

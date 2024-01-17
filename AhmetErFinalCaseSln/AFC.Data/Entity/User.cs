@@ -25,7 +25,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        BaseEntityConfigurationHelper.ConfigureBaseEntity(builder);
+        BaseEntityConfigurationExtension.ConfigureBaseEntity(builder);
 
         builder.Property(x => x.UserName).IsRequired(true).HasMaxLength(256);
         builder.Property(x => x.Password).IsRequired(true).HasMaxLength(256);

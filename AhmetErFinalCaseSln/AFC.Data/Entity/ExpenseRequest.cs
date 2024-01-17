@@ -18,7 +18,6 @@ public class ExpenseRequest : BaseEntity
     public string Description { get; set; }
     public string CompanyResultDescription { get; set; }
     public string PaymentLocation { get; set; }
-    public string DocumentPath { get; set; }
     public ExpenseStatus ExpenseStatus { get; set; }
     public PaymentStatus PaymentStatus { get; set; }
     public List<ExpenseDocument> ExpenseDocuments { get; set; }
@@ -28,7 +27,7 @@ public class ExpenseRequestConfiguration : IEntityTypeConfiguration<ExpenseReque
 {
     public void Configure(EntityTypeBuilder<ExpenseRequest> builder)
     {
-        BaseEntityConfigurationHelper.ConfigureBaseEntity(builder);
+        BaseEntityConfigurationExtension.ConfigureBaseEntity(builder);
 
         builder.Property(x => x.FieldStaffId).IsRequired(true);
         builder.Property(x => x.PaymentCategoryId).IsRequired(true);
