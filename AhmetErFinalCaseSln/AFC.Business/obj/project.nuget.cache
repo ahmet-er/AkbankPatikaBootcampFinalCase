@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aTes8z0ueR2Hb5l70Hpf80bTlHUxE51FqANmCnC5xFD8UsWYrK8tln4IOnGuBkpQXJ0jAK5vdtnklxv9Qg3yIQ==",
+  "dgSpecHash": "K+Werw6Z9ZZWpH7gcTgbIF5XL9sILTbkQNPSCxwLQkU91Yrvdp0nfea5ACh1stuTex5BJsqWe3FqwABaH0vNog==",
   "success": true,
   "projectFilePath": "C:\\Project\\AkbankBootcamp\\FinalCase\\AhmetErFinalCaseSln\\AFC.Business\\AFC.Business.csproj",
   "expectedPackageFiles": [
@@ -11,8 +11,8 @@
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit\\1.2.4\\linqkit.1.2.4.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit.core\\1.2.4\\linqkit.core.1.2.4.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit\\1.2.5\\linqkit.1.2.5.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit.core\\1.2.5\\linqkit.core.1.2.5.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l2Z0PJA9MB288xZAVy3sCSB1WtL8pcfad6o/9p1kMau6EpP82ng+rED2D/2nD1wdzAdpvtWJaVoyZpF6JnCo9Q==",
+  "dgSpecHash": "PC0dVsEm/jHlCqG4PS9seT0bBBWLQVRZ2R9G7DTmx+r0hz4yex3cDIz3jsy1+fd/wOD8qADWJ8QeME6mL4WwYQ==",
   "success": true,
   "projectFilePath": "C:\\Project\\AkbankBootcamp\\FinalCase\\AhmetErFinalCaseSln\\AFC.Data\\AFC.Data.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,8 @@
     "C:\\Users\\Ahmet\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit\\1.2.4\\linqkit.1.2.4.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit.core\\1.2.4\\linqkit.core.1.2.4.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit\\1.2.5\\linqkit.1.2.5.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit.core\\1.2.5\\linqkit.core.1.2.5.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

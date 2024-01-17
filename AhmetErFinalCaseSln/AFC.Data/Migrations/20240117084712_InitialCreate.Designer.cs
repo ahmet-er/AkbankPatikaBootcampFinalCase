@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AFC.Data.Migrations
 {
     [DbContext(typeof(AfcDbContext))]
-    [Migration("20240115102946_Initial")]
-    partial class Initial
+    [Migration("20240117084712_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -170,47 +170,6 @@ namespace AFC.Data.Migrations
                     b.ToTable("PaymentCategory", "dbo");
                 });
 
-            modelBuilder.Entity("AFC.Data.Entity.Report", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("CreateBy")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsActive")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(true);
-
-                    b.Property<DateTime?>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("ModifiedBy")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
-
-                    b.Property<int>("ReportPeriod")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ReportType")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Report", "dbo");
-                });
-
             modelBuilder.Entity("AFC.Data.Entity.User", b =>
                 {
                     b.Property<int>("Id")
@@ -288,12 +247,12 @@ namespace AFC.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(820),
+                            CreateAt = new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(995),
                             CreateBy = 1,
                             Email = "admin1@gmail.com",
                             FirstName = "Admin",
                             IsActive = false,
-                            LastActivityDate = new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(831),
+                            LastActivityDate = new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(1009),
                             LastName = "Admin1",
                             Password = "Admin1!",
                             PasswordRetryCount = 0,
@@ -304,12 +263,12 @@ namespace AFC.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(835),
+                            CreateAt = new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(1012),
                             CreateBy = 1,
                             Email = "admin2@gmail.com",
                             FirstName = "Admin",
                             IsActive = false,
-                            LastActivityDate = new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(836),
+                            LastActivityDate = new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(1013),
                             LastName = "Admin2",
                             Password = "Admin2!",
                             PasswordRetryCount = 0,

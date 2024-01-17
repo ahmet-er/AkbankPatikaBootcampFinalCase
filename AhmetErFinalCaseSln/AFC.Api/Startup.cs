@@ -1,6 +1,5 @@
 ﻿using AFC.Api.Middleware;
 using AFC.Business.Mapper;
-using AFC.Business.Validator;
 using AFC.Data;
 using AutoMapper;
 using FluentValidation.AspNetCore;

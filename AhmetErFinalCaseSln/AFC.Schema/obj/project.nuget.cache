@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fh8ZWXAvWrs94WjYzON3HCT+yP9jaIspaGeAqSSxIIloMnQtax+UBl/XQSpg/MQ/LtP18f172xlbwm3LCViXAg==",
+  "dgSpecHash": "jWbDkLGmgOQb5M7GEIqknVvGGyrudVxiaVClIx8++JB1ZFolvFousSu6sPl7xGa52W3RI0sdBqh9vlPk86Q8qw==",
   "success": true,
   "projectFilePath": "C:\\Project\\AkbankBootcamp\\FinalCase\\AhmetErFinalCaseSln\\AFC.Schema\\AFC.Schema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit\\1.2.4\\linqkit.1.2.4.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit.core\\1.2.4\\linqkit.core.1.2.4.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit\\1.2.5\\linqkit.1.2.5.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit.core\\1.2.5\\linqkit.core.1.2.5.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",

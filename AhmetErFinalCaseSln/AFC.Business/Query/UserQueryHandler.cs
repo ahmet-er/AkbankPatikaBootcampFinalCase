@@ -1,7 +1,12 @@
 ﻿using AFC.Base.Response;
 using AFC.Business.Cqrs;
+using AFC.Data;
+using AFC.Data.Entity;
 using AFC.Schema;
+using AutoMapper;
+using LinqKit;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace AFC.Business.Query;
 
@@ -10,18 +15,55 @@ public class UserQueryHandler :
     IRequestHandler<GetUserById, ApiResponse<UserResponse>>,
     IRequestHandler<GetUserByParameter, ApiResponse<List<UserResponse>>>
 {
-    public Task<ApiResponse<List<UserResponse>>> Handle(GetAllUserQuery request, CancellationToken cancellationToken)
+    private readonly AfcDbContext dbContext;
+    private readonly IMapper mapper;
+
+    public UserQueryHandler(AfcDbContext dbContext, IMapper mapper)
     {
-        throw new NotImplementedException();
+        this.dbContext = dbContext;
+        this.mapper = mapper;
     }
 
-    public Task<ApiResponse<UserResponse>> Handle(GetUserById request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<List<UserResponse>>> Handle(GetAllUserQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var list= await dbContext.Set<User>()
+            .ToListAsync(cancellationToken);
+
+        var mappedList = mapper.Map<List<User>, List<UserResponse>>(list);
+        return new ApiResponse<List<UserResponse>>(mappedList);
     }
 
-    public Task<ApiResponse<List<UserResponse>>> Handle(GetUserByParameter request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<UserResponse>> Handle(GetUserById request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var entity = await dbContext.Set<User>().FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+
+        if (entity is null)
+            return new ApiResponse<UserResponse>("Record not found.");
+
+        var mapped = mapper.Map<User, UserResponse>(entity);
+        return new ApiResponse<UserResponse>(mapped);
+
+    }
+
+    public async Task<ApiResponse<List<UserResponse>>> Handle(GetUserByParameter request, CancellationToken cancellationToken)
+    {
+        var predicate = PredicateBuilder.New<User>(true);
+        if (string.IsNullOrEmpty(request.UserName))
+            predicate.And(x => x.UserName.ToUpper().Contains(request.UserName.ToUpper()));
+        if (string.IsNullOrEmpty(request.FirstName))
+            predicate.And(x => x.FirstName.ToUpper().Contains(request.FirstName.ToUpper()));
+        if (string.IsNullOrEmpty(request.LastName))
+            predicate.And(x => x.LastName.ToUpper().Contains(request.LastName.ToUpper()));
+        if (string.IsNullOrEmpty(request.Email))
+            predicate.And(x => x.Email.ToUpper().Contains(request.Email.ToUpper()));
+        if (string.IsNullOrEmpty(request.Role.ToString()))
+            predicate.And(x => x.Role.ToString().Contains(request.Role.ToString()));
+
+        var list = await dbContext.Set<User>()
+            .Where(predicate)
+            .ToListAsync(cancellationToken);
+
+        var mappedList = mapper.Map<List<User>, List<UserResponse>>(list);
+        return new ApiResponse<List<UserResponse>>(mappedList);
     }
 }

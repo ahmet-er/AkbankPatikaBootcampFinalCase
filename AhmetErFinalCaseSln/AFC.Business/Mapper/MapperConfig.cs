@@ -17,9 +17,6 @@ public class MapperConfig : Profile
         CreateMap<PaymentCategoryRequest, PaymentCategory>();
         CreateMap<PaymentCategory, PaymentCategoryResponse>();
 
-        CreateMap<ReportRequest, Report>();
-        CreateMap<Report, ReportResponse>();
-
         CreateMap<UserRequest, User>();
         CreateMap<User, UserResponse>();
     }

@@ -142,11 +142,11 @@
           }
         }
       },
-      "LinqKit/1.2.4": {
+      "LinqKit/1.2.5": {
         "type": "package",
         "dependencies": {
           "EntityFramework": "6.3.0",
-          "LinqKit.Core": "1.2.4"
+          "LinqKit.Core": "1.2.5"
         },
         "compile": {
           "lib/netstandard2.1/LinqKit.dll": {
@@ -159,7 +159,7 @@
           }
         }
       },
-      "LinqKit.Core/1.2.4": {
+      "LinqKit.Core/1.2.5": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/LinqKit.Core.dll": {
@@ -1646,7 +1646,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "LinqKit": "1.2.4",
+          "LinqKit": "1.2.5",
           "Newtonsoft.Json": "13.0.3",
           "Serilog.AspNetCore": "8.0.0",
           "Serilog.Sinks.File": "5.0.0",
@@ -1855,10 +1855,10 @@
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
-    "LinqKit/1.2.4": {
-      "sha512": "tL30VZ2Vs2wwcCx89nvFZB9XW61LBWau9kCPWHE4xfBHQAb250sLNRWkoMND3bMgYFCuAIMqdPz32chao3oSFw==",
+    "LinqKit/1.2.5": {
+      "sha512": "bN1VgtnJbn6rcYXJ/DARBCKHfPkNddoBFxjNMNmwpPbwgbmWFeaFbZWg7egM/P6Ln3RcrykYlcac2xS3mDtr/g==",
       "type": "package",
-      "path": "linqkit/1.2.4",
+      "path": "linqkit/1.2.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1866,14 +1866,14 @@
         "lib/net45/LinqKit.xml",
         "lib/netstandard2.1/LinqKit.dll",
         "lib/netstandard2.1/LinqKit.xml",
-        "linqkit.1.2.4.nupkg.sha512",
+        "linqkit.1.2.5.nupkg.sha512",
         "linqkit.nuspec"
       ]
     },
-    "LinqKit.Core/1.2.4": {
-      "sha512": "cR88ymKSFZu1XZnmUzGl8eyeLRqnpiTMZBf+DBSr4kWRmfr40mwNdyLooCe3Or/WbkkmCo5erypLdmZTsNXi+w==",
+    "LinqKit.Core/1.2.5": {
+      "sha512": "+5UKyagtVX33TSeOGorYzDXus/ypAISfM7HFfrix4BEmuuGF+nhSjf8P9csejLQ79ny5ms33M5/lQ2SkwC0Jxw==",
       "type": "package",
-      "path": "linqkit.core/1.2.4",
+      "path": "linqkit.core/1.2.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1896,7 +1896,7 @@
         "lib/uap10.0.10240/LinqKit.Core.dll",
         "lib/uap10.0.10240/LinqKit.Core.pri",
         "lib/uap10.0.10240/LinqKit.Core.xml",
-        "linqkit.core.1.2.4.nupkg.sha512",
+        "linqkit.core.1.2.5.nupkg.sha512",
         "linqkit.core.nuspec"
       ]
     },
@@ -5005,7 +5005,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

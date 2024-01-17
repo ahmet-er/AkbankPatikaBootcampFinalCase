@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AFC.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,27 +34,6 @@ namespace AFC.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PaymentCategory", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Report",
-                schema: "dbo",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
-                    ReportType = table.Column<int>(type: "int", nullable: false),
-                    ReportPeriod = table.Column<int>(type: "int", nullable: false),
-                    CreateBy = table.Column<int>(type: "int", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifiedBy = table.Column<int>(type: "int", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Report", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -157,8 +136,8 @@ namespace AFC.Data.Migrations
                 columns: new[] { "Id", "CreateAt", "CreateBy", "Email", "FirstName", "LastActivityDate", "LastName", "ModifiedAt", "ModifiedBy", "Password", "Role", "UserName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(820), 1, "admin1@gmail.com", "Admin", new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(831), "Admin1", null, null, "Admin1!", 0, "admin1" },
-                    { 2, new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(835), 1, "admin2@gmail.com", "Admin", new DateTime(2024, 1, 15, 13, 29, 46, 601, DateTimeKind.Local).AddTicks(836), "Admin2", null, null, "Admin2!", 0, "admin2" }
+                    { 1, new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(995), 1, "admin1@gmail.com", "Admin", new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(1009), "Admin1", null, null, "Admin1!", 0, "admin1" },
+                    { 2, new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(1012), 1, "admin2@gmail.com", "Admin", new DateTime(2024, 1, 17, 11, 47, 11, 175, DateTimeKind.Local).AddTicks(1013), "Admin2", null, null, "Admin2!", 0, "admin2" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -193,10 +172,6 @@ namespace AFC.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "ExpenseRequest",
-                schema: "dbo");
-
-            migrationBuilder.DropTable(
-                name: "Report",
                 schema: "dbo");
 
             migrationBuilder.DropTable(
