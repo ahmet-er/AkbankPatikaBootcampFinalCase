@@ -1,5 +1,6 @@
 ﻿using AFC.Api.Middleware;
 using AFC.Business.Mapper;
+using AFC.Business.Service;
 using AFC.Data;
 using AutoMapper;
 using FluentValidation.AspNetCore;
@@ -28,6 +29,8 @@ public class Startup
 
         var mapperConfig = new MapperConfiguration(cfg => cfg.AddProfile(new MapperConfig()));
         services.AddSingleton(mapperConfig.CreateMapper());
+
+        services.AddSingleton<IAzureBlobStorageService, AzureBlobStorageService>();
 
         services.AddControllers()
             .AddFluentValidation(x =>

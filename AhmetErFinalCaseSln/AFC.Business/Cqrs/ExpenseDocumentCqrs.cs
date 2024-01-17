@@ -5,7 +5,7 @@ using MediatR;
 namespace AFC.Business.Cqrs;
 
 public record CreateExpenseDocumentCommand(ExpenseDocumentRequest Model) : IRequest<ApiResponse<ExpenseDocumentResponse>>;
-public record UpdateExpenseDocumentCommand(int Id, ExpenseDocumentRequest Model) : IRequest<ApiResponse>;
+public record UpdateExpenseDocumentCommand(int Id, ExpenseDocumentRequest Model) : IRequest<ApiResponse<ExpenseDocumentResponse>>;
 public record DeleteExpenseDocumentCommand(int Id) : IRequest<ApiResponse>;
 
 public record GetAllExpenseDocumentQuery() : IRequest<ApiResponse<List<ExpenseDocumentResponse>>>;
