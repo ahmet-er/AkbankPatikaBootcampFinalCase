@@ -1,11 +1,13 @@
 ﻿using AFC.Base.Response;
 using AFC.Business.Cqrs;
+using AFC.Business.Helpers;
 using AFC.Business.Service;
 using AFC.Data;
 using AFC.Data.Entity;
 using AFC.Schema;
 using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace AFC.Business.Command;
@@ -18,12 +20,14 @@ public class ExpenseDocumentCommandHandler :
     private readonly AfcDbContext dbContext;
     private readonly IMapper mapper;
     private readonly IAzureBlobStorageService azureBlobStorageService;
+    private readonly IHttpContextAccessor httpContextAccessor;
 
-    public ExpenseDocumentCommandHandler(AfcDbContext dbContext, IMapper mapper, IAzureBlobStorageService azureBlobStorageService)
+    public ExpenseDocumentCommandHandler(AfcDbContext dbContext, IMapper mapper, IAzureBlobStorageService azureBlobStorageService, IHttpContextAccessor httpContextAccessor)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;
         this.azureBlobStorageService = azureBlobStorageService;
+        this.httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<ApiResponse<ExpenseDocumentResponse>> Handle(CreateExpenseDocumentCommand request, CancellationToken cancellationToken)
@@ -37,6 +41,8 @@ public class ExpenseDocumentCommandHandler :
             FileType = uploadedFileResponse.FileType,
             FilePath = uploadedFileResponse.FilePath,
         };
+
+        BaseEntitySetPropertyExtension.SetCreatedProperties(expenseDocument, httpContextAccessor);
 
         var entityResult = await dbContext.AddAsync(expenseDocument, cancellationToken);
         var mapped = mapper.Map<ExpenseDocument, ExpenseDocumentResponse>(entityResult.Entity);
@@ -58,6 +64,8 @@ public class ExpenseDocumentCommandHandler :
         fromdb.FileName = uploadedFileResponse.FileName;
         fromdb.FileType = uploadedFileResponse.FileType;
         fromdb.FilePath = uploadedFileResponse.FilePath;
+
+        BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 
         await dbContext.SaveChangesAsync(cancellationToken);
 

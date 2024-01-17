@@ -1,10 +1,12 @@
 ﻿using AFC.Base.Response;
 using AFC.Business.Cqrs;
+using AFC.Business.Helpers;
 using AFC.Data;
 using AFC.Data.Entity;
 using AFC.Schema;
 using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace AFC.Business.Command;
@@ -16,16 +18,20 @@ public class ExpenseRequestCommandHandler :
 {
     private readonly AfcDbContext dbContext;
     private readonly IMapper mapper;
+    private readonly IHttpContextAccessor httpContextAccessor;
 
-    public ExpenseRequestCommandHandler(AfcDbContext dbContext, IMapper mapper)
+    public ExpenseRequestCommandHandler(AfcDbContext dbContext, IMapper mapper, IHttpContextAccessor httpContextAccessor)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;
+        this.httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<ApiResponse<ExpenseRequestResponse>> Handle(CreateExpenseRequestCommand request, CancellationToken cancellationToken)
     {
         var entity = mapper.Map<ExpenseRequestRequest, ExpenseRequest>(request.Model);
+
+        BaseEntitySetPropertyExtension.SetCreatedProperties(entity, httpContextAccessor);
 
         var entityResult = await dbContext.AddAsync(entity, cancellationToken);
         await dbContext.SaveChangesAsync(cancellationToken);
@@ -46,8 +52,8 @@ public class ExpenseRequestCommandHandler :
         fromdb.Description = request.Model.Description;
         fromdb.CompanyResultDescription = request.Model.CompanyResultDescription;
         fromdb.PaymentLocation = request.Model.PaymentLocation;
-        //fromdb.ExpenseStatus = request.Model.ExpenseStatus;
-        //fromdb.PaymentStatus = request.Model.PaymentStatus;
+
+        BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 
         await dbContext.SaveChangesAsync(cancellationToken);
         return new ApiResponse();

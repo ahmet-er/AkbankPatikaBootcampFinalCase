@@ -34,7 +34,6 @@ public class ExpenseRequestConfiguration : IEntityTypeConfiguration<ExpenseReque
         builder.Property(x => x.Amount).IsRequired(true).HasPrecision(18, 4);
         builder.Property(x => x.Description).IsRequired(false).HasMaxLength(512);
         builder.Property(x => x.PaymentLocation).IsRequired(true).HasMaxLength(512);
-        builder.Property(x => x.DocumentPath).IsRequired(true).HasMaxLength(512);
         builder.Property(x => x.ExpenseStatus).IsRequired(true);
         builder.Property(x => x.PaymentStatus).IsRequired(true);
 
