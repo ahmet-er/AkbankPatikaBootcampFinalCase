@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AFC.Schema")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b51157d8aca2128cbcc9f1f880a380fb27118da8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dd92d52f85cd9b3617fa0208c70e568e87f895f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AFC.Schema")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AFC.Schema")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

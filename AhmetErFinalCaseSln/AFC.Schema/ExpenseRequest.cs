@@ -9,6 +9,7 @@ public class ExpenseRequestRequest : BaseRequest
     public int PaymentCategoryId { get; set; }
     public decimal Amount { get; set; }
     public string Description { get; set; }
+    public string CompanyResultDescription { get; set; }
     public string PaymentLocation { get; set; }
     public string DocumentPath { get; set; }
     public ExpenseStatus ExpenseStatus { get; set; }
@@ -21,6 +22,7 @@ public class ExpenseRequestResponse : BaseResponse
     public int PaymentCategoryId { get; set; }
     public decimal Amount { get; set; }
     public string Description { get; set; }
+    public string CompanyResultDescription { get; set; }
     public string PaymentLocation { get; set; }
     public string DocumentPath { get; set; }
     public ExpenseStatus ExpenseStatus { get; set; }

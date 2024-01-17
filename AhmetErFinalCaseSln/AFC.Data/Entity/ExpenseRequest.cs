@@ -16,10 +16,12 @@ public class ExpenseRequest : BaseEntity
     public virtual PaymentCategory PaymentCategory { get; set; }
     public decimal Amount { get; set; }
     public string Description { get; set; }
+    public string CompanyResultDescription { get; set; }
     public string PaymentLocation { get; set; }
     public string DocumentPath { get; set; }
     public ExpenseStatus ExpenseStatus { get; set; }
     public PaymentStatus PaymentStatus { get; set; }
+    public List<ExpenseDocument> ExpenseDocuments { get; set; }
 }
 
 public class ExpenseRequestConfiguration : IEntityTypeConfiguration<ExpenseRequest>
@@ -39,5 +41,10 @@ public class ExpenseRequestConfiguration : IEntityTypeConfiguration<ExpenseReque
 
         builder.HasIndex(x => x.FieldStaffId);
         builder.HasIndex(x => x.PaymentCategoryId);
+
+        builder.HasMany(x => x.ExpenseDocuments)
+            .WithOne(x => x.ExpenseRequest)
+            .HasForeignKey(x => x.ExpenseRequestId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
