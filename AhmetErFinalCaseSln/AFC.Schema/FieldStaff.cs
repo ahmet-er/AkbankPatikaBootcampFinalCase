@@ -5,6 +5,7 @@ namespace AFC.Schema;
 public class FieldStaffRequest : BaseRequest
 {
     public int UserId { get; set; }
+    public UserRequest User { get; set; }
     public string IBAN { get; set; }
 }
 

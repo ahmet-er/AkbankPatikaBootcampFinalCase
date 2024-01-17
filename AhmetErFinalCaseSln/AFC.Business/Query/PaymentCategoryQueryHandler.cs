@@ -51,6 +51,9 @@ public class PaymentCategoryQueryHandler :
     {
         var predicate = PredicateBuilder.New<PaymentCategory>(true);
 
+        if (string.IsNullOrEmpty(request.Name))
+            predicate.And(x => x.Name.ToUpper().Contains(request.Name.ToUpper()));
+
         var list = await dbContext.Set<PaymentCategory>()
             .Where(x => x.IsActive)
             .Where(predicate)
