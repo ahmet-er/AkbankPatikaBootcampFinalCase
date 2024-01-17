@@ -1,7 +1,12 @@
 ﻿using AFC.Base.Response;
 using AFC.Business.Cqrs;
+using AFC.Data;
+using AFC.Data.Entity;
 using AFC.Schema;
+using AutoMapper;
+using LinqKit;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace AFC.Business.Query;
 
@@ -10,18 +15,48 @@ public class PaymentCategoryQueryHandler :
     IRequestHandler<GetPaymentCategoryById, ApiResponse<PaymentCategoryResponse>>,
     IRequestHandler<GetPaymentCategoryByParameter, ApiResponse<List<PaymentCategoryResponse>>>
 {
-    public Task<ApiResponse<List<PaymentCategoryResponse>>> Handle(GetAllPaymentCategoryQuery request, CancellationToken cancellationToken)
+    private readonly AfcDbContext dbContext;
+    private readonly IMapper mapper;
+
+    public PaymentCategoryQueryHandler(AfcDbContext dbContext, IMapper mapper)
     {
-        throw new NotImplementedException();
+        this.dbContext = dbContext;
+        this.mapper = mapper;
     }
 
-    public Task<ApiResponse<PaymentCategoryResponse>> Handle(GetPaymentCategoryById request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<List<PaymentCategoryResponse>>> Handle(GetAllPaymentCategoryQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var list = await dbContext.Set<PaymentCategory>()
+            .Where(x => x.IsActive)
+            .ToListAsync(cancellationToken);
+
+        var mappedList = mapper.Map<List<PaymentCategory>, List<PaymentCategoryResponse>>(list);
+        return new ApiResponse<List<PaymentCategoryResponse>>(mappedList);
     }
 
-    public Task<ApiResponse<List<PaymentCategoryResponse>>> Handle(GetPaymentCategoryByParameter request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<PaymentCategoryResponse>> Handle(GetPaymentCategoryById request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var entity = await dbContext.Set<PaymentCategory>()
+            .Where(x => x.Id == request.Id && x.IsActive)
+            .FirstOrDefaultAsync(cancellationToken);
+
+        if (entity is null)
+            return new ApiResponse<PaymentCategoryResponse>("Record not found.");
+
+        var mapped = mapper.Map<PaymentCategory, PaymentCategoryResponse>(entity);
+        return new ApiResponse<PaymentCategoryResponse>(mapped);
+    }
+
+    public async Task<ApiResponse<List<PaymentCategoryResponse>>> Handle(GetPaymentCategoryByParameter request, CancellationToken cancellationToken)
+    {
+        var predicate = PredicateBuilder.New<PaymentCategory>(true);
+
+        var list = await dbContext.Set<PaymentCategory>()
+            .Where(x => x.IsActive)
+            .Where(predicate)
+            .ToListAsync(cancellationToken);
+
+        var mappedList = mapper.Map<List<PaymentCategory>, List<PaymentCategoryResponse>>(list);
+        return new ApiResponse<List<PaymentCategoryResponse>>(mappedList);
     }
 }
