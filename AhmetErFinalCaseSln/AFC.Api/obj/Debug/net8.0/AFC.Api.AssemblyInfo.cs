@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AFC.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88bf09525133f77f35b1e8fd5359d46e72267e1b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01e64761d6a8eb2d629ec9c89954a74977dbcb20")]
 [assembly: System.Reflection.AssemblyProductAttribute("AFC.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AFC.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

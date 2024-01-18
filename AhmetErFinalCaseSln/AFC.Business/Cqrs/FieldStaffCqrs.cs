@@ -10,4 +10,4 @@ public record DeleteFieldStaffCommand(int Id) : IRequest<ApiResponse>;
 
 public record GetAllFieldStaffQuery() : IRequest<ApiResponse<List<FieldStaffResponse>>>;
 public record GetFieldStaffByIdQuery(int Id) : IRequest<ApiResponse<FieldStaffResponse>>;
-public record GetFieldStaffByParameterQuery(int UserId, string IBAN) : IRequest<ApiResponse<List<FieldStaffResponse>>>;
+public record GetFieldStaffByParameterQuery(int? UserId, string IBAN) : IRequest<ApiResponse<List<FieldStaffResponse>>>;

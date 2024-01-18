@@ -1,5 +1,4 @@
-﻿using AFC.Base.Enums;
-using AFC.Base.Response;
+﻿using AFC.Base.Response;
 using AFC.Business.Cqrs;
 using AFC.Schema;
 using MediatR;
@@ -9,56 +8,52 @@ namespace AFC.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class PaymentCategoryController : ControllerBase
     {
         private readonly IMediator mediator;
 
-        public UserController(IMediator mediator)
+        public PaymentCategoryController(IMediator mediator)
         {
             this.mediator = mediator;
         }
 
         [HttpGet]
-        public async Task<ApiResponse<List<UserResponse>>> Get()
+        public async Task<ApiResponse<List<PaymentCategoryResponse>>> Get()
         {
-            var operation = new GetAllUserQuery();
+            var operation = new GetAllPaymentCategoryQuery();
             var result = await mediator.Send(operation);
             return result;
         }
 
         [HttpGet("id")]
-        public async Task<ApiResponse<UserResponse>> Get(int id)
+        public async Task<ApiResponse<PaymentCategoryResponse>> Get(int id)
         {
-            var operation = new GetUserById(id);
+            var operation = new GetPaymentCategoryById(id);
             var result = await mediator.Send(operation);
             return result;
         }
 
         [HttpGet("by-parameters")]
-        public async Task<ApiResponse<List<UserResponse>>> GetByParameter(
-            [FromQuery] string? UserName,
-            [FromQuery] string? FirstName,
-            [FromQuery] string? LastName,
-            [FromQuery] string? Email,
-            [FromQuery] string? Role)
+        public async Task<ApiResponse<List<PaymentCategoryResponse>>> GetByParameter(
+            [FromQuery] string? Name)
         {
-            var operation = new GetUserByParameter(UserName, FirstName, LastName, Email, Role);
+            var operation = new GetPaymentCategoryByParameter(Name);
             var result = await mediator.Send(operation);
             return result;
         }
 
         [HttpPost]
-        public async Task<ApiResponse<UserResponse>> Post([FromBody] UserRequest user)
+        public async Task<ApiResponse<PaymentCategoryResponse>> Post([FromBody] PaymentCategoryRequest paymentRequest)
         {
-            var operation = new CreateUserCommand(user);
+            var operation = new CreatePaymentCategoryCommand(paymentRequest);
             var result = await mediator.Send(operation);
             return result;
         }
 
         [HttpPut("id")]
-        public async Task<ApiResponse> Put(int id, [FromBody] UserRequest user)
+        public async Task<ApiResponse> Put(int id, [FromBody] PaymentCategoryRequest paymentRequest)
         {
-            var operation = new UpdateUserCommand(id, user);
+            var operation = new UpdatePaymentCategoryCommand(id, paymentRequest);
             var result = await mediator.Send(operation);
             return result;
         }
@@ -66,7 +61,7 @@ namespace AFC.Api.Controllers
         [HttpDelete("id")]
         public async Task<ApiResponse> Delete(int id)
         {
-            var operation = new DeleteUserCommand(id);
+            var operation = new DeletePaymentCategoryCommand(id);
             var result = await mediator.Send(operation);
             return result;
         }
