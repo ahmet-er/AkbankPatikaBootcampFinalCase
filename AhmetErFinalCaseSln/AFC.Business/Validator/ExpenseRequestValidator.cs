@@ -1,6 +1,4 @@
-﻿using AFC.Base.Enums;
-using AFC.Data.Helpers;
-using AFC.Schema;
+﻿using AFC.Schema;
 using FluentValidation;
 
 namespace AFC.Business.Validator;

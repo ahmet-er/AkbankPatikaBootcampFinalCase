@@ -1,11 +1,13 @@
 ﻿using AFC.Base.Entity;
 using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
 
 namespace AFC.Business.Helpers;
 
 public static class BaseEntitySetPropertyExtension
 {
+    /// <summary>
+    /// BaseEntity'de bulunan Prop'ları nesne oluşurken set'ler.
+    /// </summary>
     public static void SetCreatedProperties(this BaseEntity entity, IHttpContextAccessor httpContextAccessor)
     {
         int userId = GetUserIdFromClaims(httpContextAccessor);
@@ -15,6 +17,9 @@ public static class BaseEntitySetPropertyExtension
         entity.IsActive = true;
     }
 
+    /// <summary>
+    /// BaseEntity'de bulunan Prop'ları nesne güncellenirken set'ler.
+    /// </summary>
     public static void SetModifiedProperties(this BaseEntity entity, IHttpContextAccessor httpContextAccessor)
     {
         int userId = GetUserIdFromClaims(httpContextAccessor);
@@ -24,6 +29,9 @@ public static class BaseEntitySetPropertyExtension
         entity.IsActive = true;
     }
 
+    /// <summary>
+    /// Claim'de bulunan User'in Id'sine çeker.
+    /// </summary>
     private static int GetUserIdFromClaims(IHttpContextAccessor httpContextAccessor)
     {
         var userIdClaim = httpContextAccessor.HttpContext?.User.FindFirst("Id");

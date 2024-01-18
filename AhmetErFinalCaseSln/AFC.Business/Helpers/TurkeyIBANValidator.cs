@@ -10,6 +10,9 @@ public class TurkeyIBANValidator : AbstractValidator<string>
             .Must(BeAValidTurkeyIBAN).WithMessage("Invalid Turkish IBAN.");
     }
 
+    /// <summary>
+    /// IBAN'ın Türkiye standatlarına uygunluğunu kontrol eder.
+    /// </summary>
     private static bool BeAValidTurkeyIBAN(string value)
     {
         if (string.IsNullOrEmpty(value) || value.Length is not 26 || !value.StartsWith("TR"))

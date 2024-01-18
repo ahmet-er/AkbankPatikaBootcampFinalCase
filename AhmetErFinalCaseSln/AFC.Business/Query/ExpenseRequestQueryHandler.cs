@@ -60,12 +60,12 @@ public class ExpenseRequestQueryHandler :
         if (Enum.TryParse<ExpenseStatus>(request.ExpenseStatus, true, out var parsedExpenseStatus))
             predicate.And(x => x.ExpenseStatus == parsedExpenseStatus);
         else
-            return new ApiResponse<List<ExpenseRequestResponse>>("Invalid expense status type.");
+            return new ApiResponse<List<ExpenseRequestResponse>>("Invalid ExpenseStatus value.");
 
         if (Enum.TryParse<PaymentStatus>(request.PaymentStatus, true, out var parsedPaymentStatus))
             predicate.And(x => x.PaymentStatus == parsedPaymentStatus);
         else
-            return new ApiResponse<List<ExpenseRequestResponse>>("Invalid payment status type.");
+            return new ApiResponse<List<ExpenseRequestResponse>>("Invalid PaymentStatus value.");
 
         var list = await dbContext.Set<ExpenseRequest>()
             .Include(x => x.ExpenseDocuments)

@@ -14,16 +14,17 @@ public interface IAzureBlobStorageService
 public class AzureBlobStorageService : IAzureBlobStorageService
 {
     private readonly BlobServiceClient blobServiceClient;
-    //private readonly string containerName;
-    public AzureBlobStorageService(IConfiguration configuration) //, string containerName
+    public AzureBlobStorageService(IConfiguration configuration)
     {
         blobServiceClient = new BlobServiceClient(configuration.GetConnectionString("AzureStorageConnection"));
-        //this.containerName = containerName;
     }
 
+    /// <summary>
+    /// Dosyaları Azure Blob Storage'a yükler.
+    /// </summary>
     public async Task<ExpenseDocumentResponse> UploadFileAsync(IFormFile file)
     {
-        var containerClient = blobServiceClient.GetBlobContainerClient("expensefiles"); // containerName
+        var containerClient = blobServiceClient.GetBlobContainerClient("expensefiles");
 
         var sanitizedFileName = SanitizeBlobName($"{DateTime.Now.Ticks}{file.FileName}");
 
@@ -41,6 +42,10 @@ public class AzureBlobStorageService : IAzureBlobStorageService
             FilePath = blobClient.Uri.ToString(),
         };
     }
+
+    /// <summary>
+    /// Geçersiz karakter kullanımını engeller.
+    /// </summary>
     private string SanitizeBlobName(string fileName)
     {
         var sanitizedName = Regex.Replace(fileName, @"[^\w\d\._-]", "_");
