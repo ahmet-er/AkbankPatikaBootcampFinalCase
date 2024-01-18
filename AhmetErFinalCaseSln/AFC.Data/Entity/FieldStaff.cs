@@ -24,7 +24,6 @@ public class FieldStaffConfiguration : IEntityTypeConfiguration<FieldStaff>
 
         builder.Property(x => x.UserId).IsRequired(true);
         builder.Property(x => x.IBAN).IsRequired(true).HasMaxLength(26);
-        //builder.Property(x => x.UserName).IsRequired(true).HasMaxLength(128);
 
         builder.HasIndex(x => x.UserId).IsUnique(true);
 

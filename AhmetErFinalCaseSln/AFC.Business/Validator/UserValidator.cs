@@ -36,6 +36,6 @@ public class UserValidator : AbstractValidator<UserRequest>
 
         RuleFor(x => x.Role)
             .NotEmpty().WithMessage("Role cannot be empty.")
-            .SetValidator(new EnumValidator<Role>());
+            .IsInEnum().WithMessage("Invalid Role value.");
     }
 }
