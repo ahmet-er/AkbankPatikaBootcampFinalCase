@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/expense-document")]
     [ApiController]
     public class ExpenseDocumentController : ControllerBase
     {
@@ -45,9 +45,9 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ApiResponse<ExpenseDocumentResponse>> Post([FromBody] ExpenseDocumentRequest expenseDocument)
+        public async Task<ApiResponse<ExpenseDocumentResponse>> Post([FromQuery] int ExpenseRequestId, IFormFile FormFile)
         {
-            var operation = new CreateExpenseDocumentCommand(expenseDocument);
+            var operation = new CreateExpenseDocumentCommand(ExpenseRequestId, FormFile);
             var result = await mediator.Send(operation);
             return result;
         }

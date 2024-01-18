@@ -32,11 +32,11 @@ public class ExpenseDocumentCommandHandler :
 
     public async Task<ApiResponse<ExpenseDocumentResponse>> Handle(CreateExpenseDocumentCommand request, CancellationToken cancellationToken)
     {
-        var uploadedFileResponse = await azureBlobStorageService.UploadFileAsync(request.Model.FormFile);
+        var uploadedFileResponse = await azureBlobStorageService.UploadFileAsync(request.FormFile);
 
         var expenseDocument = new ExpenseDocument
         {
-            ExpenseRequestId = request.Model.ExpenseRequestId,
+            ExpenseRequestId = request.ExpenseRequestId,
             FileName = uploadedFileResponse.FileName,
             FileType = uploadedFileResponse.FileType,
             FilePath = uploadedFileResponse.FilePath,
@@ -45,6 +45,8 @@ public class ExpenseDocumentCommandHandler :
         BaseEntitySetPropertyExtension.SetCreatedProperties(expenseDocument, httpContextAccessor);
 
         var entityResult = await dbContext.AddAsync(expenseDocument, cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
+
         var mapped = mapper.Map<ExpenseDocument, ExpenseDocumentResponse>(entityResult.Entity);
         return new ApiResponse<ExpenseDocumentResponse>(mapped);
     }

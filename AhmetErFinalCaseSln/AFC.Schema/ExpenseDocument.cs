@@ -7,9 +7,6 @@ public class ExpenseDocumentRequest
 {
     public int ExpenseRequestId { get; set; }
     public IFormFile FormFile { get; set; }
-    //public string FilePath { get; set; }
-    //public string FileType { get; set; }
-    //public string FileName { get; set; }
 }
 
 public class ExpenseDocumentResponse

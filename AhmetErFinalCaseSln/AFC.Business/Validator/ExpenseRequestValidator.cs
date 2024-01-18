@@ -3,10 +3,18 @@ using FluentValidation;
 
 namespace AFC.Business.Validator;
 
-public class ExpenseRequestValidator : AbstractValidator<ExpenseRequestRequest>
+public class ExpenseRequestByFieldStaffRequestValidator : AbstractValidator<ExpenseRequestByFieldStaffRequest>
 {
-    public ExpenseRequestValidator()
+    public ExpenseRequestByFieldStaffRequestValidator()
     {
         
+    }
+}
+
+public class ExpenseRequestByAdminRequestValidator : AbstractValidator<ExpenseRequestByAdminRequest>
+{
+    public ExpenseRequestByAdminRequestValidator()
+    {
+
     }
 }

@@ -8,7 +8,8 @@ public class MapperConfig : Profile
 {
     public MapperConfig()
     {
-        CreateMap<ExpenseRequestRequest, ExpenseRequest>();
+        CreateMap<ExpenseRequestByFieldStaffRequest, ExpenseRequest>();
+        CreateMap<ExpenseRequestByAdminRequest, ExpenseRequest>();
         CreateMap<ExpenseRequest, ExpenseRequestResponse>();
 
         CreateMap<ExpenseDocumentRequest, ExpenseDocument>();

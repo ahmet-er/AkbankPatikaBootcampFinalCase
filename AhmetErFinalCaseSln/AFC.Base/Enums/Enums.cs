@@ -2,9 +2,9 @@
 
 public enum Role { Admin, FieldStaff }
 
-public enum ExpenseStatus { Approved, Rejected }
+public enum ExpenseStatus { Waiting, Approved, Rejected }
 
-public enum PaymentStatus { Paid, Unpaid }
+public enum PaymentStatus { Unpaid, Paid }
 
 public enum ReportType { General, FieldStaffBased, CategoryBased, DateBased }
 

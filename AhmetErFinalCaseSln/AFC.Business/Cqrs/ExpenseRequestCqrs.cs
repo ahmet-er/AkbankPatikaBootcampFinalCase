@@ -5,8 +5,9 @@ using MediatR;
 
 namespace AFC.Business.Cqrs;
 
-public record CreateExpenseRequestCommand(ExpenseRequestRequest Model) : IRequest<ApiResponse<ExpenseRequestResponse>>;
-public record UpdateExpenseRequestCommand(int Id, ExpenseRequestRequest Model) : IRequest<ApiResponse>;
+public record CreateExpenseRequestCommand(ExpenseRequestByFieldStaffRequest Model) : IRequest<ApiResponse<ExpenseRequestResponse>>;
+public record UpdateExpenseRequestByFieldStaffCommand(int Id, ExpenseRequestByFieldStaffRequest Model) : IRequest<ApiResponse>;
+public record UpdateExpenseRequestByAdminCommand(int Id, ExpenseRequestByAdminRequest Model) : IRequest<ApiResponse>;
 public record DeleteExpenseRequestCommand(int Id) :IRequest<ApiResponse>;
 
 public record GetAllExpenseRequestQuery() : IRequest<ApiResponse<List<ExpenseRequestResponse>>>;

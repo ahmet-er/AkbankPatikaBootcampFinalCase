@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/expense-request")]
     [ApiController]
     public class ExpenseRequestController : ControllerBase
     {
@@ -49,17 +49,25 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ApiResponse<ExpenseRequestResponse>> Post([FromBody] ExpenseRequestRequest expenseRequest)
+        public async Task<ApiResponse<ExpenseRequestResponse>> Post([FromBody] ExpenseRequestByFieldStaffRequest expenseRequest)
         {
             var operation = new CreateExpenseRequestCommand(expenseRequest);
             var result = await mediator.Send(operation);
             return result;
         }
 
-        [HttpPut("id")]
-        public async Task<ApiResponse> Put(int id, [FromBody] ExpenseRequestRequest expenseRequest)
+        [HttpPut("by-fieldStaff")]
+        public async Task<ApiResponse> PutByFieldStaff(int id, [FromBody] ExpenseRequestByFieldStaffRequest expenseRequest)
         {
-            var operation = new UpdateExpenseRequestCommand(id, expenseRequest);
+            var operation = new UpdateExpenseRequestByFieldStaffCommand(id, expenseRequest);
+            var result = await mediator.Send(operation);
+            return result;
+        }
+
+        [HttpPut("by-admin")]
+        public async Task<ApiResponse> PutByAdmin(int id, [FromBody] ExpenseRequestByAdminRequest expenseRequest)
+        {
+            var operation = new UpdateExpenseRequestByAdminCommand(id, expenseRequest);
             var result = await mediator.Send(operation);
             return result;
         }
