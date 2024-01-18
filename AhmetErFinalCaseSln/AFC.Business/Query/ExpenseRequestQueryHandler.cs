@@ -1,4 +1,5 @@
-﻿using AFC.Base.Response;
+﻿using AFC.Base.Enums;
+using AFC.Base.Response;
 using AFC.Business.Cqrs;
 using AFC.Data;
 using AFC.Data.Entity;
@@ -55,6 +56,16 @@ public class ExpenseRequestQueryHandler :
 
         if (string.IsNullOrEmpty(request.PaymentLocation))
             predicate.And(x => x.PaymentLocation.ToUpper().Contains(request.PaymentLocation.ToUpper()));
+
+        if (Enum.TryParse<ExpenseStatus>(request.ExpenseStatus, true, out var parsedExpenseStatus))
+            predicate.And(x => x.ExpenseStatus == parsedExpenseStatus);
+        else
+            return new ApiResponse<List<ExpenseRequestResponse>>("Invalid expense status type.");
+
+        if (Enum.TryParse<PaymentStatus>(request.PaymentStatus, true, out var parsedPaymentStatus))
+            predicate.And(x => x.PaymentStatus == parsedPaymentStatus);
+        else
+            return new ApiResponse<List<ExpenseRequestResponse>>("Invalid payment status type.");
 
         var list = await dbContext.Set<ExpenseRequest>()
             .Include(x => x.ExpenseDocuments)
