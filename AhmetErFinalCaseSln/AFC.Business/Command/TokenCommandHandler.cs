@@ -7,6 +7,7 @@ using AFC.Data.Entity;
 using AFC.Schema;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -20,10 +21,10 @@ public class TokenCommandHandler :
     private readonly AfcDbContext dbContext;
     private readonly JwtConfig jwtConfig;
 
-    public TokenCommandHandler(AfcDbContext dbContext, JwtConfig jwtConfig)
+    public TokenCommandHandler(AfcDbContext dbContext, IOptionsMonitor<JwtConfig> jwtConfig)
     {
         this.dbContext = dbContext;
-        this.jwtConfig = jwtConfig;
+        this.jwtConfig = jwtConfig.CurrentValue;
     }
 
     public async Task<ApiResponse<TokenResponse>> Handle(CreateTokenCommand request, CancellationToken cancellationToken)

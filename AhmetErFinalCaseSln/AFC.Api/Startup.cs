@@ -1,13 +1,18 @@
 ﻿using AFC.Api.Middleware;
+using AFC.Base.Token;
+using AFC.Business.Cqrs;
 using AFC.Business.Mapper;
 using AFC.Business.Service;
+using AFC.Business.Validator;
 using AFC.Data;
 using AutoMapper;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using System.Text;
 
 namespace AFC.Api;
 
@@ -25,17 +30,18 @@ public class Startup
         string connection = Configuration.GetConnectionString("MsSqlConnection");
         services.AddDbContext<AfcDbContext>(options => options.UseSqlServer(connection));
 
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+        //services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Startup>());
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).GetTypeInfo().Assembly));
 
         var mapperConfig = new MapperConfiguration(cfg => cfg.AddProfile(new MapperConfig()));
         services.AddSingleton(mapperConfig.CreateMapper());
 
-        services.AddSingleton<IAzureBlobStorageService, AzureBlobStorageService>();
+        services.AddScoped<IAzureBlobStorageService, AzureBlobStorageService>();
 
         services.AddControllers()
             .AddFluentValidation(x =>
             {
-                x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+                x.RegisterValidatorsFromAssemblyContaining<UserValidator>();
             });
 
         services.AddEndpointsApiExplorer();
@@ -64,6 +70,30 @@ public class Startup
             {
                 { securityScheme, new string[] { } }
             });
+        });
+
+        JwtConfig jwtConfig = Configuration.GetSection("JwtConfig").Get<JwtConfig>();
+        services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
+
+        services.AddAuthentication(x =>
+        {
+            x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        }).AddJwtBearer(x =>
+        {
+            x.RequireHttpsMetadata = true;
+            x.SaveToken = true;
+            x.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidIssuer = jwtConfig.Issuer,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtConfig.Secret)),
+                ValidAudience = jwtConfig.Audience,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.FromMinutes(2)
+            };
         });
     }
 

@@ -23,15 +23,11 @@ public class ApiResponse
     }
     public bool Success { get; set; }
     public string Message { get; set; }
-    public DateTime ServerDate { get; set; } = DateTime.UtcNow;
-    public Guid ReferenceNo { get; set; } = Guid.NewGuid();
 }
 
 
 public class ApiResponse<T>
 {
-    public DateTime ServerDate { get; set; } = DateTime.UtcNow;
-    public Guid ReferenceNo { get; set; } = Guid.NewGuid();
     public bool Success { get; set; }
     public string Message { get; set; }
     public T Response { get; set; }

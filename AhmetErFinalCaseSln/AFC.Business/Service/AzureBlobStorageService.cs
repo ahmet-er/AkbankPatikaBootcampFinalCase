@@ -13,16 +13,16 @@ public interface IAzureBlobStorageService
 public class AzureBlobStorageService : IAzureBlobStorageService
 {
     private readonly BlobServiceClient blobServiceClient;
-    private readonly string containerName;
-    public AzureBlobStorageService(IConfiguration configuration, string containerName)
+    //private readonly string containerName;
+    public AzureBlobStorageService(IConfiguration configuration) //, string containerName
     {
         blobServiceClient = new BlobServiceClient(configuration.GetConnectionString("AzureStorageConnection"));
-        this.containerName = containerName;
+        //this.containerName = containerName;
     }
 
     public async Task<ExpenseDocumentResponse> UploadFileAsync(IFormFile file)
     {
-        var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+        var containerClient = blobServiceClient.GetBlobContainerClient("expense_files"); // containerName
         var blobClient = containerClient.GetBlobClient($"{DateTime.Now.Ticks}_{file.FileName}");
 
         using (var stream = file.OpenReadStream())

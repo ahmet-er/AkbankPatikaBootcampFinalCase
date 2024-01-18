@@ -171,3 +171,7 @@ C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\obj\Debug\net8.0
 C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\obj\Debug\net8.0\AFC.Api.pdb
 C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\obj\Debug\net8.0\AFC.Api.genruntimeconfig.cache
 C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\obj\Debug\net8.0\ref\AFC.Api.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
