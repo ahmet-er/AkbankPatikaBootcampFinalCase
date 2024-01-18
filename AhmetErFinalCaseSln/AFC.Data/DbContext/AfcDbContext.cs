@@ -1,4 +1,5 @@
-﻿using AFC.Base.Enums;
+﻿using AFC.Base.Encryption;
+using AFC.Base.Enums;
 using AFC.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -24,7 +25,7 @@ public class AfcDbContext : DbContext
                         FirstName = "Admin",
                         LastName = "Admin1",
                         Email = "admin1@gmail.com",
-                        Password = "Admin1!",
+                        Password = $"{Md5Extension.GetHash("Admin1!")}",
                         Role = Role.Admin
                     },
                     new User
@@ -37,7 +38,7 @@ public class AfcDbContext : DbContext
                         FirstName = "Admin",
                         LastName = "Admin2",
                         Email = "admin2@gmail.com",
-                        Password = "Admin2!",
+                        Password = $"{Md5Extension.GetHash("Admin2!")}",
                         Role = Role.Admin
                     }
                 );

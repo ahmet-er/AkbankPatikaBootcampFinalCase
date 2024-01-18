@@ -1,4 +1,5 @@
-﻿using AFC.Base.Response;
+﻿using AFC.Base.Enums;
+using AFC.Base.Response;
 using AFC.Business.Cqrs;
 using AFC.Data;
 using AFC.Data.Entity;
@@ -57,8 +58,11 @@ public class UserQueryHandler :
             predicate.And(x => x.LastName.ToUpper().Contains(request.LastName.ToUpper()));
         if (string.IsNullOrEmpty(request.Email))
             predicate.And(x => x.Email.ToUpper().Contains(request.Email.ToUpper()));
-        if (string.IsNullOrEmpty(request.Role.ToString()))
-            predicate.And(x => x.Role.ToString().Contains(request.Role.ToString()));
+
+        if (Enum.TryParse<Role>(request.Role, true, out var parsedRole))
+            predicate.And(x => x.Role == parsedRole);
+        else
+            return new ApiResponse<List<UserResponse>>("Invalid role type.");
 
         var list = await dbContext.Set<User>()
             .Where(x => x.IsActive)

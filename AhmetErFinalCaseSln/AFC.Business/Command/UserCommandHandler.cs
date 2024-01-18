@@ -1,4 +1,5 @@
-﻿using AFC.Base.Response;
+﻿using AFC.Base.Encryption;
+using AFC.Base.Response;
 using AFC.Business.Cqrs;
 using AFC.Business.Helpers;
 using AFC.Data;
@@ -7,7 +8,7 @@ using AFC.Schema;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace AFC.Business.Command;
 
@@ -34,6 +35,8 @@ public class UserCommandHandler :
             return new ApiResponse<UserResponse>("UserName or Email is in use.");
 
         var entity = mapper.Map<UserRequest, User>(request.Model);
+
+        entity.Password = Md5Extension.GetHash(entity.Password);
 
         BaseEntitySetPropertyExtension.SetCreatedProperties(entity, httpContextAccessor);
 

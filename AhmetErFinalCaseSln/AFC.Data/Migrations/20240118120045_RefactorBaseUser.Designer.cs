@@ -4,6 +4,7 @@ using AFC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AFC.Data.Migrations
 {
     [DbContext(typeof(AfcDbContext))]
-    partial class AfcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240118120045_RefactorBaseUser")]
+    partial class RefactorBaseUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -293,12 +296,12 @@ namespace AFC.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateAt = new DateTime(2024, 1, 18, 15, 2, 14, 395, DateTimeKind.Local).AddTicks(6552),
+                            CreateAt = new DateTime(2024, 1, 18, 15, 0, 45, 283, DateTimeKind.Local).AddTicks(4021),
                             CreateBy = 1,
                             Email = "admin1@gmail.com",
                             FirstName = "Admin",
                             IsActive = false,
-                            LastActivityDate = new DateTime(2024, 1, 18, 15, 2, 14, 395, DateTimeKind.Local).AddTicks(6564),
+                            LastActivityDate = new DateTime(2024, 1, 18, 15, 0, 45, 283, DateTimeKind.Local).AddTicks(4034),
                             LastName = "Admin1",
                             Password = "944f48c8bfbb918750e6c243734d4b21",
                             PasswordRetryCount = 0,
@@ -309,14 +312,14 @@ namespace AFC.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateAt = new DateTime(2024, 1, 18, 15, 2, 14, 395, DateTimeKind.Local).AddTicks(6930),
+                            CreateAt = new DateTime(2024, 1, 18, 15, 0, 45, 283, DateTimeKind.Local).AddTicks(4342),
                             CreateBy = 1,
                             Email = "admin2@gmail.com",
                             FirstName = "Admin",
                             IsActive = false,
-                            LastActivityDate = new DateTime(2024, 1, 18, 15, 2, 14, 395, DateTimeKind.Local).AddTicks(6932),
-                            LastName = "Admin2",
-                            Password = "233bdb0dca0cfc12b4b01bcfbd553574",
+                            LastActivityDate = new DateTime(2024, 1, 18, 15, 0, 45, 283, DateTimeKind.Local).AddTicks(4343),
+                            LastName = "233bdb0dca0cfc12b4b01bcfbd553574",
+                            Password = "Admin2!",
                             PasswordRetryCount = 0,
                             Role = 0,
                             Status = 0,

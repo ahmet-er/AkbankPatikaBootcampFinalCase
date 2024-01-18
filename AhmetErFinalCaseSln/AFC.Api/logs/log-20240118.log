@@ -29,3 +29,23 @@ System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2
 2024-01-18 12:02:52.938 [FTL] Path=/api/Token || Method=POST || Exception=No service for type 'MediatR.IRequestHandler`2[AFC.Business.Cqrs.CreateTokenCommand,AFC.Base.Response.ApiResponse`1[AFC.Schema.TokenResponse]]' has been registered.
 2024-01-18 12:09:48.560 [INF] App server is starting.
 2024-01-18 12:12:33.732 [INF] App server is starting.
+2024-01-18 12:39:16.722 [INF] App server is starting.
+2024-01-18 12:39:18.396 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/User" for actions - AFC.Api.Controllers.UserController.Get (AFC.Api),AFC.Api.Controllers.UserController.Get (AFC.Api). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-01-18 12:39:42.113 [INF] App server is starting.
+2024-01-18 14:35:44.748 [INF] App server is starting.
+2024-01-18 14:41:50.752 [INF] App server is starting.
+2024-01-18 14:51:57.490 [INF] App server is starting.
+2024-01-18 14:58:30.352 [INF] App server is starting.
+2024-01-18 15:00:44.457 [INF] App server is starting.
+2024-01-18 15:01:03.901 [INF] App server is starting.
+2024-01-18 15:02:13.653 [INF] App server is starting.
+2024-01-18 15:02:20.346 [INF] App server is starting.
+2024-01-18 15:03:46.685 [INF] App server is starting.
+2024-01-18 15:16:45.609 [INF] App server is starting.

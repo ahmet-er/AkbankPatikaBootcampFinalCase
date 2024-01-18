@@ -12,6 +12,7 @@ public static class BaseEntitySetPropertyExtension
 
         entity.CreateBy = userId;
         entity.CreateAt = DateTime.Now;
+        entity.IsActive = true;
     }
 
     public static void SetModifiedProperties(this BaseEntity entity, IHttpContextAccessor httpContextAccessor)
@@ -20,11 +21,12 @@ public static class BaseEntitySetPropertyExtension
 
         entity.ModifiedBy = userId;
         entity.ModifiedAt = DateTime.Now;
+        entity.IsActive = true;
     }
 
     private static int GetUserIdFromClaims(IHttpContextAccessor httpContextAccessor)
     {
-        var userIdClaim = httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier);
+        var userIdClaim = httpContextAccessor.HttpContext?.User.FindFirst("Id");
 
         if (userIdClaim is not null && int.TryParse(userIdClaim.Value, out var userId))
             return userId;
