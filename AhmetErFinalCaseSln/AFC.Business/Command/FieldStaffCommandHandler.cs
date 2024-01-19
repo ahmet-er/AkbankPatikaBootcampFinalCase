@@ -39,6 +39,8 @@ public class FieldStaffCommandHandler :
 
         BaseEntitySetPropertyExtension.SetCreatedProperties(entity, httpContextAccessor);
 
+        entity.IBAN = request.Model.IBAN.ToUpper().Replace(" ", "");
+
         var entityResult = await dbContext.AddAsync(entity, cancellationToken);
         await dbContext.SaveChangesAsync(cancellationToken);
 

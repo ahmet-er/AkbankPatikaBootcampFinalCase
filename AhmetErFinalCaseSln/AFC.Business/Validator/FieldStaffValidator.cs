@@ -13,7 +13,29 @@ public class FieldStaffValidator : AbstractValidator<FieldStaffRequest>
 
         RuleFor(x => x.IBAN)
             .NotEmpty().WithMessage("IBAN cannot be empty.")
-            .Length(26).WithMessage("IBAN must be exactly 26 characters long.")
-            .SetValidator(new TurkeyIBANValidator()).WithMessage("Invalid Turkish IBAN.");
+            .Custom((value, context) =>
+            {
+                var cleanIBAN = value?.Replace(" ", "");
+
+                if (!BeAValidTurkeyIBAN(cleanIBAN))
+                    context.AddFailure("Invalid Turkish IBAN");
+            });
+    }
+
+    /// <summary>
+    /// IBAN'ın Türkiye standatlarına uygunluğunu kontrol eder.
+    /// </summary>
+    private bool BeAValidTurkeyIBAN(string value)
+    {
+        if (string.IsNullOrEmpty(value) || value.Length is not 26 || !value.StartsWith("TR"))
+            return false;
+
+        for (int i = 2; i < value.Length; i++)
+        {
+            if (!char.IsDigit(value[i]))
+                return false;
+        }
+
+        return true;
     }
 }

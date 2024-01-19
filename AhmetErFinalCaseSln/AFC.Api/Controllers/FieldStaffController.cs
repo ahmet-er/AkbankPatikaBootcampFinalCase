@@ -2,6 +2,7 @@
 using AFC.Business.Cqrs;
 using AFC.Schema;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
@@ -18,6 +19,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<FieldStaffResponse>>> Get()
         {
             var operation = new GetAllFieldStaffQuery();
@@ -26,6 +28,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("id")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<FieldStaffResponse>> Get(int id)
         {
             var operation = new GetFieldStaffByIdQuery(id);
@@ -34,6 +37,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("by-parameters")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<FieldStaffResponse>>> GetByParameter(
             [FromQuery] int? UserId,
             [FromQuery] string? IBAN)
@@ -44,6 +48,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse<FieldStaffResponse>> Post([FromBody] FieldStaffRequest fieldStaff)
         {
             var operation = new CreateFieldStaffCommand(fieldStaff);
@@ -52,6 +57,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPut("id")]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse> Put(int id, [FromBody] FieldStaffRequest fieldStaff)
         {
             var operation = new UpdateFieldStaffCommand(id, fieldStaff);
@@ -60,6 +66,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpDelete("id")]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse> Delete(int id)
         {
             var operation = new DeleteFieldStaffCommand(id);

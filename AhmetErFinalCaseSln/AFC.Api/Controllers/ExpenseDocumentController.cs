@@ -2,6 +2,7 @@
 using AFC.Business.Cqrs;
 using AFC.Schema;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
@@ -18,6 +19,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<ExpenseDocumentResponse>>> Get()
         {
             var operation = new GetAllExpenseDocumentQuery();
@@ -26,6 +28,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("id")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<ExpenseDocumentResponse>> Get(int id)
         {
             var operation = new GetExpenseDocumentByIdQuery(id);
@@ -34,6 +37,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("by-parameter")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<ExpenseDocumentResponse>>> GetByParameter(
             [FromQuery] int? ExpenseRequestId,
             [FromQuery] string? FileType,
@@ -45,6 +49,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<ExpenseDocumentResponse>> Post([FromQuery] int ExpenseRequestId, IFormFile FormFile)
         {
             var operation = new CreateExpenseDocumentCommand(ExpenseRequestId, FormFile);
@@ -53,6 +58,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPut("id")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<ExpenseDocumentResponse>> Put(int id, [FromBody] ExpenseDocumentRequest expenseDocument)
         {
             var operation = new UpdateExpenseDocumentCommand(id, expenseDocument);
@@ -61,6 +67,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpDelete("id")]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse> Delete(int id)
         {
             var operation = new DeleteExpenseDocumentCommand(id);

@@ -2,6 +2,7 @@
 using AFC.Business.Cqrs;
 using AFC.Schema;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
@@ -18,6 +19,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<ExpenseRequestResponse>>> Get()
         {
             var operation = new GetAllExpenseRequestQuery();
@@ -26,6 +28,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("id")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<ExpenseRequestResponse>> Get(int id)
         {
             var operation = new GetExpenseRequestByIdQuery(id);
@@ -34,6 +37,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("by-parameter")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<ExpenseRequestResponse>>> GetByParameter(
             [FromQuery] int? FieldStaffId,
             [FromQuery] int? PaymentCategoryId,
@@ -49,6 +53,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "FieldStaff")]
         public async Task<ApiResponse<ExpenseRequestResponse>> Post([FromBody] ExpenseRequestByFieldStaffRequest expenseRequest)
         {
             var operation = new CreateExpenseRequestCommand(expenseRequest);
@@ -57,6 +62,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPut("by-fieldStaff")]
+        [Authorize(Roles = "FieldStaff")]
         public async Task<ApiResponse> PutByFieldStaff(int id, [FromBody] ExpenseRequestByFieldStaffRequest expenseRequest)
         {
             var operation = new UpdateExpenseRequestByFieldStaffCommand(id, expenseRequest);
@@ -65,6 +71,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPut("by-admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse> PutByAdmin(int id, [FromBody] ExpenseRequestByAdminRequest expenseRequest)
         {
             var operation = new UpdateExpenseRequestByAdminCommand(id, expenseRequest);
@@ -73,6 +80,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpDelete("id")]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse> Delete(int id)
         {
             var operation = new DeleteExpenseRequestCommand(id);

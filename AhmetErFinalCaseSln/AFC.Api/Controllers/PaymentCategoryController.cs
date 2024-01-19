@@ -2,6 +2,7 @@
 using AFC.Business.Cqrs;
 using AFC.Schema;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
@@ -18,6 +19,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<PaymentCategoryResponse>>> Get()
         {
             var operation = new GetAllPaymentCategoryQuery();
@@ -26,6 +28,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("id")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<PaymentCategoryResponse>> Get(int id)
         {
             var operation = new GetPaymentCategoryById(id);
@@ -34,6 +37,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpGet("by-parameters")]
+        [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<List<PaymentCategoryResponse>>> GetByParameter(
             [FromQuery] string? Name)
         {
@@ -43,6 +47,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse<PaymentCategoryResponse>> Post([FromBody] PaymentCategoryRequest paymentRequest)
         {
             var operation = new CreatePaymentCategoryCommand(paymentRequest);
@@ -51,6 +56,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpPut("id")]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse> Put(int id, [FromBody] PaymentCategoryRequest paymentRequest)
         {
             var operation = new UpdatePaymentCategoryCommand(id, paymentRequest);
@@ -59,6 +65,7 @@ namespace AFC.Api.Controllers
         }
 
         [HttpDelete("id")]
+        [Authorize(Roles = "Admin")]
         public async Task<ApiResponse> Delete(int id)
         {
             var operation = new DeletePaymentCategoryCommand(id);
