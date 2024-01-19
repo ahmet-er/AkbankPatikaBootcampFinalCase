@@ -7,6 +7,8 @@ using AFC.Business.Validator;
 using AFC.Data;
 using AutoMapper;
 using FluentValidation.AspNetCore;
+using Hangfire;
+using Hangfire.SqlServer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -95,6 +97,15 @@ public class Startup
                 ClockSkew = TimeSpan.FromMinutes(2)
             };
         });
+
+        services.AddHangfire(configuration => configuration
+        .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+        .UseSimpleAssemblyNameTypeSerializer()
+        .UseRecommendedSerializerSettings()
+        .UseSqlServerStorage(Configuration.GetConnectionString("HangfireSqlConnection"), new SqlServerStorageOptions()));
+        services.AddHangfireServer();
+
+        services.AddScoped<INotificationService, NotificationService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -109,6 +120,8 @@ public class Startup
         app.UseMiddleware<ErrorHandlerMiddleware>();
 
         app.UseHttpsRedirection();
+
+        app.UseHangfireDashboard();
 
         app.UseAuthentication();
         app.UseRouting();

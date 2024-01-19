@@ -360,3 +360,2178 @@ Error Number:2628,State:1,Class:16
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 2024-01-19 10:21:35.411 [INF] App server is starting.
+2024-01-19 11:20:57.139 [INF] App server is starting.
+2024-01-19 11:38:36.198 [INF] App server is starting.
+2024-01-19 12:25:07.437 [INF] App server is starting.
+2024-01-19 12:27:49.498 [INF] App server is starting.
+2024-01-19 12:28:17.472 [INF] App server is starting.
+2024-01-19 12:30:09.104 [INF] App server is starting.
+2024-01-19 13:30:45.435 [INF] App server is starting.
+2024-01-19 13:32:26.047 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFC.Business.Command.ExpensePaymentCommandHandler.Handle(CreateExpensePaymentCommand request, CancellationToken cancellationToken) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Business\Command\ExpensePaymentCommandHandler.cs:line 43
+   at AFC.Api.Controllers.ExpensePaymentController.Payment(ExpensePaymentRequest expensePayment) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Controllers\ExpensePaymentController.cs:line 26
+   at lambda_method184(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AFC.Api.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Middleware\ErrorHandlerMiddleware.cs:line 21
+2024-01-19 13:32:26.085 [FTL] Path=/api/expense-payment || Method=POST || Exception=Object reference not set to an instance of an object.
+2024-01-19 13:32:55.229 [ERR] UnexpectedError
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFC.Business.Command.ExpensePaymentCommandHandler.Handle(CreateExpensePaymentCommand request, CancellationToken cancellationToken) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Business\Command\ExpensePaymentCommandHandler.cs:line 43
+   at AFC.Api.Controllers.ExpensePaymentController.Payment(ExpensePaymentRequest expensePayment) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Controllers\ExpensePaymentController.cs:line 26
+   at lambda_method184(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AFC.Api.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Middleware\ErrorHandlerMiddleware.cs:line 21
+2024-01-19 13:32:55.230 [FTL] Path=/api/expense-payment || Method=POST || Exception=Object reference not set to an instance of an object.
+2024-01-19 13:36:35.658 [INF] App server is starting.
+2024-01-19 13:37:22.712 [INF] App server is starting.
+2024-01-19 15:26:30.850 [INF] App server is starting.
+2024-01-19 15:26:32.443 [INF] Start installing Hangfire SQL objects...
+2024-01-19 15:26:42.935 [WRN] An exception occurred while trying to perform the migration. Retrying...
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:87066de9-dcbf-48e5-abdf-a3d546cf497e
+Error Number:4060,State:1,Class:11
+2024-01-19 15:26:43.066 [WRN] An exception occurred while trying to perform the migration. Retrying...
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:87066de9-dcbf-48e5-abdf-a3d546cf497e
+Error Number:4060,State:1,Class:11
+2024-01-19 15:26:43.067 [WRN] An exception occurred while trying to perform the migration.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:87066de9-dcbf-48e5-abdf-a3d546cf497e
+Error Number:4060,State:1,Class:11
+2024-01-19 15:26:43.067 [WRN] Was unable to perform the Hangfire schema migration due to an exception. Ignore this message unless you've just installed or upgraded Hangfire.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:87066de9-dcbf-48e5-abdf-a3d546cf497e
+Error Number:4060,State:1,Class:11
+2024-01-19 15:26:43.069 [ERR] Was unable to use the TryAutoDetectSchemaDependentOptions option due to an exception.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:87066de9-dcbf-48e5-abdf-a3d546cf497e
+Error Number:4060,State:1,Class:11
+2024-01-19 15:26:43.559 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-19 15:26:43.560 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-19 15:26:43.560 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-19 15:26:43.589 [DBG] Execution loop BackgroundServerProcess:db1949ba has started in 8,8221 ms
+2024-01-19 15:26:43.624 [VRB] Server desktop-j0d1m11:34672:a2b43bb9 is announcing itself...
+2024-01-19 15:26:43.629 [ERR] Execution BackgroundServerProcess is in the Failed state now due to an exception, execution will be retried no more than in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:87066de9-dcbf-48e5-abdf-a3d546cf497e
+Error Number:4060,State:1,Class:11
+2024-01-19 15:26:43.631 [DBG] Execution loop BackgroundServerProcess:db1949ba caught an exception and will be retried in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:87066de9-dcbf-48e5-abdf-a3d546cf497e
+Error Number:4060,State:1,Class:11
+2024-01-19 15:26:43.632 [DBG] Execution loop BackgroundServerProcess:db1949ba will be retried in 00:00:15...
+2024-01-19 15:26:58.642 [VRB] Server desktop-j0d1m11:34672:7adea829 is announcing itself...
+2024-01-19 15:27:08.656 [ERR] Execution BackgroundServerProcess is still in the Failed state for 00:00:25.0254516 due to an exception, will be retried no more than in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:81e63824-3e95-496d-a9cf-8424e5d9226f
+Error Number:4060,State:1,Class:11
+2024-01-19 15:27:08.658 [DBG] Execution loop BackgroundServerProcess:db1949ba caught an exception and will be retried in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:81e63824-3e95-496d-a9cf-8424e5d9226f
+Error Number:4060,State:1,Class:11
+2024-01-19 15:27:08.660 [DBG] Execution loop BackgroundServerProcess:db1949ba will be retried in 00:00:15...
+2024-01-19 15:27:23.666 [VRB] Server desktop-j0d1m11:34672:5b8b661a is announcing itself...
+2024-01-19 15:27:33.690 [ERR] Execution BackgroundServerProcess is still in the Failed state for 00:00:50.0593907 due to an exception, will be retried no more than in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:6d6c5e8b-6b4f-4b22-92cc-0d4349deca1b
+Error Number:4060,State:1,Class:11
+2024-01-19 15:27:33.692 [DBG] Execution loop BackgroundServerProcess:db1949ba caught an exception and will be retried in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:6d6c5e8b-6b4f-4b22-92cc-0d4349deca1b
+Error Number:4060,State:1,Class:11
+2024-01-19 15:27:33.695 [DBG] Execution loop BackgroundServerProcess:db1949ba will be retried in 00:00:15...
+2024-01-19 15:27:48.705 [VRB] Server desktop-j0d1m11:34672:be9a958d is announcing itself...
+2024-01-19 15:27:48.706 [ERR] Execution BackgroundServerProcess is still in the Failed state for 00:01:05.0754448 due to an exception, will be retried no more than in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:6d6c5e8b-6b4f-4b22-92cc-0d4349deca1b
+Error Number:4060,State:1,Class:11
+2024-01-19 15:27:48.707 [DBG] Execution loop BackgroundServerProcess:db1949ba caught an exception and will be retried in 00:00:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "afc_hangfire" requested by the login. The login failed.
+Login failed for user 'DESKTOP-J0D1M11\Ahmet'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:6d6c5e8b-6b4f-4b22-92cc-0d4349deca1b
+Error Number:4060,State:1,Class:11
+2024-01-19 15:27:48.707 [DBG] Execution loop BackgroundServerProcess:db1949ba will be retried in 00:00:15...
+2024-01-19 15:29:02.288 [INF] App server is starting.
+2024-01-19 15:29:03.108 [INF] Start installing Hangfire SQL objects...
+2024-01-19 15:29:03.916 [INF] Hangfire SQL objects installed.
+2024-01-19 15:29:04.219 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-19 15:29:04.220 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-19 15:29:04.220 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-19 15:29:04.250 [DBG] Execution loop BackgroundServerProcess:064a7a6e has started in 13,0303 ms
+2024-01-19 15:29:04.252 [VRB] Server desktop-j0d1m11:10276:3f87c5af is announcing itself...
+2024-01-19 15:29:04.429 [INF] Server desktop-j0d1m11:10276:3f87c5af successfully announced in 176,6469 ms
+2024-01-19 15:29:04.436 [INF] Server desktop-j0d1m11:10276:3f87c5af is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-19 15:29:04.436 [DBG] Execution loop ServerHeartbeatProcess:489ae90a has started in 5,661 ms
+2024-01-19 15:29:04.440 [DBG] Execution loop ServerWatchdog:82f149e0 has started in 3,9281 ms
+2024-01-19 15:29:04.444 [DBG] Execution loop ServerJobCancellationWatcher:2a0515ef has started in 8,1235 ms
+2024-01-19 15:29:04.448 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:04.448 [VRB] Server desktop-j0d1m11:10276:3f87c5af waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:29:04.450 [DBG] Execution loop ExpirationManager:6c2f0f4a has started in 9,3962 ms
+2024-01-19 15:29:04.456 [DBG] Execution loop CountersAggregator:b902b842 has started in 11,2504 ms
+2024-01-19 15:29:04.458 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-01-19 15:29:04.458 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:04.460 [DBG] Execution loop SqlServerHeartbeatProcess:9d0aac80 has started in 9,9057 ms
+2024-01-19 15:29:04.462 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 15:29:04.466 [DBG] Execution loop Worker:f776067f has started in 9,4591 ms
+2024-01-19 15:29:04.469 [DBG] Execution loop Worker:feb9979e has started in 11,9588 ms
+2024-01-19 15:29:04.472 [DBG] Execution loop Worker:6ea550fc has started in 16,0222 ms
+2024-01-19 15:29:04.477 [DBG] Execution loop Worker:e19a0e43 has started in 20,8031 ms
+2024-01-19 15:29:04.483 [DBG] Execution loop Worker:8a52a77a has started in 25,1143 ms
+2024-01-19 15:29:04.518 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 15:29:04.518 [DBG] Execution loop Worker:4ce46ee7 has started in 62,1392 ms
+2024-01-19 15:29:04.518 [DBG] Execution loop Worker:8abb5b57 has started in 62,1392 ms
+2024-01-19 15:29:04.524 [DBG] Execution loop Worker:35f4aba7 has started in 67,9684 ms
+2024-01-19 15:29:04.528 [DBG] Execution loop Worker:4ac69b01 has started in 71,7931 ms
+2024-01-19 15:29:04.533 [DBG] Execution loop Worker:2d77101c has started in 76,6599 ms
+2024-01-19 15:29:04.538 [DBG] Execution loop Worker:b9f02292 has started in 81,4386 ms
+2024-01-19 15:29:04.543 [DBG] Execution loop Worker:ab9b5e92 has started in 86,7227 ms
+2024-01-19 15:29:04.547 [DBG] Execution loop Worker:902452e9 has started in 90,8611 ms
+2024-01-19 15:29:04.552 [DBG] Execution loop Worker:52561326 has started in 95,7914 ms
+2024-01-19 15:29:04.558 [DBG] Execution loop Worker:78b0b00f has started in 101,6837 ms
+2024-01-19 15:29:04.562 [DBG] Execution loop Worker:f53a8118 has started in 105,1866 ms
+2024-01-19 15:29:04.566 [DBG] Execution loop Worker:1e5d1627 has started in 109,906 ms
+2024-01-19 15:29:04.573 [DBG] Execution loop Worker:63174e70 has started in 116,3631 ms
+2024-01-19 15:29:04.578 [DBG] Execution loop Worker:c595f629 has started in 121,4822 ms
+2024-01-19 15:29:04.581 [DBG] Execution loop Worker:8c444a28 has started in 124,8378 ms
+2024-01-19 15:29:04.587 [DBG] Execution loop DelayedJobScheduler:b6bc9db6 has started in 9,814 ms
+2024-01-19 15:29:04.587 [INF] Server desktop-j0d1m11:10276:3f87c5af all the dispatchers started
+2024-01-19 15:29:04.592 [DBG] Execution loop RecurringJobScheduler:193faa7f has started in 9,8651 ms
+2024-01-19 15:29:04.607 [VRB] Outdated records removed from the 'AggregatedCounter' table.
+2024-01-19 15:29:04.608 [DBG] Removing outdated records from the 'Job' table...
+2024-01-19 15:29:04.618 [VRB] Outdated records removed from the 'Job' table.
+2024-01-19 15:29:04.618 [DBG] Removing outdated records from the 'List' table...
+2024-01-19 15:29:04.628 [VRB] Outdated records removed from the 'List' table.
+2024-01-19 15:29:04.629 [DBG] Removing outdated records from the 'Set' table...
+2024-01-19 15:29:04.636 [VRB] Outdated records removed from the 'Set' table.
+2024-01-19 15:29:04.640 [DBG] Removing outdated records from the 'Hash' table...
+2024-01-19 15:29:04.642 [VRB] Outdated records removed from the 'Hash' table.
+2024-01-19 15:29:09.471 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:09.471 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:14.471 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:14.471 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:19.484 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:19.484 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:24.488 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:24.489 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:29.496 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:29.496 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:34.478 [DBG] Server desktop-j0d1m11:10276:3f87c5af heartbeat successfully sent
+2024-01-19 15:29:34.478 [VRB] Server desktop-j0d1m11:10276:3f87c5af waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:29:34.509 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:34.509 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:39.518 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:39.518 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:44.531 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:44.531 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:49.557 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:49.557 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:54.569 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:54.569 [VRB] No newly aborted jobs found.
+2024-01-19 15:29:59.584 [VRB] Checking for aborted jobs...
+2024-01-19 15:29:59.585 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:04.513 [DBG] Server desktop-j0d1m11:10276:3f87c5af heartbeat successfully sent
+2024-01-19 15:30:04.513 [VRB] Server desktop-j0d1m11:10276:3f87c5af waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:30:04.595 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:04.595 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:09.602 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:09.602 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:14.606 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:14.607 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:19.618 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:19.618 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:24.632 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:24.632 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:29.640 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:29.640 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:34.521 [DBG] Server desktop-j0d1m11:10276:3f87c5af heartbeat successfully sent
+2024-01-19 15:30:34.521 [VRB] Server desktop-j0d1m11:10276:3f87c5af waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:30:34.645 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:34.645 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:39.655 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:39.655 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:44.665 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:44.665 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:49.674 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:49.675 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:54.687 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:54.687 [VRB] No newly aborted jobs found.
+2024-01-19 15:30:59.702 [VRB] Checking for aborted jobs...
+2024-01-19 15:30:59.702 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:04.528 [DBG] Server desktop-j0d1m11:10276:3f87c5af heartbeat successfully sent
+2024-01-19 15:31:04.528 [VRB] Server desktop-j0d1m11:10276:3f87c5af waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:31:04.713 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:04.714 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:09.729 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:09.729 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:14.735 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:14.735 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:19.751 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:19.751 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:24.757 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:24.757 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:29.764 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:29.764 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:34.532 [DBG] Server desktop-j0d1m11:10276:3f87c5af heartbeat successfully sent
+2024-01-19 15:31:34.532 [VRB] Server desktop-j0d1m11:10276:3f87c5af waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:31:34.779 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:34.779 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:39.790 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:39.790 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:44.802 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:44.802 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:49.809 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:49.809 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:54.822 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:54.823 [VRB] No newly aborted jobs found.
+2024-01-19 15:31:59.823 [VRB] Checking for aborted jobs...
+2024-01-19 15:31:59.823 [VRB] No newly aborted jobs found.
+2024-01-19 15:32:04.555 [DBG] Server desktop-j0d1m11:10276:3f87c5af heartbeat successfully sent
+2024-01-19 15:32:04.555 [VRB] Server desktop-j0d1m11:10276:3f87c5af waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:32:04.827 [VRB] Checking for aborted jobs...
+2024-01-19 15:32:04.828 [VRB] No newly aborted jobs found.
+2024-01-19 15:32:09.829 [VRB] Checking for aborted jobs...
+2024-01-19 15:32:09.830 [VRB] No newly aborted jobs found.
+2024-01-19 15:39:35.221 [INF] App server is starting.
+2024-01-19 15:39:36.172 [INF] Start installing Hangfire SQL objects...
+2024-01-19 15:39:36.693 [INF] Hangfire SQL objects installed.
+2024-01-19 15:39:37.012 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-19 15:39:37.013 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-19 15:39:37.013 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-19 15:39:37.049 [DBG] Execution loop BackgroundServerProcess:594ab586 has started in 16,6215 ms
+2024-01-19 15:39:37.053 [VRB] Server desktop-j0d1m11:23052:37721ef4 is announcing itself...
+2024-01-19 15:39:37.188 [INF] Server desktop-j0d1m11:23052:37721ef4 successfully announced in 134,8491 ms
+2024-01-19 15:39:37.194 [DBG] Execution loop ServerHeartbeatProcess:238158c5 has started in 5,3096 ms
+2024-01-19 15:39:37.194 [INF] Server desktop-j0d1m11:23052:37721ef4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-19 15:39:37.199 [DBG] Execution loop ServerWatchdog:db7100a3 has started in 4,6928 ms
+2024-01-19 15:39:37.201 [DBG] Execution loop ServerJobCancellationWatcher:d5a2f97f has started in 6,3589 ms
+2024-01-19 15:39:37.203 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:39:37.203 [VRB] Checking for aborted jobs...
+2024-01-19 15:39:37.205 [DBG] Execution loop ExpirationManager:426ebb11 has started in 6,0459 ms
+2024-01-19 15:39:37.207 [VRB] No newly aborted jobs found.
+2024-01-19 15:39:37.209 [DBG] Execution loop CountersAggregator:6e41f24b has started in 7,1489 ms
+2024-01-19 15:39:37.210 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 15:39:37.213 [DBG] Execution loop SqlServerHeartbeatProcess:cb52f762 has started in 7,1283 ms
+2024-01-19 15:39:37.214 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-01-19 15:39:37.216 [DBG] Execution loop Worker:661b9368 has started in 6,9016 ms
+2024-01-19 15:39:37.220 [INF] 1 servers were removed due to timeout
+2024-01-19 15:39:37.220 [DBG] Execution loop Worker:cf1db8a4 has started in 10,7812 ms
+2024-01-19 15:39:37.225 [DBG] Execution loop Worker:55c96f13 has started in 16,1503 ms
+2024-01-19 15:39:37.228 [DBG] Execution loop Worker:41767961 has started in 18,9551 ms
+2024-01-19 15:39:37.233 [DBG] Execution loop Worker:fa173ffb has started in 24,1088 ms
+2024-01-19 15:39:37.237 [DBG] Execution loop Worker:c2b059ef has started in 27,3789 ms
+2024-01-19 15:39:37.241 [DBG] Execution loop Worker:126f8f4c has started in 32,3686 ms
+2024-01-19 15:39:37.246 [DBG] Execution loop Worker:b9868c18 has started in 36,5158 ms
+2024-01-19 15:39:37.248 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 15:39:37.251 [DBG] Execution loop Worker:1ce77fa8 has started in 41,9494 ms
+2024-01-19 15:39:37.264 [DBG] Execution loop Worker:286daceb has started in 55,0006 ms
+2024-01-19 15:39:37.268 [DBG] Execution loop Worker:c30cc501 has started in 59,3328 ms
+2024-01-19 15:39:37.274 [DBG] Execution loop Worker:ce1e94fa has started in 65,4228 ms
+2024-01-19 15:39:37.277 [DBG] Execution loop Worker:ea48d307 has started in 68,0789 ms
+2024-01-19 15:39:37.283 [DBG] Execution loop Worker:5ebb6cb2 has started in 74,0654 ms
+2024-01-19 15:39:37.287 [DBG] Execution loop Worker:ff200ae1 has started in 78,4035 ms
+2024-01-19 15:39:37.295 [DBG] Execution loop Worker:3934162a has started in 85,9868 ms
+2024-01-19 15:39:37.298 [DBG] Execution loop Worker:45a75834 has started in 89,1874 ms
+2024-01-19 15:39:37.302 [DBG] Execution loop Worker:ac8a9ef8 has started in 93,5002 ms
+2024-01-19 15:39:37.307 [DBG] Execution loop Worker:047dfb88 has started in 97,6618 ms
+2024-01-19 15:39:37.311 [DBG] Execution loop Worker:7b9e1fa1 has started in 101,5987 ms
+2024-01-19 15:39:37.314 [INF] Server desktop-j0d1m11:23052:37721ef4 all the dispatchers started
+2024-01-19 15:39:37.315 [DBG] Execution loop DelayedJobScheduler:e3500eb8 has started in 7,973 ms
+2024-01-19 15:39:37.319 [DBG] Execution loop RecurringJobScheduler:69b842d9 has started in 8,7155 ms
+2024-01-19 15:39:37.326 [VRB] Outdated records removed from the 'AggregatedCounter' table.
+2024-01-19 15:39:37.330 [DBG] Removing outdated records from the 'Job' table...
+2024-01-19 15:39:37.347 [VRB] Outdated records removed from the 'Job' table.
+2024-01-19 15:39:37.347 [DBG] Removing outdated records from the 'List' table...
+2024-01-19 15:39:37.352 [VRB] Outdated records removed from the 'List' table.
+2024-01-19 15:39:37.352 [DBG] Removing outdated records from the 'Set' table...
+2024-01-19 15:39:37.356 [VRB] Outdated records removed from the 'Set' table.
+2024-01-19 15:39:37.356 [DBG] Removing outdated records from the 'Hash' table...
+2024-01-19 15:39:37.360 [VRB] Outdated records removed from the 'Hash' table.
+2024-01-19 15:39:42.221 [VRB] Checking for aborted jobs...
+2024-01-19 15:39:42.222 [VRB] No newly aborted jobs found.
+2024-01-19 15:39:47.233 [VRB] Checking for aborted jobs...
+2024-01-19 15:39:47.233 [VRB] No newly aborted jobs found.
+2024-01-19 15:39:52.248 [VRB] Checking for aborted jobs...
+2024-01-19 15:39:52.248 [VRB] No newly aborted jobs found.
+2024-01-19 15:39:57.250 [VRB] Checking for aborted jobs...
+2024-01-19 15:39:57.250 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:02.264 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:02.265 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:07.236 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:40:07.236 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:40:07.270 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:07.270 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:12.287 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:12.287 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:17.292 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:17.292 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:22.306 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:22.306 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:27.316 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:27.316 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:32.321 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:32.321 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:37.245 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:40:37.246 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:40:37.335 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:37.335 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:42.336 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:42.336 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:47.351 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:47.351 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:52.356 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:52.356 [VRB] No newly aborted jobs found.
+2024-01-19 15:40:57.359 [VRB] Checking for aborted jobs...
+2024-01-19 15:40:57.360 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:02.363 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:02.363 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:07.250 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:41:07.250 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:41:07.373 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:07.374 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:12.392 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:12.392 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:17.396 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:17.397 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:22.405 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:22.405 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:27.416 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:27.416 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:32.421 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:32.421 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:37.269 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:41:37.269 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:41:37.435 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:37.435 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:42.440 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:42.440 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:47.450 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:47.451 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:52.456 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:52.457 [VRB] No newly aborted jobs found.
+2024-01-19 15:41:57.459 [VRB] Checking for aborted jobs...
+2024-01-19 15:41:57.459 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:02.464 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:02.464 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:07.296 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:42:07.296 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:42:07.467 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:07.468 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:07.728 [DBG] 1 scheduled job(s) processed by scheduler.
+2024-01-19 15:42:12.480 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:12.480 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:17.497 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:17.498 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:22.501 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:22.501 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:27.517 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:27.517 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:32.530 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:32.530 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:37.311 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:42:37.311 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:42:37.539 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:37.540 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:42.541 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:42.541 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:47.553 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:47.553 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:52.554 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:52.554 [VRB] No newly aborted jobs found.
+2024-01-19 15:42:57.561 [VRB] Checking for aborted jobs...
+2024-01-19 15:42:57.562 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:02.567 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:02.567 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:07.326 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:43:07.326 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:43:07.581 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:07.581 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:12.583 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:12.583 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:17.592 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:17.593 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:22.606 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:22.607 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:27.615 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:27.615 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:32.627 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:32.627 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:37.351 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:43:37.351 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:43:37.636 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:37.636 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:42.642 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:42.642 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:47.654 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:47.654 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:52.664 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:52.664 [VRB] No newly aborted jobs found.
+2024-01-19 15:43:57.672 [VRB] Checking for aborted jobs...
+2024-01-19 15:43:57.672 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:02.676 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:02.676 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:07.360 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:44:07.360 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:44:07.683 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:07.684 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:12.694 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:12.694 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:17.707 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:17.707 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:22.709 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:22.709 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:27.712 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:27.712 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:32.725 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:32.725 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:37.261 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 15:44:37.287 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 15:44:37.374 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:44:37.374 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:44:37.727 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:37.728 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:42.739 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:42.739 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:47.741 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:47.741 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:52.757 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:52.757 [VRB] No newly aborted jobs found.
+2024-01-19 15:44:57.760 [VRB] Checking for aborted jobs...
+2024-01-19 15:44:57.760 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:02.762 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:02.762 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:07.391 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:45:07.391 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:45:07.770 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:07.770 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:12.772 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:12.772 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:17.781 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:17.781 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:22.782 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:22.782 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:27.792 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:27.793 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:32.800 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:32.800 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:37.399 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:45:37.399 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:45:37.802 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:37.802 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:42.807 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:42.808 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:47.811 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:47.811 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:52.821 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:52.821 [VRB] No newly aborted jobs found.
+2024-01-19 15:45:57.830 [VRB] Checking for aborted jobs...
+2024-01-19 15:45:57.830 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:02.837 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:02.837 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:07.413 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:46:07.413 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:46:07.842 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:07.842 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:12.852 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:12.852 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:17.858 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:17.858 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:22.860 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:22.861 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:27.874 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:27.874 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:32.877 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:32.877 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:37.431 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:46:37.431 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:46:37.886 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:37.886 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:42.887 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:42.887 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:47.890 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:47.890 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:52.891 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:52.891 [VRB] No newly aborted jobs found.
+2024-01-19 15:46:57.891 [VRB] Checking for aborted jobs...
+2024-01-19 15:46:57.891 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:02.891 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:02.892 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:07.446 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:47:07.446 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:47:07.904 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:07.905 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:12.907 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:12.907 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:17.908 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:17.908 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:22.918 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:22.918 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:27.928 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:27.928 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:32.935 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:32.935 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:37.461 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:47:37.461 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:47:37.938 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:37.938 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:42.947 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:42.947 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:47.952 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:47.952 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:52.959 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:52.959 [VRB] No newly aborted jobs found.
+2024-01-19 15:47:57.960 [VRB] Checking for aborted jobs...
+2024-01-19 15:47:57.961 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:02.966 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:02.967 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:07.486 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:48:07.486 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:48:07.970 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:07.970 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:12.982 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:12.982 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:17.995 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:17.995 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:23.005 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:23.005 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:28.014 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:28.014 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:33.016 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:33.016 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:37.504 [DBG] Server desktop-j0d1m11:23052:37721ef4 heartbeat successfully sent
+2024-01-19 15:48:37.505 [VRB] Server desktop-j0d1m11:23052:37721ef4 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 15:48:38.029 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:38.029 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:43.038 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:43.038 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:48.041 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:48.041 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:53.050 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:53.050 [VRB] No newly aborted jobs found.
+2024-01-19 15:48:58.053 [VRB] Checking for aborted jobs...
+2024-01-19 15:48:58.053 [VRB] No newly aborted jobs found.
+2024-01-19 15:49:03.057 [VRB] Checking for aborted jobs...
+2024-01-19 15:49:03.057 [VRB] No newly aborted jobs found.
+2024-01-19 16:42:51.107 [INF] App server is starting.
+2024-01-19 16:42:52.154 [INF] Start installing Hangfire SQL objects...
+2024-01-19 16:42:52.889 [INF] Hangfire SQL objects installed.
+2024-01-19 16:42:53.230 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-19 16:42:53.230 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-19 16:42:53.230 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-19 16:42:53.259 [DBG] Execution loop BackgroundServerProcess:f52bc978 has started in 6,9969 ms
+2024-01-19 16:42:53.267 [VRB] Server desktop-j0d1m11:15752:fd66257b is announcing itself...
+2024-01-19 16:42:53.415 [INF] Server desktop-j0d1m11:15752:fd66257b successfully announced in 147,8385 ms
+2024-01-19 16:42:53.419 [INF] Server desktop-j0d1m11:15752:fd66257b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-19 16:42:53.422 [DBG] Execution loop ServerHeartbeatProcess:d8026403 has started in 6,1178 ms
+2024-01-19 16:42:53.427 [DBG] Execution loop ServerWatchdog:63116409 has started in 7,5404 ms
+2024-01-19 16:42:53.431 [DBG] Execution loop ServerJobCancellationWatcher:c6ac1d71 has started in 8,0544 ms
+2024-01-19 16:42:53.433 [VRB] Checking for aborted jobs...
+2024-01-19 16:42:53.479 [DBG] Execution loop ExpirationManager:7610912c has started in 50,1164 ms
+2024-01-19 16:42:53.479 [DBG] Execution loop CountersAggregator:5c21bd8b has started in 47,2303 ms
+2024-01-19 16:42:53.480 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:42:53.481 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 16:42:53.482 [VRB] No newly aborted jobs found.
+2024-01-19 16:42:53.495 [DBG] Execution loop SqlServerHeartbeatProcess:926d9a03 has started in 16,7122 ms
+2024-01-19 16:42:53.496 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-01-19 16:42:53.505 [DBG] Execution loop Worker:ed6cbe36 has started in 22,3793 ms
+2024-01-19 16:42:53.505 [INF] 1 servers were removed due to timeout
+2024-01-19 16:42:53.513 [DBG] Execution loop Worker:22bbfb40 has started in 30,0332 ms
+2024-01-19 16:42:53.520 [DBG] Execution loop Worker:6d4cb812 has started in 36,8144 ms
+2024-01-19 16:42:53.527 [DBG] Execution loop Worker:839d3373 has started in 43,8536 ms
+2024-01-19 16:42:53.530 [DBG] Execution loop Worker:e43d336c has started in 46,9488 ms
+2024-01-19 16:42:53.538 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 16:42:53.538 [DBG] Execution loop Worker:8a0e8bec has started in 54,7407 ms
+2024-01-19 16:42:53.541 [DBG] Execution loop Worker:368fe707 has started in 58,326 ms
+2024-01-19 16:42:53.547 [DBG] Execution loop Worker:1975604b has started in 64,4971 ms
+2024-01-19 16:42:53.554 [DBG] Execution loop Worker:199cb95e has started in 71,0576 ms
+2024-01-19 16:42:53.561 [DBG] Execution loop Worker:a39d863a has started in 78,4862 ms
+2024-01-19 16:42:53.571 [DBG] Execution loop Worker:c82cc8b6 has started in 86,9712 ms
+2024-01-19 16:42:53.575 [DBG] Execution loop Worker:8bfa3d0e has started in 92,3014 ms
+2024-01-19 16:42:53.582 [DBG] Execution loop Worker:e3f1f4d5 has started in 98,5286 ms
+2024-01-19 16:42:53.588 [DBG] Execution loop Worker:69c15d21 has started in 105,4355 ms
+2024-01-19 16:42:53.598 [DBG] Execution loop Worker:0e1d5587 has started in 113,2614 ms
+2024-01-19 16:42:53.603 [DBG] Execution loop Worker:4d2f3f94 has started in 120,4011 ms
+2024-01-19 16:42:53.607 [DBG] Execution loop Worker:f83b4e6d has started in 123,6905 ms
+2024-01-19 16:42:53.614 [DBG] Execution loop Worker:bc732776 has started in 130,5096 ms
+2024-01-19 16:42:53.620 [DBG] Execution loop Worker:50bb2a45 has started in 136,7869 ms
+2024-01-19 16:42:53.626 [DBG] Execution loop Worker:6f9b6d0f has started in 143,5076 ms
+2024-01-19 16:42:53.632 [DBG] Execution loop DelayedJobScheduler:29b302e4 has started in 12,4421 ms
+2024-01-19 16:42:53.632 [INF] Server desktop-j0d1m11:15752:fd66257b all the dispatchers started
+2024-01-19 16:42:53.638 [DBG] Execution loop RecurringJobScheduler:b9320a08 has started in 11,7124 ms
+2024-01-19 16:42:53.640 [VRB] Outdated records removed from the 'AggregatedCounter' table.
+2024-01-19 16:42:53.640 [DBG] Removing outdated records from the 'Job' table...
+2024-01-19 16:42:53.674 [VRB] Outdated records removed from the 'Job' table.
+2024-01-19 16:42:53.674 [DBG] Removing outdated records from the 'List' table...
+2024-01-19 16:42:53.682 [VRB] Outdated records removed from the 'List' table.
+2024-01-19 16:42:53.683 [DBG] Removing outdated records from the 'Set' table...
+2024-01-19 16:42:53.693 [VRB] Outdated records removed from the 'Set' table.
+2024-01-19 16:42:53.694 [DBG] Removing outdated records from the 'Hash' table...
+2024-01-19 16:42:53.699 [VRB] Outdated records removed from the 'Hash' table.
+2024-01-19 16:42:58.499 [VRB] Checking for aborted jobs...
+2024-01-19 16:42:58.499 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:03.500 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:03.500 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:08.508 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:08.509 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:13.512 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:13.512 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:18.527 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:18.527 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:23.508 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:43:23.508 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:43:23.528 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:23.528 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:28.536 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:28.536 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:33.548 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:33.549 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:38.556 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:38.556 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:43.562 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:43.562 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:48.574 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:48.574 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:53.533 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:43:53.533 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:43:53.584 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:53.584 [VRB] No newly aborted jobs found.
+2024-01-19 16:43:58.595 [VRB] Checking for aborted jobs...
+2024-01-19 16:43:58.595 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:03.610 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:03.610 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:08.620 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:08.620 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:13.625 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:13.625 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:18.634 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:18.634 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:23.548 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:44:23.548 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:44:23.641 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:23.641 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:28.653 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:28.653 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:33.661 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:33.661 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:41.523 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:41.524 [VRB] No newly aborted jobs found.
+2024-01-19 16:44:49.025 [VRB] Checking for aborted jobs...
+2024-01-19 16:44:49.026 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:00.199 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:00.200 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:00.217 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:45:00.217 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:45:04.047 [ERR] UnexpectedError
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at AFC.Business.Query.ExpenseDocumentQueryHandler.Handle(GetExpenseDocumentByParameterQuery request, CancellationToken cancellationToken) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Business\Query\ExpenseDocumentQueryHandler.cs:line 61
+   at AFC.Api.Controllers.ExpenseDocumentController.GetByParameter(Nullable`1 ExpenseRequestId, String FileType, String FileName) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Controllers\ExpenseDocumentController.cs:line 47
+   at lambda_method187(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AFC.Api.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Middleware\ErrorHandlerMiddleware.cs:line 21
+2024-01-19 16:45:04.467 [FTL] Path=/api/expense-document/by-parameter || Method=GET || Exception=An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+2024-01-19 16:45:05.342 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:05.343 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:10.358 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:10.358 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:15.368 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:15.368 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:20.374 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:20.374 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:25.377 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:25.377 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:30.223 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:45:30.223 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:45:30.392 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:30.393 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:35.407 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:35.407 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:40.420 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:40.420 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:45.421 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:45.421 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:50.431 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:50.431 [VRB] No newly aborted jobs found.
+2024-01-19 16:45:55.438 [VRB] Checking for aborted jobs...
+2024-01-19 16:45:55.438 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:00.247 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:46:00.247 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:46:00.441 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:00.441 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:05.455 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:05.455 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:10.471 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:10.471 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:15.471 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:15.471 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:20.481 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:20.481 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:25.495 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:25.496 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:30.271 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:46:30.271 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:46:30.497 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:30.497 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:35.505 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:35.505 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:40.518 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:40.518 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:45.525 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:45.525 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:50.530 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:50.530 [VRB] No newly aborted jobs found.
+2024-01-19 16:46:55.537 [VRB] Checking for aborted jobs...
+2024-01-19 16:46:55.538 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:00.278 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:47:00.279 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:47:00.541 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:00.541 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:05.556 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:05.557 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:10.571 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:10.571 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:15.582 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:15.582 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:20.597 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:20.597 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:25.605 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:25.605 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:30.303 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:47:30.303 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:47:30.606 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:30.606 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:35.622 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:35.622 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:40.635 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:40.635 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:45.650 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:45.650 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:50.654 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:50.655 [VRB] No newly aborted jobs found.
+2024-01-19 16:47:53.547 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 16:47:53.558 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 16:47:55.667 [VRB] Checking for aborted jobs...
+2024-01-19 16:47:55.667 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:00.320 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:48:00.320 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:48:00.678 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:00.678 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:05.685 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:05.685 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:10.687 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:10.687 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:15.690 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:15.691 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:20.698 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:20.698 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:25.702 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:25.702 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:30.339 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:48:30.339 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:48:30.716 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:30.716 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:35.730 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:35.731 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:40.736 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:40.736 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:45.746 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:45.746 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:50.753 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:50.753 [VRB] No newly aborted jobs found.
+2024-01-19 16:48:55.756 [VRB] Checking for aborted jobs...
+2024-01-19 16:48:55.756 [VRB] No newly aborted jobs found.
+2024-01-19 16:49:00.355 [DBG] Server desktop-j0d1m11:15752:fd66257b heartbeat successfully sent
+2024-01-19 16:49:00.355 [VRB] Server desktop-j0d1m11:15752:fd66257b waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:49:00.765 [VRB] Checking for aborted jobs...
+2024-01-19 16:49:00.766 [VRB] No newly aborted jobs found.
+2024-01-19 16:49:05.770 [VRB] Checking for aborted jobs...
+2024-01-19 16:49:05.770 [VRB] No newly aborted jobs found.
+2024-01-19 16:49:11.163 [VRB] Checking for aborted jobs...
+2024-01-19 16:49:11.163 [VRB] No newly aborted jobs found.
+2024-01-19 16:59:27.790 [INF] App server is starting.
+2024-01-19 16:59:28.703 [INF] Start installing Hangfire SQL objects...
+2024-01-19 16:59:29.227 [INF] Hangfire SQL objects installed.
+2024-01-19 16:59:29.522 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-19 16:59:29.522 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-19 16:59:29.522 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-19 16:59:29.549 [DBG] Execution loop BackgroundServerProcess:ad17b55f has started in 6,1218 ms
+2024-01-19 16:59:29.551 [VRB] Server desktop-j0d1m11:22148:f81e6779 is announcing itself...
+2024-01-19 16:59:29.666 [INF] Server desktop-j0d1m11:22148:f81e6779 successfully announced in 114,841 ms
+2024-01-19 16:59:29.669 [INF] Server desktop-j0d1m11:22148:f81e6779 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-19 16:59:29.672 [DBG] Execution loop ServerHeartbeatProcess:d4fed4bb has started in 4,8968 ms
+2024-01-19 16:59:29.677 [DBG] Execution loop ServerWatchdog:05e954a7 has started in 7,5146 ms
+2024-01-19 16:59:29.679 [DBG] Execution loop ServerJobCancellationWatcher:24383056 has started in 6,8505 ms
+2024-01-19 16:59:29.681 [VRB] Server desktop-j0d1m11:22148:f81e6779 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:59:29.681 [VRB] Checking for aborted jobs...
+2024-01-19 16:59:29.683 [DBG] Execution loop ExpirationManager:d74ddda3 has started in 5,4082 ms
+2024-01-19 16:59:29.684 [VRB] No newly aborted jobs found.
+2024-01-19 16:59:29.686 [DBG] Execution loop CountersAggregator:e5cefcde has started in 6,3918 ms
+2024-01-19 16:59:29.689 [DBG] Execution loop SqlServerHeartbeatProcess:dd6a2230 has started in 6,4581 ms
+2024-01-19 16:59:29.690 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 16:59:29.690 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-01-19 16:59:29.695 [INF] 1 servers were removed due to timeout
+2024-01-19 16:59:29.695 [DBG] Execution loop Worker:35af8254 has started in 8,2558 ms
+2024-01-19 16:59:29.698 [DBG] Execution loop Worker:01ddabbf has started in 11,819 ms
+2024-01-19 16:59:29.702 [DBG] Execution loop Worker:bd7c0ea1 has started in 15,9637 ms
+2024-01-19 16:59:29.707 [DBG] Execution loop Worker:0c2734d7 has started in 21,1306 ms
+2024-01-19 16:59:29.713 [DBG] Execution loop Worker:bd1ad6e6 has started in 26,4529 ms
+2024-01-19 16:59:29.714 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 16:59:29.717 [DBG] Execution loop Worker:49846e94 has started in 30,1682 ms
+2024-01-19 16:59:29.720 [DBG] Execution loop Worker:e61c060f has started in 34,2649 ms
+2024-01-19 16:59:29.725 [DBG] Execution loop Worker:cabbb316 has started in 38,4561 ms
+2024-01-19 16:59:29.729 [DBG] Execution loop Worker:6d367787 has started in 43,3027 ms
+2024-01-19 16:59:29.734 [DBG] Execution loop Worker:6dfda964 has started in 47,5875 ms
+2024-01-19 16:59:29.739 [DBG] Execution loop Worker:59230ba0 has started in 52,6596 ms
+2024-01-19 16:59:29.742 [DBG] Execution loop Worker:129561ca has started in 55,9822 ms
+2024-01-19 16:59:29.747 [DBG] Execution loop Worker:9d462498 has started in 60,6561 ms
+2024-01-19 16:59:29.752 [DBG] Execution loop Worker:fc6f229c has started in 65,5839 ms
+2024-01-19 16:59:29.757 [DBG] Execution loop Worker:c94c987c has started in 70,4358 ms
+2024-01-19 16:59:29.761 [DBG] Execution loop Worker:0209ff8e has started in 75,1169 ms
+2024-01-19 16:59:29.766 [DBG] Execution loop Worker:5e2d5f92 has started in 80,2728 ms
+2024-01-19 16:59:29.772 [DBG] Execution loop Worker:ddbc0adf has started in 86,2304 ms
+2024-01-19 16:59:29.776 [DBG] Execution loop Worker:9872c409 has started in 89,726 ms
+2024-01-19 16:59:29.781 [VRB] Outdated records removed from the 'AggregatedCounter' table.
+2024-01-19 16:59:29.781 [DBG] Execution loop Worker:70d96985 has started in 94,8512 ms
+2024-01-19 16:59:29.781 [DBG] Removing outdated records from the 'Job' table...
+2024-01-19 16:59:29.795 [DBG] Execution loop DelayedJobScheduler:ca90b9c3 has started in 18,8331 ms
+2024-01-19 16:59:29.816 [INF] Server desktop-j0d1m11:22148:f81e6779 all the dispatchers started
+2024-01-19 16:59:29.822 [DBG] Execution loop RecurringJobScheduler:f7bbae9e has started in 41,8714 ms
+2024-01-19 16:59:29.824 [VRB] Outdated records removed from the 'Job' table.
+2024-01-19 16:59:29.824 [DBG] Removing outdated records from the 'List' table...
+2024-01-19 16:59:29.840 [VRB] Outdated records removed from the 'List' table.
+2024-01-19 16:59:29.840 [DBG] Removing outdated records from the 'Set' table...
+2024-01-19 16:59:29.844 [VRB] Outdated records removed from the 'Set' table.
+2024-01-19 16:59:29.844 [DBG] Removing outdated records from the 'Hash' table...
+2024-01-19 16:59:29.848 [VRB] Outdated records removed from the 'Hash' table.
+2024-01-19 16:59:34.698 [VRB] Checking for aborted jobs...
+2024-01-19 16:59:34.698 [VRB] No newly aborted jobs found.
+2024-01-19 16:59:39.710 [VRB] Checking for aborted jobs...
+2024-01-19 16:59:39.710 [VRB] No newly aborted jobs found.
+2024-01-19 16:59:44.715 [VRB] Checking for aborted jobs...
+2024-01-19 16:59:44.715 [VRB] No newly aborted jobs found.
+2024-01-19 16:59:49.715 [VRB] Checking for aborted jobs...
+2024-01-19 16:59:49.715 [VRB] No newly aborted jobs found.
+2024-01-19 16:59:54.726 [VRB] Checking for aborted jobs...
+2024-01-19 16:59:54.726 [VRB] No newly aborted jobs found.
+2024-01-19 16:59:59.693 [DBG] Server desktop-j0d1m11:22148:f81e6779 heartbeat successfully sent
+2024-01-19 16:59:59.693 [VRB] Server desktop-j0d1m11:22148:f81e6779 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 16:59:59.732 [VRB] Checking for aborted jobs...
+2024-01-19 16:59:59.732 [VRB] No newly aborted jobs found.
+2024-01-19 17:00:04.734 [VRB] Checking for aborted jobs...
+2024-01-19 17:00:04.735 [VRB] No newly aborted jobs found.
+2024-01-19 17:00:09.744 [VRB] Checking for aborted jobs...
+2024-01-19 17:00:09.744 [VRB] No newly aborted jobs found.
+2024-01-19 17:00:16.187 [VRB] Checking for aborted jobs...
+2024-01-19 17:00:16.188 [VRB] No newly aborted jobs found.
+2024-01-19 17:04:48.098 [VRB] Checking for aborted jobs...
+2024-01-19 17:04:48.100 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 17:04:48.100 [VRB] No newly aborted jobs found.
+2024-01-19 17:04:48.117 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 17:04:48.117 [DBG] Server desktop-j0d1m11:22148:f81e6779 heartbeat successfully sent
+2024-01-19 17:04:48.119 [VRB] Server desktop-j0d1m11:22148:f81e6779 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 17:04:53.106 [VRB] Checking for aborted jobs...
+2024-01-19 17:04:53.107 [VRB] No newly aborted jobs found.
+2024-01-19 17:04:57.448 [ERR] UnexpectedError
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at AFC.Business.Query.ExpenseDocumentQueryHandler.Handle(GetExpenseDocumentByParameterQuery request, CancellationToken cancellationToken) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Business\Query\ExpenseDocumentQueryHandler.cs:line 61
+   at AFC.Api.Controllers.ExpenseDocumentController.GetByParameter(Nullable`1 ExpenseRequestId, String FileType, String FileName) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Controllers\ExpenseDocumentController.cs:line 47
+   at lambda_method187(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AFC.Api.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Middleware\ErrorHandlerMiddleware.cs:line 21
+2024-01-19 17:04:57.473 [FTL] Path=/api/expense-document/by-parameter || Method=GET || Exception=An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+2024-01-19 17:04:58.112 [VRB] Checking for aborted jobs...
+2024-01-19 17:04:58.113 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:03.121 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:03.122 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:08.126 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:08.127 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:13.142 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:13.142 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:18.137 [DBG] Server desktop-j0d1m11:22148:f81e6779 heartbeat successfully sent
+2024-01-19 17:05:18.137 [VRB] Server desktop-j0d1m11:22148:f81e6779 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 17:05:18.157 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:18.157 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:23.165 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:23.166 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:28.174 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:28.174 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:33.183 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:33.183 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:38.195 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:38.195 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:43.208 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:43.208 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:48.153 [DBG] Server desktop-j0d1m11:22148:f81e6779 heartbeat successfully sent
+2024-01-19 17:05:48.153 [VRB] Server desktop-j0d1m11:22148:f81e6779 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 17:05:48.210 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:48.210 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:53.221 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:53.222 [VRB] No newly aborted jobs found.
+2024-01-19 17:05:58.230 [VRB] Checking for aborted jobs...
+2024-01-19 17:05:58.230 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:03.243 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:03.243 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:08.246 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:08.246 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:13.247 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:13.247 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:18.177 [DBG] Server desktop-j0d1m11:22148:f81e6779 heartbeat successfully sent
+2024-01-19 17:06:18.177 [VRB] Server desktop-j0d1m11:22148:f81e6779 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 17:06:18.262 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:18.262 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:23.275 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:23.276 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:28.278 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:28.278 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:33.279 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:33.280 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:38.289 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:38.289 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:43.300 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:43.300 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:48.191 [DBG] Server desktop-j0d1m11:22148:f81e6779 heartbeat successfully sent
+2024-01-19 17:06:48.191 [VRB] Server desktop-j0d1m11:22148:f81e6779 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 17:06:48.312 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:48.312 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:53.325 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:53.326 [VRB] No newly aborted jobs found.
+2024-01-19 17:06:58.337 [VRB] Checking for aborted jobs...
+2024-01-19 17:06:58.337 [VRB] No newly aborted jobs found.
+2024-01-19 18:23:30.547 [INF] App server is starting.
+2024-01-19 18:23:31.425 [INF] Start installing Hangfire SQL objects...
+2024-01-19 18:23:31.830 [INF] Hangfire SQL objects installed.
+2024-01-19 18:23:32.100 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-19 18:23:32.100 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-19 18:23:32.100 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-19 18:23:32.128 [DBG] Execution loop BackgroundServerProcess:b2565101 has started in 13,3095 ms
+2024-01-19 18:23:32.130 [VRB] Server desktop-j0d1m11:11248:3906f150 is announcing itself...
+2024-01-19 18:23:32.251 [INF] Server desktop-j0d1m11:11248:3906f150 successfully announced in 119,8412 ms
+2024-01-19 18:23:32.254 [INF] Server desktop-j0d1m11:11248:3906f150 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-19 18:23:32.257 [DBG] Execution loop ServerHeartbeatProcess:f3326c11 has started in 5,6072 ms
+2024-01-19 18:23:32.263 [DBG] Execution loop ServerWatchdog:a538300f has started in 8,509 ms
+2024-01-19 18:23:32.265 [DBG] Execution loop ServerJobCancellationWatcher:a6484bc5 has started in 7,6208 ms
+2024-01-19 18:23:32.267 [VRB] Checking for aborted jobs...
+2024-01-19 18:23:32.267 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:23:32.270 [DBG] Execution loop ExpirationManager:bf4448fd has started in 6,5177 ms
+2024-01-19 18:23:32.271 [VRB] No newly aborted jobs found.
+2024-01-19 18:23:32.274 [DBG] Execution loop CountersAggregator:8d8e1f60 has started in 7,9773 ms
+2024-01-19 18:23:32.278 [INF] 1 servers were removed due to timeout
+2024-01-19 18:23:32.278 [DBG] Execution loop SqlServerHeartbeatProcess:9698b623 has started in 8,5342 ms
+2024-01-19 18:23:32.279 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-01-19 18:23:32.279 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 18:23:32.284 [DBG] Execution loop Worker:3af46587 has started in 9,7067 ms
+2024-01-19 18:23:32.287 [DBG] Execution loop Worker:7e969a4d has started in 12,68 ms
+2024-01-19 18:23:32.291 [DBG] Execution loop Worker:e7448b5a has started in 17,0577 ms
+2024-01-19 18:23:32.295 [DBG] Execution loop Worker:4bd94702 has started in 20,9643 ms
+2024-01-19 18:23:32.296 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 18:23:32.299 [DBG] Execution loop Worker:26682342 has started in 25,0425 ms
+2024-01-19 18:23:32.306 [DBG] Execution loop Worker:eeb10291 has started in 32,4725 ms
+2024-01-19 18:23:32.311 [DBG] Execution loop Worker:5eefa08c has started in 35,4816 ms
+2024-01-19 18:23:32.317 [DBG] Execution loop Worker:1f31bd83 has started in 41,1036 ms
+2024-01-19 18:23:32.320 [DBG] Execution loop Worker:fa2843ae has started in 46,1856 ms
+2024-01-19 18:23:32.325 [DBG] Execution loop Worker:afb980ee has started in 51,3354 ms
+2024-01-19 18:23:32.333 [DBG] Execution loop Worker:51164b6c has started in 59,1131 ms
+2024-01-19 18:23:32.337 [DBG] Execution loop Worker:826a30b5 has started in 63,2049 ms
+2024-01-19 18:23:32.346 [DBG] Execution loop Worker:45a178ea has started in 71,6328 ms
+2024-01-19 18:23:32.354 [DBG] Execution loop Worker:86d8e309 has started in 79,4277 ms
+2024-01-19 18:23:32.360 [DBG] Execution loop Worker:f0be165e has started in 86,369 ms
+2024-01-19 18:23:32.365 [DBG] Execution loop Worker:f51a810f has started in 91,011 ms
+2024-01-19 18:23:32.369 [DBG] Execution loop Worker:6893cdab has started in 95,4425 ms
+2024-01-19 18:23:32.375 [DBG] Execution loop Worker:e31b4c54 has started in 100,6571 ms
+2024-01-19 18:23:32.380 [DBG] Execution loop Worker:f73ed355 has started in 106,3918 ms
+2024-01-19 18:23:32.386 [DBG] Execution loop Worker:8341c99d has started in 112,2316 ms
+2024-01-19 18:23:32.390 [DBG] Execution loop DelayedJobScheduler:15b10b8c has started in 9,5766 ms
+2024-01-19 18:23:32.391 [INF] Server desktop-j0d1m11:11248:3906f150 all the dispatchers started
+2024-01-19 18:23:32.397 [DBG] Execution loop RecurringJobScheduler:efa83a19 has started in 11,1788 ms
+2024-01-19 18:23:32.399 [VRB] Outdated records removed from the 'AggregatedCounter' table.
+2024-01-19 18:23:32.400 [DBG] Removing outdated records from the 'Job' table...
+2024-01-19 18:23:32.419 [VRB] Outdated records removed from the 'Job' table.
+2024-01-19 18:23:32.420 [DBG] Removing outdated records from the 'List' table...
+2024-01-19 18:23:32.428 [VRB] Outdated records removed from the 'List' table.
+2024-01-19 18:23:32.428 [DBG] Removing outdated records from the 'Set' table...
+2024-01-19 18:23:32.430 [VRB] Outdated records removed from the 'Set' table.
+2024-01-19 18:23:32.431 [DBG] Removing outdated records from the 'Hash' table...
+2024-01-19 18:23:32.433 [VRB] Outdated records removed from the 'Hash' table.
+2024-01-19 18:23:37.276 [VRB] Checking for aborted jobs...
+2024-01-19 18:23:37.277 [VRB] No newly aborted jobs found.
+2024-01-19 18:23:42.280 [VRB] Checking for aborted jobs...
+2024-01-19 18:23:42.280 [VRB] No newly aborted jobs found.
+2024-01-19 18:23:47.292 [VRB] Checking for aborted jobs...
+2024-01-19 18:23:47.292 [VRB] No newly aborted jobs found.
+2024-01-19 18:23:52.308 [VRB] Checking for aborted jobs...
+2024-01-19 18:23:52.308 [VRB] No newly aborted jobs found.
+2024-01-19 18:23:57.314 [VRB] Checking for aborted jobs...
+2024-01-19 18:23:57.314 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:02.298 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:24:02.298 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:24:02.316 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:02.316 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:07.322 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:07.323 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:12.325 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:12.326 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:17.341 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:17.341 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:22.345 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:22.345 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:27.350 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:27.350 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:32.323 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:24:32.324 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:24:32.359 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:32.360 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:37.374 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:37.374 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:42.388 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:42.388 [VRB] No newly aborted jobs found.
+2024-01-19 18:24:47.393 [VRB] Checking for aborted jobs...
+2024-01-19 18:24:47.393 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:09.886 [VRB] Checking for aborted jobs...
+2024-01-19 18:25:09.887 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:09.910 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:25:09.910 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:25:12.831 [ERR] UnexpectedError
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at AFC.Business.Query.PaymentCategoryQueryHandler.Handle(GetPaymentCategoryByParameter request, CancellationToken cancellationToken) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Business\Query\PaymentCategoryQueryHandler.cs:line 57
+   at AFC.Api.Controllers.PaymentCategoryController.GetByParameter(String Name) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Controllers\PaymentCategoryController.cs:line 45
+   at lambda_method187(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AFC.Api.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Middleware\ErrorHandlerMiddleware.cs:line 21
+2024-01-19 18:25:12.841 [FTL] Path=/api/payment-category/by-parameters || Method=GET || Exception=An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+2024-01-19 18:25:14.892 [VRB] Checking for aborted jobs...
+2024-01-19 18:25:14.892 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:19.909 [VRB] Checking for aborted jobs...
+2024-01-19 18:25:19.909 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:24.916 [VRB] Checking for aborted jobs...
+2024-01-19 18:25:24.916 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:29.921 [VRB] Checking for aborted jobs...
+2024-01-19 18:25:29.921 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:34.933 [VRB] Checking for aborted jobs...
+2024-01-19 18:25:34.933 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:43.020 [VRB] Checking for aborted jobs...
+2024-01-19 18:25:43.022 [VRB] No newly aborted jobs found.
+2024-01-19 18:25:43.640 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:25:43.640 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:26:00.975 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:00.975 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:05.986 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:05.987 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:10.996 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:10.996 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:13.658 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:26:13.658 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:26:15.996 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:15.997 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:21.002 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:21.002 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:26.009 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:26.009 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:31.013 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:31.013 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:36.026 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:36.026 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:41.040 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:41.040 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:43.675 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:26:43.675 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:26:46.047 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:46.047 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:51.048 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:51.048 [VRB] No newly aborted jobs found.
+2024-01-19 18:26:56.049 [VRB] Checking for aborted jobs...
+2024-01-19 18:26:56.049 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:01.051 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:01.051 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:06.060 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:06.061 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:11.069 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:11.069 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:13.696 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:27:13.696 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:27:16.077 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:16.077 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:21.089 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:21.090 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:26.100 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:26.100 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:31.107 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:31.107 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:36.747 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:36.747 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:53.509 [VRB] Checking for aborted jobs...
+2024-01-19 18:27:53.511 [VRB] No newly aborted jobs found.
+2024-01-19 18:27:53.519 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:27:53.520 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:31:35.332 [VRB] Checking for aborted jobs...
+2024-01-19 18:31:35.333 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 18:31:35.333 [VRB] No newly aborted jobs found.
+2024-01-19 18:31:35.341 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:31:35.341 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:31:36.200 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 18:31:37.683 [ERR] UnexpectedError
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at AFC.Business.Query.PaymentCategoryQueryHandler.Handle(GetPaymentCategoryByParameter request, CancellationToken cancellationToken) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Business\Query\PaymentCategoryQueryHandler.cs:line 57
+   at AFC.Api.Controllers.PaymentCategoryController.GetByParameter(String Name) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Controllers\PaymentCategoryController.cs:line 45
+   at lambda_method187(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AFC.Api.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Middleware\ErrorHandlerMiddleware.cs:line 21
+2024-01-19 18:31:37.690 [FTL] Path=/api/payment-category/by-parameters || Method=GET || Exception=An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+2024-01-19 18:31:40.348 [VRB] Checking for aborted jobs...
+2024-01-19 18:31:40.348 [VRB] No newly aborted jobs found.
+2024-01-19 18:31:45.360 [VRB] Checking for aborted jobs...
+2024-01-19 18:31:45.360 [VRB] No newly aborted jobs found.
+2024-01-19 18:31:50.360 [VRB] Checking for aborted jobs...
+2024-01-19 18:31:50.360 [VRB] No newly aborted jobs found.
+2024-01-19 18:31:55.369 [VRB] Checking for aborted jobs...
+2024-01-19 18:31:55.369 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:00.375 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:00.375 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:05.350 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:32:05.350 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:32:05.380 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:05.380 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:10.387 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:10.387 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:15.399 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:15.399 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:20.400 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:20.400 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:25.407 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:25.407 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:30.416 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:30.416 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:35.375 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:32:35.375 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:32:35.420 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:35.420 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:40.423 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:40.423 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:45.436 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:45.436 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:50.450 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:50.450 [VRB] No newly aborted jobs found.
+2024-01-19 18:32:55.455 [VRB] Checking for aborted jobs...
+2024-01-19 18:32:55.456 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:00.466 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:00.467 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:05.399 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:33:05.399 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:33:05.476 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:05.476 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:10.482 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:10.482 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:15.496 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:15.496 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:20.503 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:20.504 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:25.513 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:25.513 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:30.522 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:30.522 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:35.426 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:33:35.426 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:33:35.523 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:35.524 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:40.531 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:40.531 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:45.546 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:45.546 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:50.550 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:50.550 [VRB] No newly aborted jobs found.
+2024-01-19 18:33:55.563 [VRB] Checking for aborted jobs...
+2024-01-19 18:33:55.563 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:00.579 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:00.579 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:05.438 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:34:05.438 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:34:05.591 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:05.591 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:10.602 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:10.603 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:15.610 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:15.610 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:20.620 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:20.620 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:25.635 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:25.635 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:30.639 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:30.639 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:35.442 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:34:35.442 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:34:35.641 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:35.641 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:40.655 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:40.655 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:45.660 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:45.660 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:50.669 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:50.669 [VRB] No newly aborted jobs found.
+2024-01-19 18:34:55.682 [VRB] Checking for aborted jobs...
+2024-01-19 18:34:55.682 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:00.692 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:00.692 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:05.452 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:35:05.452 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:35:05.708 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:05.708 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:10.717 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:10.717 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:15.719 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:15.719 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:20.726 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:20.726 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:25.727 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:25.727 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:30.731 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:30.732 [VRB] No newly aborted jobs found.
+2024-01-19 18:35:35.468 [DBG] Server desktop-j0d1m11:11248:3906f150 heartbeat successfully sent
+2024-01-19 18:35:35.469 [VRB] Server desktop-j0d1m11:11248:3906f150 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:35:35.740 [VRB] Checking for aborted jobs...
+2024-01-19 18:35:35.741 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:18.104 [INF] App server is starting.
+2024-01-19 18:37:19.000 [INF] Start installing Hangfire SQL objects...
+2024-01-19 18:37:19.402 [INF] Hangfire SQL objects installed.
+2024-01-19 18:37:19.666 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-19 18:37:19.666 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-19 18:37:19.666 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-19 18:37:19.692 [DBG] Execution loop BackgroundServerProcess:bd0efdab has started in 12,4266 ms
+2024-01-19 18:37:19.694 [VRB] Server desktop-j0d1m11:30836:f1e070ee is announcing itself...
+2024-01-19 18:37:19.803 [INF] Server desktop-j0d1m11:30836:f1e070ee successfully announced in 108,9446 ms
+2024-01-19 18:37:19.807 [INF] Server desktop-j0d1m11:30836:f1e070ee is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-19 18:37:19.809 [DBG] Execution loop ServerHeartbeatProcess:18fe1464 has started in 5,223 ms
+2024-01-19 18:37:19.815 [DBG] Execution loop ServerWatchdog:58e56531 has started in 7,839 ms
+2024-01-19 18:37:19.817 [DBG] Execution loop ServerJobCancellationWatcher:e1925277 has started in 7,5513 ms
+2024-01-19 18:37:19.819 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:19.819 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:37:19.822 [DBG] Execution loop ExpirationManager:1e0a84c6 has started in 6,9678 ms
+2024-01-19 18:37:19.823 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:19.826 [DBG] Execution loop CountersAggregator:41fc367e has started in 7,8174 ms
+2024-01-19 18:37:19.829 [DBG] Execution loop SqlServerHeartbeatProcess:ecde64f9 has started in 7,2385 ms
+2024-01-19 18:37:19.830 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-01-19 18:37:19.830 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 18:37:19.835 [DBG] Execution loop Worker:7e47ee76 has started in 8,7861 ms
+2024-01-19 18:37:19.839 [DBG] Execution loop Worker:aad133d7 has started in 13,1686 ms
+2024-01-19 18:37:19.844 [DBG] Execution loop Worker:773dd5d5 has started in 18,1125 ms
+2024-01-19 18:37:19.848 [DBG] Execution loop Worker:4b790060 has started in 22,4557 ms
+2024-01-19 18:37:19.852 [DBG] Execution loop Worker:6576397c has started in 26,2613 ms
+2024-01-19 18:37:19.857 [DBG] Execution loop Worker:ac31d58c has started in 31,1434 ms
+2024-01-19 18:37:19.862 [DBG] Execution loop Worker:9ecf5b4d has started in 34,9859 ms
+2024-01-19 18:37:19.862 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 18:37:19.865 [DBG] Execution loop Worker:9b2f957e has started in 39,6258 ms
+2024-01-19 18:37:19.868 [DBG] Execution loop Worker:6bc65bbb has started in 42,332 ms
+2024-01-19 18:37:19.872 [DBG] Execution loop Worker:35f9dcef has started in 46,4321 ms
+2024-01-19 18:37:19.876 [DBG] Execution loop Worker:7fad18ca has started in 50,5479 ms
+2024-01-19 18:37:19.881 [DBG] Execution loop Worker:22c9daa1 has started in 55,4741 ms
+2024-01-19 18:37:19.884 [DBG] Execution loop Worker:c0d65b90 has started in 58,4837 ms
+2024-01-19 18:37:19.891 [DBG] Execution loop Worker:25fe1153 has started in 64,7648 ms
+2024-01-19 18:37:19.897 [DBG] Execution loop Worker:850b4e1f has started in 70,8992 ms
+2024-01-19 18:37:19.903 [DBG] Execution loop Worker:e0cf72db has started in 77,4074 ms
+2024-01-19 18:37:19.907 [DBG] Execution loop Worker:cc4533da has started in 81,2462 ms
+2024-01-19 18:37:19.911 [DBG] Execution loop Worker:0a25093e has started in 85,5521 ms
+2024-01-19 18:37:19.915 [DBG] Execution loop Worker:2ec6bf45 has started in 89,2141 ms
+2024-01-19 18:37:19.921 [DBG] Execution loop Worker:efdf19b9 has started in 94,904 ms
+2024-01-19 18:37:19.926 [INF] Server desktop-j0d1m11:30836:f1e070ee all the dispatchers started
+2024-01-19 18:37:19.927 [DBG] Execution loop DelayedJobScheduler:a8808e53 has started in 12,2438 ms
+2024-01-19 18:37:19.931 [VRB] Outdated records removed from the 'AggregatedCounter' table.
+2024-01-19 18:37:19.932 [DBG] Removing outdated records from the 'Job' table...
+2024-01-19 18:37:19.932 [DBG] Execution loop RecurringJobScheduler:cedde6b8 has started in 11,3216 ms
+2024-01-19 18:37:19.954 [VRB] Outdated records removed from the 'Job' table.
+2024-01-19 18:37:19.954 [DBG] Removing outdated records from the 'List' table...
+2024-01-19 18:37:19.963 [VRB] Outdated records removed from the 'List' table.
+2024-01-19 18:37:19.964 [DBG] Removing outdated records from the 'Set' table...
+2024-01-19 18:37:19.967 [VRB] Outdated records removed from the 'Set' table.
+2024-01-19 18:37:19.967 [DBG] Removing outdated records from the 'Hash' table...
+2024-01-19 18:37:19.970 [VRB] Outdated records removed from the 'Hash' table.
+2024-01-19 18:37:24.837 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:24.837 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:29.842 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:29.842 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:34.850 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:34.850 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:39.854 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:39.855 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:44.858 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:44.858 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:49.853 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:37:49.853 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:37:49.871 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:49.871 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:54.875 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:54.876 [VRB] No newly aborted jobs found.
+2024-01-19 18:37:59.878 [VRB] Checking for aborted jobs...
+2024-01-19 18:37:59.879 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:04.892 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:04.893 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:09.906 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:09.907 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:14.916 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:14.917 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:19.866 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:38:19.866 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:38:19.917 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:19.918 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:24.918 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:24.918 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:29.929 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:29.930 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:34.943 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:34.943 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:39.947 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:39.947 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:44.949 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:44.949 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:49.880 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:38:49.880 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:38:49.963 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:49.963 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:54.973 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:54.973 [VRB] No newly aborted jobs found.
+2024-01-19 18:38:59.975 [VRB] Checking for aborted jobs...
+2024-01-19 18:38:59.975 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:04.984 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:04.984 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:09.990 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:09.990 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:14.993 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:14.993 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:19.904 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:39:19.904 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:39:20.003 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:20.003 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:25.003 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:25.003 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:30.014 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:30.015 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:35.028 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:35.028 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:40.043 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:40.043 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:45.053 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:45.053 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:49.920 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:39:49.920 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:39:50.058 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:50.058 [VRB] No newly aborted jobs found.
+2024-01-19 18:39:55.065 [VRB] Checking for aborted jobs...
+2024-01-19 18:39:55.065 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:00.080 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:00.080 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:05.096 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:05.096 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:10.098 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:10.098 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:15.109 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:15.109 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:19.932 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:40:19.932 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:40:20.121 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:20.121 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:25.138 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:25.138 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:30.146 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:30.146 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:35.155 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:35.155 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:40.168 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:40.168 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:45.177 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:45.177 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:49.941 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:40:49.941 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:40:50.190 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:50.190 [VRB] No newly aborted jobs found.
+2024-01-19 18:40:55.200 [VRB] Checking for aborted jobs...
+2024-01-19 18:40:55.200 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:00.210 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:00.210 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:05.217 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:05.217 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:10.227 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:10.227 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:15.229 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:15.229 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:19.961 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:41:19.961 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:41:20.232 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:20.232 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:25.246 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:25.246 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:30.248 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:30.248 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:35.249 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:35.250 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:40.259 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:40.259 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:45.272 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:45.272 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:49.977 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:41:49.977 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:41:50.273 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:50.273 [VRB] No newly aborted jobs found.
+2024-01-19 18:41:55.281 [VRB] Checking for aborted jobs...
+2024-01-19 18:41:55.281 [VRB] No newly aborted jobs found.
+2024-01-19 18:42:00.296 [VRB] Checking for aborted jobs...
+2024-01-19 18:42:00.296 [VRB] No newly aborted jobs found.
+2024-01-19 18:42:05.310 [VRB] Checking for aborted jobs...
+2024-01-19 18:42:05.310 [VRB] No newly aborted jobs found.
+2024-01-19 18:42:41.392 [VRB] Checking for aborted jobs...
+2024-01-19 18:42:41.392 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 18:42:41.392 [VRB] No newly aborted jobs found.
+2024-01-19 18:42:41.419 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 18:42:41.419 [INF] 1 servers were removed due to timeout
+2024-01-19 18:42:41.419 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:42:41.419 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:42:46.046 [ERR] UnexpectedError
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)
+   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)
+   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, Boolean generateParameter)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression, Boolean clearEvaluatedValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean parameterize, Boolean generateContextAccessors)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at AFC.Business.Query.PaymentCategoryQueryHandler.Handle(GetPaymentCategoryByParameter request, CancellationToken cancellationToken) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Business\Query\PaymentCategoryQueryHandler.cs:line 58
+   at AFC.Api.Controllers.PaymentCategoryController.GetByParameter(String Name) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Controllers\PaymentCategoryController.cs:line 45
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AFC.Api.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\Middleware\ErrorHandlerMiddleware.cs:line 21
+2024-01-19 18:42:46.072 [FTL] Path=/api/payment-category/by-parameters || Method=GET || Exception=An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.
+2024-01-19 18:42:46.407 [VRB] Checking for aborted jobs...
+2024-01-19 18:42:46.408 [VRB] No newly aborted jobs found.
+2024-01-19 18:42:51.408 [VRB] Checking for aborted jobs...
+2024-01-19 18:42:51.409 [VRB] No newly aborted jobs found.
+2024-01-19 18:42:56.416 [VRB] Checking for aborted jobs...
+2024-01-19 18:42:56.416 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:01.429 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:01.429 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:06.436 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:06.436 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:11.445 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:43:11.445 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:43:11.449 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:11.449 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:16.458 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:16.458 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:21.462 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:21.462 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:26.476 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:26.476 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:31.485 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:31.485 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:36.498 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:36.499 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:41.468 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:43:41.468 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:43:41.502 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:41.502 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:46.515 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:46.515 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:51.518 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:51.518 [VRB] No newly aborted jobs found.
+2024-01-19 18:43:56.532 [VRB] Checking for aborted jobs...
+2024-01-19 18:43:56.532 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:01.546 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:01.546 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:06.559 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:06.560 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:11.491 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:44:11.491 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:44:11.572 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:11.572 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:16.608 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:16.608 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:21.617 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:21.617 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:26.623 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:26.623 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:33.628 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:33.629 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:38.636 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:38.637 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:41.516 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:44:41.516 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:44:43.640 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:43.640 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:49.776 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:49.776 [VRB] No newly aborted jobs found.
+2024-01-19 18:44:56.678 [VRB] Checking for aborted jobs...
+2024-01-19 18:44:56.679 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:01.679 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:01.680 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:06.693 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:06.693 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:11.520 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:45:11.521 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:45:11.707 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:11.708 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:16.712 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:16.712 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:21.728 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:21.728 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:26.733 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:26.733 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:31.735 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:31.736 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:36.737 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:36.737 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:41.544 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:45:41.545 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:45:41.750 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:41.750 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:46.756 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:46.756 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:51.757 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:51.757 [VRB] No newly aborted jobs found.
+2024-01-19 18:45:56.766 [VRB] Checking for aborted jobs...
+2024-01-19 18:45:56.766 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:01.765 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:01.766 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:06.775 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:06.776 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:11.566 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:46:11.566 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:46:11.788 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:11.788 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:16.796 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:16.796 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:21.799 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:21.799 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:26.813 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:26.814 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:31.821 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:31.821 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:36.836 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:36.836 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:41.578 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:46:41.578 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:46:41.850 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:41.850 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:46.863 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:46.863 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:51.869 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:51.869 [VRB] No newly aborted jobs found.
+2024-01-19 18:46:56.873 [VRB] Checking for aborted jobs...
+2024-01-19 18:46:56.873 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:01.874 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:01.874 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:06.882 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:06.882 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:11.600 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:47:11.601 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:47:11.892 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:11.892 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:16.898 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:16.898 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:21.899 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:21.900 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:26.905 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:26.905 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:31.912 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:31.912 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:36.917 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:36.917 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:41.432 [DBG] Aggregating records in 'Counter' table...
+2024-01-19 18:47:41.446 [VRB] Records from the 'Counter' table aggregated.
+2024-01-19 18:47:41.605 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:47:41.605 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:47:41.929 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:41.929 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:46.938 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:46.938 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:51.951 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:51.951 [VRB] No newly aborted jobs found.
+2024-01-19 18:47:56.963 [VRB] Checking for aborted jobs...
+2024-01-19 18:47:56.963 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:01.964 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:01.964 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:06.971 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:06.972 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:11.631 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:48:11.631 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:48:11.978 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:11.978 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:16.990 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:16.990 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:22.003 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:22.003 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:27.017 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:27.017 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:32.025 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:32.025 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:37.032 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:37.032 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:41.652 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:48:41.652 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:48:42.033 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:42.033 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:47.045 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:47.045 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:52.060 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:52.060 [VRB] No newly aborted jobs found.
+2024-01-19 18:48:57.072 [VRB] Checking for aborted jobs...
+2024-01-19 18:48:57.072 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:02.086 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:02.086 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:07.088 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:07.088 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:11.679 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:49:11.679 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:49:12.095 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:12.095 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:17.098 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:17.098 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:22.108 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:22.108 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:27.111 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:27.111 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:32.118 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:32.118 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:37.127 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:37.128 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:41.705 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:49:41.705 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:49:42.133 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:42.133 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:47.137 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:47.137 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:52.150 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:52.150 [VRB] No newly aborted jobs found.
+2024-01-19 18:49:57.152 [VRB] Checking for aborted jobs...
+2024-01-19 18:49:57.153 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:02.160 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:02.160 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:07.168 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:07.168 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:11.730 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:50:11.730 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:50:12.184 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:12.184 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:17.197 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:17.197 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:22.208 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:22.208 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:27.211 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:27.211 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:32.224 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:32.225 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:37.226 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:37.226 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:41.751 [DBG] Server desktop-j0d1m11:30836:f1e070ee heartbeat successfully sent
+2024-01-19 18:50:41.751 [VRB] Server desktop-j0d1m11:30836:f1e070ee waiting for 00:00:30 delay before sending a heartbeat
+2024-01-19 18:50:42.236 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:42.236 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:47.249 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:47.249 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:52.264 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:52.265 [VRB] No newly aborted jobs found.
+2024-01-19 18:50:57.277 [VRB] Checking for aborted jobs...
+2024-01-19 18:50:57.277 [VRB] No newly aborted jobs found.
+2024-01-19 18:51:02.279 [VRB] Checking for aborted jobs...
+2024-01-19 18:51:02.279 [VRB] No newly aborted jobs found.

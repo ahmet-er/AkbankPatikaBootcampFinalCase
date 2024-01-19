@@ -30,12 +30,6 @@ public class FieldStaffValidator : AbstractValidator<FieldStaffRequest>
         if (string.IsNullOrEmpty(value) || value.Length is not 26 || !value.StartsWith("TR"))
             return false;
 
-        for (int i = 2; i < value.Length; i++)
-        {
-            if (!char.IsDigit(value[i]))
-                return false;
-        }
-
-        return true;
+        return value.Skip(2).All(char.IsDigit);
     }
 }

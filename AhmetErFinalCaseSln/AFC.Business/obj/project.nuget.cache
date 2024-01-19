@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cIhVZszwBquvBdH8C0AEIGR8yt0G+Ej/O+kJ1+XJ0rpX3Pv/LVoGW8k2IAmZ8j4GGHwLwG/TgnNfSyHk/FC4AQ==",
+  "dgSpecHash": "dkBqRLhi2Nrg44XJ/LZcnVSjvw7+ZV3egDL5NlM1DQPqCtuICoGJgBy2HHqLahDItjZ1O3TTiNaiuxz2sPYejQ==",
   "success": true,
   "projectFilePath": "C:\\Project\\AkbankBootcamp\\FinalCase\\AhmetErFinalCaseSln\\AFC.Business\\AFC.Business.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,11 @@
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\hangfire\\1.8.7\\hangfire.1.8.7.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\hangfire.aspnetcore\\1.8.7\\hangfire.aspnetcore.1.8.7.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\hangfire.core\\1.8.7\\hangfire.core.1.8.7.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\hangfire.netcore\\1.8.7\\hangfire.netcore.1.8.7.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\hangfire.sqlserver\\1.8.7\\hangfire.sqlserver.1.8.7.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit\\1.2.5\\linqkit.1.2.5.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\linqkit.core\\1.2.5\\linqkit.core.1.2.5.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",

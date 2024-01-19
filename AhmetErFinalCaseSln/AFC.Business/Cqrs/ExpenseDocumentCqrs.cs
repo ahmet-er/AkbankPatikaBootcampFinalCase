@@ -14,5 +14,5 @@ public record DeleteExpenseDocumentCommand(int Id) : IRequest<ApiResponse>;
 #region Queries
 public record GetAllExpenseDocumentQuery() : IRequest<ApiResponse<List<ExpenseDocumentResponse>>>;
 public record GetExpenseDocumentByIdQuery(int Id) : IRequest<ApiResponse<ExpenseDocumentResponse>>;
-public record GetExpenseDocumentByParameterQuery(int? ExpenseRequestId, string FileType, string FileName) : IRequest<ApiResponse<List<ExpenseDocumentResponse>>>; 
+public record GetExpenseDocumentByParameterQuery(int? ExpenseRequestId, string? FileType, string? FileName) : IRequest<ApiResponse<List<ExpenseDocumentResponse>>>; 
 #endregion

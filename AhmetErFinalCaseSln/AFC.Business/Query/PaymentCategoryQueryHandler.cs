@@ -49,14 +49,14 @@ public class PaymentCategoryQueryHandler :
 
     public async Task<ApiResponse<List<PaymentCategoryResponse>>> Handle(GetPaymentCategoryByParameter request, CancellationToken cancellationToken)
     {
-        var predicate = PredicateBuilder.New<PaymentCategory>(true);
+        //var predicate = PredicateBuilder.New<PaymentCategory>(true);
 
-        if (string.IsNullOrEmpty(request.Name))
-            predicate.And(x => x.Name.ToUpper().Contains(request.Name.ToUpper()));
+        //if (string.IsNullOrEmpty(request.Name))
+        //    predicate.And(x => x.Name.ToUpper().Contains(request.Name.ToUpper()));
 
+        //.Where(predicate)
         var list = await dbContext.Set<PaymentCategory>()
-            .Where(x => x.IsActive)
-            .Where(predicate)
+            .Where(x => x.IsActive && x.Name.ToUpper().Contains(request.Name.ToUpper()))
             .ToListAsync(cancellationToken);
 
         var mappedList = mapper.Map<List<PaymentCategory>, List<PaymentCategoryResponse>>(list);
