@@ -6,7 +6,7 @@ namespace AFC.Business.Cqrs;
 
 #region Commands
 public record CreateFieldStaffCommand(FieldStaffRequest Model) : IRequest<ApiResponse<FieldStaffResponse>>;
-public record UpdateFieldStaffCommand(int Id, FieldStaffRequest Model) : IRequest<ApiResponse>;
+public record UpdateFieldStaffCommand(int Id, UpdateFieldStaffRequest Model) : IRequest<ApiResponse>;
 public record DeleteFieldStaffCommand(int Id) : IRequest<ApiResponse>;
 
 #endregion

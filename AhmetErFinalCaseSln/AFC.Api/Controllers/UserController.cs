@@ -61,7 +61,7 @@ namespace AFC.Api.Controllers
 
         [HttpPut("id")]
         [Authorize(Roles = "Admin")]
-        public async Task<ApiResponse> Put(int id, [FromBody] UserRequest user)
+        public async Task<ApiResponse> Put(int id, [FromBody] UpdateUserRequest user)
         {
             var operation = new UpdateUserCommand(id, user);
             var result = await mediator.Send(operation);

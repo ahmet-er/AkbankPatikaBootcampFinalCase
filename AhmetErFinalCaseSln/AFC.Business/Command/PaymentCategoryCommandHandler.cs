@@ -55,8 +55,8 @@ public class PaymentCategoryCommandHandler :
         if (fromdb is null)
             return new ApiResponse("Record not found.");
 
-        fromdb.Name = request.Model.Name;
-        fromdb.Description = request.Model.Description;
+        fromdb.Name = request.Model.Name == null ? fromdb.Name : request.Model.Name;
+        fromdb.Description = request.Model.Description == null ? fromdb.Description : request.Model.Description;
 
         BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 

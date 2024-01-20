@@ -12,11 +12,18 @@ public class ExpenseRequestByFieldStaffRequest : BaseRequest
     public string PaymentLocation { get; set; }
 }
 
-public class ExpenseRequestByAdminRequest : BaseRequest
+public class UpdateExpenseRequestByFieldStaffRequest : BaseRequest
 {
-    public string CompanyResultDescription { get; set; }
-    public ExpenseStatus ExpenseStatus { get; set; }
-    public PaymentStatus PaymentStatus { get; set; }
+    public decimal? Amount { get; set; }
+    public string? Description { get; set; }
+    public string? PaymentLocation { get; set; }
+}
+
+public class UpdateExpenseRequestByAdminRequest : BaseRequest
+{
+    public string? CompanyResultDescription { get; set; }
+    public ExpenseStatus? ExpenseStatus { get; set; }
+    public PaymentStatus? PaymentStatus { get; set; }
 }
 
 public class ExpenseRequestResponse : BaseResponse

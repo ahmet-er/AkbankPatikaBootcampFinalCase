@@ -22,23 +22,36 @@ public class ExpenseRequestByFieldStaffRequestValidator : AbstractValidator<Expe
 
         RuleFor(x => x.PaymentLocation)
             .NotNull().NotEmpty().WithMessage("PaymentLocation cannot be empty.")
-            .MaximumLength(512).WithMessage("");
+            .MaximumLength(512).WithMessage("PaymentLocation cannot exceed 512 characters.");
     }
 }
 
-public class ExpenseRequestByAdminRequestValidator : AbstractValidator<ExpenseRequestByAdminRequest>
+public class UpdateExpenseRequestByFieldStaffRequestValidator : AbstractValidator<UpdateExpenseRequestByFieldStaffRequest>
+{
+    public UpdateExpenseRequestByFieldStaffRequestValidator()
+    {
+        RuleFor(x => x.Amount)
+            .GreaterThan(0).WithMessage("Amount must be greater than zero.");
+
+        RuleFor(x => x.Description)
+            .MaximumLength(512).WithMessage("Description cannot be empty.");
+
+        RuleFor(x => x.PaymentLocation)
+            .MaximumLength(512).WithMessage("PaymentLocation cannot exceed 512 characters.");
+    }
+}
+
+public class ExpenseRequestByAdminRequestValidator : AbstractValidator<UpdateExpenseRequestByAdminRequest>
 {
     public ExpenseRequestByAdminRequestValidator()
     {
         RuleFor(x => x.CompanyResultDescription)
-            .MaximumLength(512).WithMessage("Company result description cannot be empty.");
+            .MaximumLength(512).WithMessage("Description cannot be empty.");
 
         RuleFor(x => x.ExpenseStatus)
-            .NotEmpty().WithMessage("ExpenseStatus cannot be empty.")
             .IsInEnum().WithMessage("Invalid ExpenseStatus value.");
 
         RuleFor(x => x.PaymentStatus)
-            .NotEmpty().WithMessage("PaymentStatus cannot be empty.")
             .IsInEnum().WithMessage("Invalid PaymentStatus value.");
     }
 }

@@ -9,7 +9,6 @@ public class MapperConfig : Profile
     public MapperConfig()
     {
         CreateMap<ExpenseRequestByFieldStaffRequest, ExpenseRequest>();
-        CreateMap<ExpenseRequestByAdminRequest, ExpenseRequest>();
         CreateMap<ExpenseRequest, ExpenseRequestResponse>();
         CreateMap<ExpenseRequest, ExpenseReportResponse>();
 

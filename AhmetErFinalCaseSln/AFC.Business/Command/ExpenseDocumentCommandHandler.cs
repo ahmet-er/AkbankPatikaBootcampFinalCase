@@ -61,11 +61,12 @@ public class ExpenseDocumentCommandHandler :
 
         var oldFilePath = fromdb.FilePath;
 
+        if (request.Model.FormFile is null)
+            return new ApiResponse<ExpenseDocumentResponse>("File not found.");
+
         var uploadedFileResponse = await azureBlobStorageService.UploadFileAsync(request.Model.FormFile);
 
-        fromdb.FileName = uploadedFileResponse.FileName;
-        fromdb.FileType = uploadedFileResponse.FileType;
-        fromdb.FilePath = uploadedFileResponse.FilePath;
+        fromdb.FilePath = uploadedFileResponse.FilePath == null ? oldFilePath : uploadedFileResponse.FilePath;
 
         BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 

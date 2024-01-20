@@ -8,6 +8,11 @@ public class FieldStaffRequest : BaseRequest
     public string IBAN { get; set; }
 }
 
+public class UpdateFieldStaffRequest : BaseRequest
+{
+    public string? IBAN { get; set; }
+}
+
 public class FieldStaffResponse : BaseResponse
 {
     public int UserId { get; set; }

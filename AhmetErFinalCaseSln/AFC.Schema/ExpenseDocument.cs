@@ -9,6 +9,11 @@ public class ExpenseDocumentRequest
     public IFormFile FormFile { get; set; }
 }
 
+public class UpdateExpenseDocumentRequest
+{
+    public IFormFile? FormFile { get; set; }
+}
+
 public class ExpenseDocumentResponse
 {
     [JsonIgnore]

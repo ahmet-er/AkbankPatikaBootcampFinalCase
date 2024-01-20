@@ -63,7 +63,7 @@ namespace AFC.Api.Controllers
 
         [HttpPut("by-fieldStaff")]
         [Authorize(Roles = "FieldStaff")]
-        public async Task<ApiResponse> PutByFieldStaff(int id, [FromBody] ExpenseRequestByFieldStaffRequest expenseRequest)
+        public async Task<ApiResponse> PutByFieldStaff(int id, [FromBody] UpdateExpenseRequestByFieldStaffRequest expenseRequest)
         {
             var operation = new UpdateExpenseRequestByFieldStaffCommand(id, expenseRequest);
             var result = await mediator.Send(operation);
@@ -72,7 +72,7 @@ namespace AFC.Api.Controllers
 
         [HttpPut("by-admin")]
         [Authorize(Roles = "Admin")]
-        public async Task<ApiResponse> PutByAdmin(int id, [FromBody] ExpenseRequestByAdminRequest expenseRequest)
+        public async Task<ApiResponse> PutByAdmin(int id, [FromBody] UpdateExpenseRequestByAdminRequest expenseRequest)
         {
             var operation = new UpdateExpenseRequestByAdminCommand(id, expenseRequest);
             var result = await mediator.Send(operation);

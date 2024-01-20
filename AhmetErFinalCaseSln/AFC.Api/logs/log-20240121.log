@@ -1,0 +1,63 @@
+2024-01-21 00:48:44.375 [INF] App server is starting.
+2024-01-21 00:48:51.718 [INF] Start installing Hangfire SQL objects...
+2024-01-21 00:48:53.363 [INF] Hangfire SQL objects installed.
+2024-01-21 00:48:54.734 [INF] Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-J0D1M11\SQLEXPRESS@afc_hangfire'
+2024-01-21 00:48:54.734 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-21 00:48:54.734 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-21 00:48:54.786 [DBG] Execution loop BackgroundServerProcess:3fef1c37 has started in 24,6565 ms
+2024-01-21 00:48:54.874 [VRB] Server desktop-j0d1m11:31604:d6488321 is announcing itself...
+2024-01-21 00:48:55.563 [INF] Server desktop-j0d1m11:31604:d6488321 successfully announced in 687,4558 ms
+2024-01-21 00:48:55.577 [INF] Server desktop-j0d1m11:31604:d6488321 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-21 00:48:55.581 [DBG] Execution loop ServerHeartbeatProcess:b1deba27 has started in 16,4374 ms
+2024-01-21 00:48:55.585 [VRB] Server desktop-j0d1m11:31604:d6488321 waiting for 00:00:30 delay before sending a heartbeat
+2024-01-21 00:48:55.596 [DBG] Execution loop ServerWatchdog:aae0d1dc has started in 15,4348 ms
+2024-01-21 00:48:55.608 [DBG] Execution loop ServerJobCancellationWatcher:26fdd39a has started in 17,3947 ms
+2024-01-21 00:48:55.610 [VRB] Checking for aborted jobs...
+2024-01-21 00:48:55.612 [VRB] No newly aborted jobs found.
+2024-01-21 00:48:55.624 [DBG] Execution loop ExpirationManager:4c0aba36 has started in 20,9016 ms
+2024-01-21 00:48:55.624 [INF] 1 servers were removed due to timeout
+2024-01-21 00:48:55.627 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-01-21 00:48:55.660 [DBG] Execution loop CountersAggregator:b8df0242 has started in 40,821 ms
+2024-01-21 00:48:55.666 [DBG] Aggregating records in 'Counter' table...
+2024-01-21 00:48:55.693 [DBG] Execution loop SqlServerHeartbeatProcess:f5a3cb2b has started in 51,1719 ms
+2024-01-21 00:48:55.712 [DBG] Execution loop Worker:39763fca has started in 23,9239 ms
+2024-01-21 00:48:55.718 [DBG] Execution loop Worker:3c6b5c9b has started in 32,1703 ms
+2024-01-21 00:48:55.727 [VRB] Outdated records removed from the 'AggregatedCounter' table.
+2024-01-21 00:48:55.727 [DBG] Execution loop Worker:161ddda8 has started in 41,111 ms
+2024-01-21 00:48:55.727 [DBG] Removing outdated records from the 'Job' table...
+2024-01-21 00:48:55.742 [DBG] Execution loop Worker:e3a2a962 has started in 56,0634 ms
+2024-01-21 00:48:55.764 [DBG] Execution loop Worker:8c574190 has started in 78,19 ms
+2024-01-21 00:48:55.771 [VRB] Outdated records removed from the 'Job' table.
+2024-01-21 00:48:55.771 [DBG] Removing outdated records from the 'List' table...
+2024-01-21 00:48:55.804 [DBG] Execution loop Worker:a9e1ab52 has started in 118,0982 ms
+2024-01-21 00:48:55.829 [DBG] Execution loop Worker:9258f64a has started in 143,2794 ms
+2024-01-21 00:48:55.943 [VRB] Outdated records removed from the 'List' table.
+2024-01-21 00:48:55.943 [DBG] Execution loop Worker:0e26f825 has started in 257,2118 ms
+2024-01-21 00:48:55.947 [DBG] Removing outdated records from the 'Set' table...
+2024-01-21 00:48:55.957 [DBG] Execution loop Worker:79ca116d has started in 271,8427 ms
+2024-01-21 00:48:55.981 [VRB] Outdated records removed from the 'Set' table.
+2024-01-21 00:48:55.981 [DBG] Removing outdated records from the 'Hash' table...
+2024-01-21 00:48:56.000 [VRB] Outdated records removed from the 'Hash' table.
+2024-01-21 00:48:56.016 [DBG] Execution loop Worker:398bf6fe has started in 329,9338 ms
+2024-01-21 00:48:56.062 [DBG] Execution loop Worker:2618f908 has started in 376,0122 ms
+2024-01-21 00:48:56.370 [VRB] Records from the 'Counter' table aggregated.
+2024-01-21 00:48:56.452 [DBG] Execution loop Worker:8edde768 has started in 766,192 ms
+2024-01-21 00:48:56.452 [DBG] Execution loop Worker:219531e9 has started in 766,1889 ms
+2024-01-21 00:48:56.475 [DBG] Execution loop Worker:da1245f1 has started in 789,8169 ms
+2024-01-21 00:48:56.489 [DBG] Execution loop Worker:ebd5a843 has started in 803,0456 ms
+2024-01-21 00:48:56.604 [DBG] Execution loop Worker:2f6addf7 has started in 918,5911 ms
+2024-01-21 00:48:56.816 [DBG] Execution loop Worker:a306e17a has started in 1130,2001 ms
+2024-01-21 00:48:56.834 [DBG] Execution loop Worker:679e0ca0 has started in 1148,4805 ms
+2024-01-21 00:48:56.855 [DBG] Execution loop Worker:c1312270 has started in 1168,893 ms
+2024-01-21 00:48:56.890 [DBG] Execution loop Worker:aae56458 has started in 1204,1635 ms
+2024-01-21 00:48:56.919 [DBG] Execution loop DelayedJobScheduler:3a7d2589 has started in 60,8644 ms
+2024-01-21 00:48:56.926 [INF] Server desktop-j0d1m11:31604:d6488321 all the dispatchers started
+2024-01-21 00:48:56.963 [DBG] Execution loop RecurringJobScheduler:7496c906 has started in 43,8199 ms
+2024-01-21 00:49:00.616 [VRB] Checking for aborted jobs...
+2024-01-21 00:49:00.617 [VRB] No newly aborted jobs found.
+2024-01-21 00:49:05.630 [VRB] Checking for aborted jobs...
+2024-01-21 00:49:05.631 [VRB] No newly aborted jobs found.

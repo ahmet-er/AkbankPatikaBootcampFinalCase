@@ -6,7 +6,7 @@ namespace AFC.Business.Cqrs;
 
 #region Commands
 public record CreateUserCommand(UserRequest Model) : IRequest<ApiResponse<UserResponse>>;
-public record UpdateUserCommand(int Id, UserRequest Model) : IRequest<ApiResponse>;
+public record UpdateUserCommand(int Id, UpdateUserRequest Model) : IRequest<ApiResponse>;
 public record DeleteUserCommand(int Id) : IRequest<ApiResponse>; 
 #endregion
 

@@ -57,7 +57,7 @@ namespace AFC.Api.Controllers
 
         [HttpPut("id")]
         [Authorize(Roles = "Admin")]
-        public async Task<ApiResponse> Put(int id, [FromBody] PaymentCategoryRequest paymentRequest)
+        public async Task<ApiResponse> Put(int id, [FromBody] UpdatePaymentCategoryRequest paymentRequest)
         {
             var operation = new UpdatePaymentCategoryCommand(id, paymentRequest);
             var result = await mediator.Send(operation);

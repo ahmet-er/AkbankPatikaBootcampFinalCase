@@ -6,7 +6,6 @@ using AFC.Data.Entity;
 using AFC.Schema;
 using AutoMapper;
 using MediatR;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
@@ -56,7 +55,7 @@ public class FieldStaffCommandHandler :
         if (fromdb is null)
             return new ApiResponse("Record not found.");
 
-        fromdb.IBAN = request.Model.IBAN;
+        fromdb.IBAN = request.Model.IBAN == null ? fromdb.IBAN : request.Model.IBAN;
 
         BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 

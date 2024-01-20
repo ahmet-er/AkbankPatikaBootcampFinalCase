@@ -53,10 +53,10 @@ public class UserCommandHandler :
         if (fromdb is null)
             return new ApiResponse("Record not found.");
 
-        fromdb.FirstName = request.Model.FirstName;
-        fromdb.LastName = request.Model.LastName;
-        fromdb.Email = request.Model.Email;
-        fromdb.Role = request.Model.Role;
+        fromdb.UserName = request.Model.UserName == null ? fromdb.UserName : request.Model.UserName;
+        fromdb.FirstName = request.Model.FirstName == null ? fromdb.FirstName : request.Model.FirstName;
+        fromdb.LastName = request.Model.LastName == null ? fromdb.LastName : request.Model.LastName;
+        fromdb.Email = request.Model.Email == null ? fromdb.Email : request.Model.Email;
 
         BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 

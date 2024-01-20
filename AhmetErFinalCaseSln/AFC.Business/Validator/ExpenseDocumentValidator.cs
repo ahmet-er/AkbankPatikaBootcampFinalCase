@@ -16,3 +16,13 @@ public class ExpenseDocumentValidator : AbstractValidator<ExpenseDocumentRequest
             .WithMessage("File size must be between 1 byte and 10 MB.");
     }
 }
+
+public class UpdateExpenseDocumentValidator : AbstractValidator<UpdateExpenseDocumentRequest>
+{
+    public UpdateExpenseDocumentValidator()
+    {
+        RuleFor(x => x.FormFile)
+            .Must(file => file is not null && file.Length > 0 && file.Length <= 10 * 1024 * 1024)
+            .WithMessage("File size must be between 1 byte and 10 MB.");
+    }
+}

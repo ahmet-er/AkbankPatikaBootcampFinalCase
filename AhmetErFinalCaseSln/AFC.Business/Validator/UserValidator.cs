@@ -37,3 +37,25 @@ public class UserValidator : AbstractValidator<UserRequest>
             .IsInEnum().WithMessage("Invalid Role value.");
     }
 }
+
+public class UpdateUserValidator : AbstractValidator<UpdateUserRequest>
+{
+    public UpdateUserValidator()
+    {
+        RuleFor(x => x.UserName)
+            .MinimumLength(5).WithMessage("UserName must be at least 5 characters long.")
+            .MaximumLength(256).WithMessage("UserName cannot exceed 256 characters.");
+
+        RuleFor(x => x.FirstName)
+            .MinimumLength(5).WithMessage("FirstName must be at least 5 characters long.")
+            .MaximumLength(128).WithMessage("FirstName cannot exceed 128 characters.");
+
+        RuleFor(x => x.LastName)
+            .MinimumLength(5).WithMessage("LastName must be at least 5 characters long.")
+            .MaximumLength(128).WithMessage("LastName cannot exceed 128 characters.");
+
+        RuleFor(x => x.Email)
+            .MaximumLength(256).WithMessage("Email cannot exceed 256 characters.")
+            .EmailAddress().WithMessage("Invalid email address");
+    }
+}

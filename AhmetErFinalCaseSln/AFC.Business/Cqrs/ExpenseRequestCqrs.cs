@@ -6,8 +6,8 @@ namespace AFC.Business.Cqrs;
 
 #region Commands
 public record CreateExpenseRequestCommand(ExpenseRequestByFieldStaffRequest Model) : IRequest<ApiResponse<ExpenseRequestResponse>>;
-public record UpdateExpenseRequestByFieldStaffCommand(int Id, ExpenseRequestByFieldStaffRequest Model) : IRequest<ApiResponse>;
-public record UpdateExpenseRequestByAdminCommand(int Id, ExpenseRequestByAdminRequest Model) : IRequest<ApiResponse>;
+public record UpdateExpenseRequestByFieldStaffCommand(int Id, UpdateExpenseRequestByFieldStaffRequest Model) : IRequest<ApiResponse>;
+public record UpdateExpenseRequestByAdminCommand(int Id, UpdateExpenseRequestByAdminRequest Model) : IRequest<ApiResponse>;
 public record DeleteExpenseRequestCommand(int Id) : IRequest<ApiResponse>;
 
 #endregion

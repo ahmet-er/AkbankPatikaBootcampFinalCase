@@ -6,7 +6,7 @@ namespace AFC.Business.Cqrs;
 
 #region Commands
 public record CreatePaymentCategoryCommand(PaymentCategoryRequest Model) : IRequest<ApiResponse<PaymentCategoryResponse>>;
-public record UpdatePaymentCategoryCommand(int Id, PaymentCategoryRequest Model) : IRequest<ApiResponse>;
+public record UpdatePaymentCategoryCommand(int Id, UpdatePaymentCategoryRequest Model) : IRequest<ApiResponse>;
 public record DeletePaymentCategoryCommand(int Id) : IRequest<ApiResponse>;
 
 #endregion

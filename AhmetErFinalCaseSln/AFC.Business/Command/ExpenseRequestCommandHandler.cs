@@ -53,9 +53,9 @@ public class ExpenseRequestCommandHandler :
         if (fromdb is null)
             return new ApiResponse("Record not found.");
 
-        fromdb.Amount = request.Model.Amount;
-        fromdb.Description = request.Model.Description;
-        fromdb.PaymentLocation = request.Model.PaymentLocation;
+        fromdb.Amount = (decimal)(request.Model.Amount == null ? fromdb.Amount : request.Model.Amount);
+        fromdb.Description = request.Model.Description == null ? fromdb.Description : request.Model.Description;
+        fromdb.PaymentLocation = request.Model.PaymentLocation == null ? fromdb.PaymentLocation : request.Model.PaymentLocation;
 
         BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 
@@ -71,9 +71,9 @@ public class ExpenseRequestCommandHandler :
         if (fromdb is null)
             return new ApiResponse("Record not found.");
 
-        fromdb.CompanyResultDescription = request.Model.CompanyResultDescription;
-        fromdb.ExpenseStatus = request.Model.ExpenseStatus;
-        fromdb.PaymentStatus = request.Model.PaymentStatus;
+        fromdb.CompanyResultDescription = request.Model.CompanyResultDescription == null ? fromdb.CompanyResultDescription : request.Model.CompanyResultDescription;
+        fromdb.ExpenseStatus = (ExpenseStatus)(request.Model.ExpenseStatus == null ? fromdb.ExpenseStatus : request.Model.ExpenseStatus);
+        fromdb.PaymentStatus = (PaymentStatus)(request.Model.PaymentStatus == null ? fromdb.PaymentStatus : request.Model.PaymentStatus);
 
         BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 
