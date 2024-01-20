@@ -31,7 +31,7 @@ namespace AFC.Api.Controllers
         [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<PaymentCategoryResponse>> Get(int id)
         {
-            var operation = new GetPaymentCategoryById(id);
+            var operation = new GetPaymentCategoryByIdQuery(id);
             var result = await mediator.Send(operation);
             return result;
         }
@@ -41,7 +41,7 @@ namespace AFC.Api.Controllers
         public async Task<ApiResponse<List<PaymentCategoryResponse>>> GetByParameter(
             [FromQuery] string? Name)
         {
-            var operation = new GetPaymentCategoryByParameter(Name);
+            var operation = new GetPaymentCategoryByParameterQuery(Name);
             var result = await mediator.Send(operation);
             return result;
         }

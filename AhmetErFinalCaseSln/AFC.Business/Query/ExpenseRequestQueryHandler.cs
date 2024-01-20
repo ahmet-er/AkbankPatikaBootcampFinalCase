@@ -54,17 +54,29 @@ public class ExpenseRequestQueryHandler :
     {
         var predicate = PredicateBuilder.New<ExpenseRequest>(true);
 
-        if (string.IsNullOrEmpty(request.PaymentLocation))
-            predicate.And(x => x.PaymentLocation.ToUpper().Contains(request.PaymentLocation.ToUpper()));
+        if (request.FieldStaffId.HasValue)
+            predicate = predicate.And(x => x.FieldStaffId == request.FieldStaffId);
 
-        if (Enum.TryParse<ExpenseStatus>(request.ExpenseStatus, true, out var parsedExpenseStatus))
+        if (request.PaymentCategoryId.HasValue)
+            predicate = predicate.And(x => x.PaymentCategoryId == request.PaymentCategoryId);
+
+        if (request.MinAmount.HasValue)
+            predicate = predicate.And(x => x.Amount >= request.MinAmount);
+
+        if (request.MaxAmount.HasValue)
+            predicate = predicate.And(x => x.Amount <= request.MaxAmount);
+
+        if (!string.IsNullOrEmpty(request.PaymentLocation))
+            predicate.And(x => x.PaymentLocation.Contains(request.PaymentLocation));
+
+        if (!string.IsNullOrEmpty(request.ExpenseStatus) && Enum.TryParse<ExpenseStatus>(request.ExpenseStatus, true, out var parsedExpenseStatus))
             predicate.And(x => x.ExpenseStatus == parsedExpenseStatus);
-        else
+        else if (!string.IsNullOrEmpty(request.ExpenseStatus))
             return new ApiResponse<List<ExpenseRequestResponse>>("Invalid ExpenseStatus value.");
 
-        if (Enum.TryParse<PaymentStatus>(request.PaymentStatus, true, out var parsedPaymentStatus))
+        if (!string.IsNullOrEmpty(request.PaymentStatus) && Enum.TryParse<PaymentStatus>(request.PaymentStatus, true, out var parsedPaymentStatus))
             predicate.And(x => x.PaymentStatus == parsedPaymentStatus);
-        else
+        else if (!string.IsNullOrEmpty(request.PaymentStatus))
             return new ApiResponse<List<ExpenseRequestResponse>>("Invalid PaymentStatus value.");
 
         var list = await dbContext.Set<ExpenseRequest>()

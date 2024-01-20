@@ -51,8 +51,12 @@ public class FieldStaffQueryHandler :
     public async Task<ApiResponse<List<FieldStaffResponse>>> Handle(GetFieldStaffByParameterQuery request, CancellationToken cancellationToken)
     {
         var predicate = PredicateBuilder.New<FieldStaff>(true);
-        if (string.IsNullOrEmpty(request.IBAN))
-            predicate.And(x => x.IBAN.ToUpper().Contains(request.IBAN.ToUpper()));
+
+        if (request.UserId.HasValue)
+            predicate.And(x => x.UserId == request.UserId);
+
+        if (!string.IsNullOrEmpty(request.IBAN))
+            predicate.And(x => x.IBAN.Contains(request.IBAN));
 
         var list = await dbContext.Set<FieldStaff>()
             .Include(x => x.User)

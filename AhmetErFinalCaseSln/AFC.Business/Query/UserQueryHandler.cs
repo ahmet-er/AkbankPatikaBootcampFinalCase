@@ -13,8 +13,8 @@ namespace AFC.Business.Query;
 
 public class UserQueryHandler :
     IRequestHandler<GetAllUserQuery, ApiResponse<List<UserResponse>>>,
-    IRequestHandler<GetUserById, ApiResponse<UserResponse>>,
-    IRequestHandler<GetUserByParameter, ApiResponse<List<UserResponse>>>
+    IRequestHandler<GetUserByIdQuery, ApiResponse<UserResponse>>,
+    IRequestHandler<GetUserByParameterQuery, ApiResponse<List<UserResponse>>>
 {
     private readonly AfcDbContext dbContext;
     private readonly IMapper mapper;
@@ -35,7 +35,7 @@ public class UserQueryHandler :
         return new ApiResponse<List<UserResponse>>(mappedList);
     }
 
-    public async Task<ApiResponse<UserResponse>> Handle(GetUserById request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<UserResponse>> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
         var entity = await dbContext.Set<User>().FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
 
@@ -47,21 +47,21 @@ public class UserQueryHandler :
 
     }
 
-    public async Task<ApiResponse<List<UserResponse>>> Handle(GetUserByParameter request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<List<UserResponse>>> Handle(GetUserByParameterQuery request, CancellationToken cancellationToken)
     {
         var predicate = PredicateBuilder.New<User>(true);
-        if (string.IsNullOrEmpty(request.UserName))
-            predicate.And(x => x.UserName.ToUpper().Contains(request.UserName.ToUpper()));
-        if (string.IsNullOrEmpty(request.FirstName))
-            predicate.And(x => x.FirstName.ToUpper().Contains(request.FirstName.ToUpper()));
-        if (string.IsNullOrEmpty(request.LastName))
-            predicate.And(x => x.LastName.ToUpper().Contains(request.LastName.ToUpper()));
-        if (string.IsNullOrEmpty(request.Email))
-            predicate.And(x => x.Email.ToUpper().Contains(request.Email.ToUpper()));
+        if (!string.IsNullOrEmpty(request.UserName))
+            predicate.And(x => x.UserName.Contains(request.UserName));
+        if (!string.IsNullOrEmpty(request.FirstName))
+            predicate.And(x => x.FirstName.Contains(request.FirstName));
+        if (!string.IsNullOrEmpty(request.LastName))
+            predicate.And(x => x.LastName.Contains(request.LastName));
+        if (!string.IsNullOrEmpty(request.Email))
+            predicate.And(x => x.Email.Contains(request.Email));
 
-        if (Enum.TryParse<Role>(request.Role, true, out var parsedRole))
+        if (!string.IsNullOrEmpty(request.Role) && Enum.TryParse<Role>(request.Role, true, out var parsedRole))
             predicate.And(x => x.Role == parsedRole);
-        else
+        else if (!string.IsNullOrEmpty(request.Role))
             return new ApiResponse<List<UserResponse>>("Invalid role type.");
 
         var list = await dbContext.Set<User>()

@@ -12,8 +12,8 @@ namespace AFC.Business.Query;
 
 public class PaymentCategoryQueryHandler :
     IRequestHandler<GetAllPaymentCategoryQuery, ApiResponse<List<PaymentCategoryResponse>>>,
-    IRequestHandler<GetPaymentCategoryById, ApiResponse<PaymentCategoryResponse>>,
-    IRequestHandler<GetPaymentCategoryByParameter, ApiResponse<List<PaymentCategoryResponse>>>
+    IRequestHandler<GetPaymentCategoryByIdQuery, ApiResponse<PaymentCategoryResponse>>,
+    IRequestHandler<GetPaymentCategoryByParameterQuery, ApiResponse<List<PaymentCategoryResponse>>>
 {
     private readonly AfcDbContext dbContext;
     private readonly IMapper mapper;
@@ -34,7 +34,7 @@ public class PaymentCategoryQueryHandler :
         return new ApiResponse<List<PaymentCategoryResponse>>(mappedList);
     }
 
-    public async Task<ApiResponse<PaymentCategoryResponse>> Handle(GetPaymentCategoryById request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<PaymentCategoryResponse>> Handle(GetPaymentCategoryByIdQuery request, CancellationToken cancellationToken)
     {
         var entity = await dbContext.Set<PaymentCategory>()
             .Where(x => x.Id == request.Id && x.IsActive)
@@ -47,16 +47,16 @@ public class PaymentCategoryQueryHandler :
         return new ApiResponse<PaymentCategoryResponse>(mapped);
     }
 
-    public async Task<ApiResponse<List<PaymentCategoryResponse>>> Handle(GetPaymentCategoryByParameter request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<List<PaymentCategoryResponse>>> Handle(GetPaymentCategoryByParameterQuery request, CancellationToken cancellationToken)
     {
-        //var predicate = PredicateBuilder.New<PaymentCategory>(true);
+        var predicate = PredicateBuilder.New<PaymentCategory>(true);
 
-        //if (string.IsNullOrEmpty(request.Name))
-        //    predicate.And(x => x.Name.ToUpper().Contains(request.Name.ToUpper()));
+        if (!string.IsNullOrEmpty(request.Name))
+            predicate.And(x => x.Name.Contains(request.Name));
 
-        //.Where(predicate)
         var list = await dbContext.Set<PaymentCategory>()
-            .Where(x => x.IsActive && x.Name.ToUpper().Contains(request.Name.ToUpper()))
+            .Where(x => x.IsActive)
+            .Where(predicate)
             .ToListAsync(cancellationToken);
 
         var mappedList = mapper.Map<List<PaymentCategory>, List<PaymentCategoryResponse>>(list);

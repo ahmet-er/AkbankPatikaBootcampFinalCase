@@ -10,7 +10,7 @@ public static class BaseEntitySetPropertyExtension
     /// </summary>
     public static void SetCreatedProperties(this BaseEntity entity, IHttpContextAccessor httpContextAccessor)
     {
-        int userId = GetUserIdFromClaims(httpContextAccessor);
+        int userId = GetUserIdFromClaims.GetUserId(httpContextAccessor);
 
         entity.CreateBy = userId;
         entity.CreateAt = DateTime.Now;
@@ -22,22 +22,10 @@ public static class BaseEntitySetPropertyExtension
     /// </summary>
     public static void SetModifiedProperties(this BaseEntity entity, IHttpContextAccessor httpContextAccessor)
     {
-        int userId = GetUserIdFromClaims(httpContextAccessor);
+        int userId = GetUserIdFromClaims.GetUserId(httpContextAccessor);
 
         entity.ModifiedBy = userId;
         entity.ModifiedAt = DateTime.Now;
         entity.IsActive = true;
-    }
-
-    /// <summary>
-    /// Claim'de bulunan User'in Id'sine çeker.
-    /// </summary>
-    private static int GetUserIdFromClaims(IHttpContextAccessor httpContextAccessor)
-    {
-        var userIdClaim = httpContextAccessor.HttpContext?.User.FindFirst("Id");
-
-        if (userIdClaim is not null && int.TryParse(userIdClaim.Value, out var userId))
-            return userId;
-        return 0;
     }
 }

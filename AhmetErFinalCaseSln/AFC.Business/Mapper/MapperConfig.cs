@@ -11,6 +11,7 @@ public class MapperConfig : Profile
         CreateMap<ExpenseRequestByFieldStaffRequest, ExpenseRequest>();
         CreateMap<ExpenseRequestByAdminRequest, ExpenseRequest>();
         CreateMap<ExpenseRequest, ExpenseRequestResponse>();
+        CreateMap<ExpenseRequest, ExpenseReportResponse>();
 
         CreateMap<ExpenseDocumentRequest, ExpenseDocument>();
         CreateMap<ExpenseDocument, ExpenseDocumentResponse>();

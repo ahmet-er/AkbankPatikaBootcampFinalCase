@@ -52,11 +52,11 @@ public class ExpenseDocumentQueryHandler :
     {
         var predicate = PredicateBuilder.New<ExpenseDocument>(true);
 
-        if (string.IsNullOrEmpty(request.FileType))
-            predicate.And(x => x.FileType.ToUpper().Contains(request.FileType.ToUpper()));
+        if (!string.IsNullOrEmpty(request.FileType))
+            predicate.And(x => x.FileType.Contains(request.FileType));
 
-        if (string.IsNullOrEmpty(request.FileName))
-            predicate.And(x => x.FileName.ToUpper().Contains(request.FileName.ToUpper()));
+        if (!string.IsNullOrEmpty(request.FileName))
+            predicate.And(x => x.FileName.Contains(request.FileName));
 
         var list = await dbContext.Set<ExpenseDocument>()
             .Include(x => x.ExpenseRequest)

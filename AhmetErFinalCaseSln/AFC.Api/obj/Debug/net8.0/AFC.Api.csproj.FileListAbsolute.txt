@@ -193,3 +193,4 @@ C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0
 C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
 C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
+C:\Project\AkbankBootcamp\FinalCase\AhmetErFinalCaseSln\AFC.Api\bin\Debug\net8.0\Dapper.dll

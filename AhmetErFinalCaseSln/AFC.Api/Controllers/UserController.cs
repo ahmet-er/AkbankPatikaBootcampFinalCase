@@ -31,7 +31,7 @@ namespace AFC.Api.Controllers
         [Authorize(Roles = "Admin, FieldStaff")]
         public async Task<ApiResponse<UserResponse>> Get(int id)
         {
-            var operation = new GetUserById(id);
+            var operation = new GetUserByIdQuery(id);
             var result = await mediator.Send(operation);
             return result;
         }
@@ -45,7 +45,7 @@ namespace AFC.Api.Controllers
             [FromQuery] string? Email,
             [FromQuery] string? Role)
         {
-            var operation = new GetUserByParameter(UserName, FirstName, LastName, Email, Role);
+            var operation = new GetUserByParameterQuery(UserName, FirstName, LastName, Email, Role);
             var result = await mediator.Send(operation);
             return result;
         }
