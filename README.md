@@ -43,7 +43,7 @@ açılmalı. (İnitial migration dosyasında hazırlanmalı. )
 FieldStaff = Saha Personeli : Admin rolune sahip kullanıcı tarafından oluşturulabilir.
 
 ## Database Diagram
-![Database Diagram](link)
+![Database Diagram](https://github.com/ahmet-er/AkbankPatikaBootcampFinalCase/blob/main/images/lastest-database-diagram.png?raw=true)
 
 ## Enums
 | Enum   | Values                                      | Description                              |
