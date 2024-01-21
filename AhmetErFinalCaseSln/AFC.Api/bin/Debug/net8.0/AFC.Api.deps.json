@@ -92,14 +92,6 @@
           }
         }
       },
-      "Dapper/2.1.28": {
-        "runtime": {
-          "lib/net7.0/Dapper.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.1.28.55233"
-          }
-        }
-      },
       "EntityFramework/6.3.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -1468,7 +1460,6 @@
           "AFC.Schema": "1.0.0",
           "AutoMapper": "12.0.1",
           "Azure.Storage.Blobs": "12.19.1",
-          "Dapper": "2.1.28",
           "FluentValidation.AspNetCore": "11.3.0",
           "FluentValidation.DependencyInjectionExtensions": "11.9.0",
           "Hangfire": "1.8.7",
@@ -1540,13 +1531,6 @@
       "sha512": "sha512-ohCslqP9yDKIn+DVjBEOBuieB1QwsUCz+BwHYNaJ3lcIsTSiI4Evnq81HcKe8CqM8qvdModbipVQKpnxpbdWqA==",
       "path": "azure.storage.common/12.18.1",
       "hashPath": "azure.storage.common.12.18.1.nupkg.sha512"
-    },
-    "Dapper/2.1.28": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ha49pzOEDmCPkMxwfPSR/wxa/6RD3r42TESIgpzpi7FXq/gNVUuJVEO+wtUzntNRhtmq3BKCl0s0aAlSZLkBUA==",
-      "path": "dapper/2.1.28",
-      "hashPath": "dapper.2.1.28.nupkg.sha512"
     },
     "EntityFramework/6.3.0": {
       "type": "package",

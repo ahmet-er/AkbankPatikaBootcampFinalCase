@@ -57,7 +57,7 @@ public class ExpenseReportQueryHandler :
         var predicate = PredicateBuilder.New<ExpenseRequest>();
 
         if (request.DayCount.HasValue)
-            predicate.And(x => x.CreateAt >= DateTime.Now.AddDays(request.DayCount.Value));
+            predicate.And(x => x.CreateAt >= DateTime.Now.AddDays(-1 * request.DayCount.Value));
 
         if (request.FieldStaffId.HasValue)
             predicate.And(x => x.FieldStaffId ==  request.FieldStaffId);

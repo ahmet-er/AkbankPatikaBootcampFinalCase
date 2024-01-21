@@ -18,6 +18,4 @@ public class PaymentCategoryResponse : BaseResponse
 {
     public string Name { get; set; }
     public string Description { get; set; }
-
-    public virtual List<ExpenseRequestResponse> ExpenseRequests { get; set; }
 }

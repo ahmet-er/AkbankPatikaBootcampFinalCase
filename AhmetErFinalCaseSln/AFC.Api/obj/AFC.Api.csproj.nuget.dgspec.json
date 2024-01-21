@@ -234,10 +234,6 @@
               "target": "Package",
               "version": "[12.19.1, )"
             },
-            "Dapper": {
-              "target": "Package",
-              "version": "[2.1.28, )"
-            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CDht58tWqJA7Neo0MhYX62zmEQ2Y9kSEwhd0y1g4u4jzHG7FT0A1T6a7h+jxqryv9Q6RLXt7XPCPJHche8ckQg==",
+  "dgSpecHash": "dkBqRLhi2Nrg44XJ/LZcnVSjvw7+ZV3egDL5NlM1DQPqCtuICoGJgBy2HHqLahDItjZ1O3TTiNaiuxz2sPYejQ==",
   "success": true,
   "projectFilePath": "C:\\Project\\AkbankBootcamp\\FinalCase\\AhmetErFinalCaseSln\\AFC.Business\\AFC.Business.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,6 @@
     "C:\\Users\\Ahmet\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\azure.storage.blobs\\12.19.1\\azure.storage.blobs.12.19.1.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\azure.storage.common\\12.18.1\\azure.storage.common.12.18.1.nupkg.sha512",
-    "C:\\Users\\Ahmet\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
