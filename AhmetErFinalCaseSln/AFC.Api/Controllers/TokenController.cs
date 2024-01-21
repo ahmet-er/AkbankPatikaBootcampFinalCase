@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
 {
-    [Route("api/token")]
+    [Route("api/tokens")]
     [ApiController]
     public class TokenController : ControllerBase
     {

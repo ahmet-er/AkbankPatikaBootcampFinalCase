@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers;
 
-[Route("api/expense-report")]
+[Route("api/expense-reports")]
 [ApiController]
 public class ExpenseReportController : ControllerBase
 {

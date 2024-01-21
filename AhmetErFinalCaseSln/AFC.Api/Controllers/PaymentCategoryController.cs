@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
 {
-    [Route("api/payment-category")]
+    [Route("api/payment-categories")]
     [ApiController]
     public class PaymentCategoryController : ControllerBase
     {

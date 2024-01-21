@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AFC.Api.Controllers
 {
-    [Route("api/field-staff")]
+    [Route("api/field-staffs")]
     [ApiController]
     public class FieldStaffController : ControllerBase
     {
