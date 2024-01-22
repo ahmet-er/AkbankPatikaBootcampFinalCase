@@ -6,6 +6,7 @@
   - [Default Admins](#default-admins)
   - [Field Staff](#field-staff)
 - [Database Diagram](#database-diagram)
+- [Api Screenshots](#api-screenshots)
 - [Enums](#enums)
 - [Endpoints](#endpoints)
   - [Token](#token)
@@ -47,6 +48,9 @@ FieldStaff = Saha Personeli : Admin rolune sahip kullanıcı tarafından oluştu
 
 ## Database Diagram
 ![Database Diagram](https://github.com/ahmet-er/AkbankPatikaBootcampFinalCase/blob/main/images/lastest-database-diagram.png?raw=true)
+
+## Api Screenshots
+[Api Screenshots](https://github.com/ahmet-er/AkbankPatikaBootcampFinalCase/blob/main/images/akbank-final-case-screenshots.pdf)
 
 ## Enums
 | Enum   | Values                                      | Description                              |
