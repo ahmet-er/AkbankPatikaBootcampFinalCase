@@ -14,6 +14,7 @@ public class AfcDbContext : DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+        // App ayağa kalkarken oluşturulan Admin rolüne sahip kullanıcılar.
         modelBuilder.Entity<User>().HasData(
                     new User
                     {

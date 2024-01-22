@@ -32,7 +32,6 @@ public class Startup
         string connection = Configuration.GetConnectionString("MsSqlConnection");
         services.AddDbContext<AfcDbContext>(options => options.UseSqlServer(connection));
 
-        //services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Startup>());
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).GetTypeInfo().Assembly));
 
         var mapperConfig = new MapperConfiguration(cfg => cfg.AddProfile(new MapperConfig()));

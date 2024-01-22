@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AFC.Data.Helpers;
 
+/// <summary>
+/// BaseEntity'den gelen propertylerin configurasyonlarını yapar.
+/// </summary>
 public static class BaseEntityConfigurationExtension
 {
     public static void ConfigureBaseEntity<TEntity>(EntityTypeBuilder<TEntity> builder) where TEntity : BaseEntity

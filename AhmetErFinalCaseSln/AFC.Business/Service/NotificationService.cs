@@ -4,6 +4,9 @@ using System.Text;
 
 namespace AFC.Business.Service;
 
+/// <summary>
+/// Sistem'de ödeme simülasyonunda mail atar.
+/// </summary>
 public interface INotificationService
 {
     Task SendEmail(string Subject, string Email, string Content);
@@ -12,7 +15,7 @@ public class NotificationService : INotificationService
 {
     const string gmail_account = "akbankfinalcase@gmail.com";
     const string gmail_password = "wycj fdfd kvep beth";
-    //const string gmail_password = "Akbankfinalcase1!";
+
     public async Task SendEmail(string Subject, string Email, string Content)
     {
         SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);

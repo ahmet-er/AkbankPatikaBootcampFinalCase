@@ -4,6 +4,9 @@ using System.Text.Json;
 
 namespace AFC.Api.Middleware;
 
+/// <summary>
+/// Global Error Handler
+/// </summary>
 public class ErrorHandlerMiddleware
 {
     private readonly RequestDelegate next;
