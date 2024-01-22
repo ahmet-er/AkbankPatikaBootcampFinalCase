@@ -50,7 +50,7 @@ FieldStaff = Saha Personeli : Admin rolune sahip kullanıcı tarafından oluştu
 ![Database Diagram](https://github.com/ahmet-er/AkbankPatikaBootcampFinalCase/blob/main/images/lastest-database-diagram.png?raw=true)
 
 ## Api Screenshots
-[Api Screenshots](https://github.com/ahmet-er/AkbankPatikaBootcampFinalCase/blob/main/images/akbank-final-case-screenshots.pdf)
+Daha detaylı ekran görüntüleri: [Api Screenshots](https://github.com/ahmet-er/AkbankPatikaBootcampFinalCase/blob/main/images/akbank-final-case-screenshots.pdf)
 
 ## Enums
 | Enum   | Values                                      | Description                              |
