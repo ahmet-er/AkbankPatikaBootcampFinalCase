@@ -23,7 +23,6 @@ public class UpdateExpenseRequestByAdminRequest : BaseRequest
 {
     public string? CompanyResultDescription { get; set; }
     public ExpenseStatus? ExpenseStatus { get; set; }
-    public PaymentStatus? PaymentStatus { get; set; }
 }
 
 public class ExpenseRequestResponse : BaseResponse

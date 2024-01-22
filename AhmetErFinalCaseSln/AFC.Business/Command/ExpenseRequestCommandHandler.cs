@@ -73,7 +73,6 @@ public class ExpenseRequestCommandHandler :
 
         fromdb.CompanyResultDescription = request.Model.CompanyResultDescription == null ? fromdb.CompanyResultDescription : request.Model.CompanyResultDescription;
         fromdb.ExpenseStatus = (ExpenseStatus)(request.Model.ExpenseStatus == null ? fromdb.ExpenseStatus : request.Model.ExpenseStatus);
-        fromdb.PaymentStatus = (PaymentStatus)(request.Model.PaymentStatus == null ? fromdb.PaymentStatus : request.Model.PaymentStatus);
 
         BaseEntitySetPropertyExtension.SetModifiedProperties(fromdb, httpContextAccessor);
 

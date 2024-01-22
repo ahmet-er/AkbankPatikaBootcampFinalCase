@@ -59,9 +59,9 @@ namespace AFC.Api.Controllers
 
         [HttpPut("id")]
         [Authorize(Roles = "Admin, FieldStaff")]
-        public async Task<ApiResponse<ExpenseDocumentResponse>> Put(int id, [FromBody] UpdateExpenseDocumentRequest expenseDocument)
+        public async Task<ApiResponse<ExpenseDocumentResponse>> Put([FromQuery] int id, IFormFile FormFile)
         {
-            var operation = new UpdateExpenseDocumentCommand(id, expenseDocument);
+            var operation = new UpdateExpenseDocumentCommand(id, FormFile);
             var result = await mediator.Send(operation);
             return result;
         }

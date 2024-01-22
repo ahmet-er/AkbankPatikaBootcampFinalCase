@@ -50,8 +50,5 @@ public class ExpenseRequestByAdminRequestValidator : AbstractValidator<UpdateExp
 
         RuleFor(x => x.ExpenseStatus)
             .IsInEnum().WithMessage("Invalid ExpenseStatus value.");
-
-        RuleFor(x => x.PaymentStatus)
-            .IsInEnum().WithMessage("Invalid PaymentStatus value.");
     }
 }

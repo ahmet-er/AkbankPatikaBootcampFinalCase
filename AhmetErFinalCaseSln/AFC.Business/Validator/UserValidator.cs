@@ -19,12 +19,12 @@ public class UserValidator : AbstractValidator<UserRequest>
 
         RuleFor(x => x.FirstName)
             .NotEmpty().WithMessage("FirstName cannot be empty.")
-            .MinimumLength(5).WithMessage("FirstName must be at least 5 characters long.")
+            .MinimumLength(2).WithMessage("FirstName must be at least 2 characters long.")
             .MaximumLength(128).WithMessage("FirstName cannot exceed 128 characters.");
 
         RuleFor(x => x.LastName)
             .NotEmpty().WithMessage("LastName cannot be empty.")
-            .MinimumLength(5).WithMessage("LastName must be at least 5 characters long.")
+            .MinimumLength(2).WithMessage("LastName must be at least 2 characters long.")
             .MaximumLength(128).WithMessage("LastName cannot exceed 128 characters.");
 
         RuleFor(x => x.Email)

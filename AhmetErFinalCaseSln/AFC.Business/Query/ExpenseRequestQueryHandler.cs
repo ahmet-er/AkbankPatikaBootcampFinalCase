@@ -40,8 +40,7 @@ public class ExpenseRequestQueryHandler :
     {
         var entity = await dbContext.Set<ExpenseRequest>()
             .Include(x => x.ExpenseDocuments)
-            .Where(x => x.IsActive)
-            .FirstOrDefaultAsync(cancellationToken);
+            .FirstOrDefaultAsync(x => x.IsActive && x.Id == request.Id, cancellationToken);
 
         if (entity is null)
             return new ApiResponse<ExpenseRequestResponse>("Record not found.");
@@ -55,16 +54,16 @@ public class ExpenseRequestQueryHandler :
         var predicate = PredicateBuilder.New<ExpenseRequest>(true);
 
         if (request.FieldStaffId.HasValue)
-            predicate = predicate.And(x => x.FieldStaffId == request.FieldStaffId);
+            predicate.And(x => x.FieldStaffId == request.FieldStaffId);
 
         if (request.PaymentCategoryId.HasValue)
-            predicate = predicate.And(x => x.PaymentCategoryId == request.PaymentCategoryId);
+            predicate.And(x => x.PaymentCategoryId == request.PaymentCategoryId);
 
         if (request.MinAmount.HasValue)
-            predicate = predicate.And(x => x.Amount >= request.MinAmount);
+            predicate.And(x => x.Amount >= request.MinAmount);
 
         if (request.MaxAmount.HasValue)
-            predicate = predicate.And(x => x.Amount <= request.MaxAmount);
+            predicate.And(x => x.Amount <= request.MaxAmount);
 
         if (!string.IsNullOrEmpty(request.PaymentLocation))
             predicate.And(x => x.PaymentLocation.Contains(request.PaymentLocation));
@@ -82,6 +81,7 @@ public class ExpenseRequestQueryHandler :
         var list = await dbContext.Set<ExpenseRequest>()
             .Include(x => x.ExpenseDocuments)
             .Where(x => x.IsActive)
+            .Where(predicate)
             .ToListAsync(cancellationToken);
         
         var mappedList = mapper.Map<List<ExpenseRequest>, List<ExpenseRequestResponse>>(list);

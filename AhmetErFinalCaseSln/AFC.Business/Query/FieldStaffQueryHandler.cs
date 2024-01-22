@@ -28,6 +28,7 @@ public class FieldStaffQueryHandler :
     {
         var list = await dbContext.Set<FieldStaff>()
             .Include(x => x.User)
+            .Include(x => x.ExpenseRequests)
             .Where(x => x.IsActive)
             .ToListAsync(cancellationToken);
 
@@ -60,6 +61,7 @@ public class FieldStaffQueryHandler :
 
         var list = await dbContext.Set<FieldStaff>()
             .Include(x => x.User)
+            .Include(x => x.ExpenseRequests)
             .Where(x => x.IsActive)
             .Where(predicate)
             .ToListAsync(cancellationToken);

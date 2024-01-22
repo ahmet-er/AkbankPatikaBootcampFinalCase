@@ -61,10 +61,10 @@ public class ExpenseDocumentCommandHandler :
 
         var oldFilePath = fromdb.FilePath;
 
-        if (request.Model.FormFile is null)
+        if (request.FormFile is null)
             return new ApiResponse<ExpenseDocumentResponse>("File not found.");
 
-        var uploadedFileResponse = await azureBlobStorageService.UploadFileAsync(request.Model.FormFile);
+        var uploadedFileResponse = await azureBlobStorageService.UploadFileAsync(request.FormFile);
 
         fromdb.FilePath = uploadedFileResponse.FilePath == null ? oldFilePath : uploadedFileResponse.FilePath;
 
